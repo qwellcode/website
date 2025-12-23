@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCode Content Manager</title>
+    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .admin-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .admin-header {
+            background: #111;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .admin-header h1 {
+            font-size: 32px;
+            font-weight: 500;
+            color: #87d832;
+        }
+
+        .admin-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: #87d832;
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background: #9de047;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #333;
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            background: #444;
+        }
+
+        .btn-success {
+            background: #4caf50;
+            color: #fff;
+        }
+
+        .btn-success:hover {
+            background: #66bb6a;
+        }
+
+        .btn-danger {
+            background: #f44336;
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 12px;
+        }
+
+        .btn-danger:hover {
+            background: #e57373;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            background: #111;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            background: #222;
+            border: none;
+            color: #999;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tab:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        .tab.active {
+            background: #87d832;
+            color: #000;
+        }
+
+        .tab-content {
+            display: none;
+            background: #111;
+            padding: 30px;
+            border-radius: 10px;
+            animation: fadeIn 0.3s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #87d832;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            background: #000;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #87d832;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            position: relative;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #333;
+        }
+
+        .card-header h3 {
+            font-size: 18px;
+            color: #87d832;
+            font-weight: 500;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .item-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .list-item {
+            background: #222;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .list-item:hover {
+            background: #2a2a2a;
+        }
+
+        .list-item-info h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .list-item-info p {
+            font-size: 13px;
+            color: #999;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            cursor: pointer;
+        }
+
+        .array-input {
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .array-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .array-item input {
+            flex: 1;
+        }
+
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 12px;
+        }
+
+        .alert {
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .alert.show {
+            display: block;
+            animation: slideDown 0.3s;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .alert-success {
+            background: #1b5e20;
+            color: #a5d6a7;
+            border: 1px solid #2e7d32;
+        }
+
+        .alert-error {
+            background: #b71c1c;
+            color: #ef9a9a;
+            border: 1px solid #c62828;
+        }
+
+        .json-preview {
+            background: #000;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            max-height: 600px;
+            overflow-y: auto;
+            border: 1px solid #333;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+
+        .empty-state i {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: #111;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #333;
+        }
+
+        .modal-header h2 {
+            font-size: 24px;
+            color: #87d832;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 28px;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+        }
+
+        .close-modal:hover {
+            color: #fff;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-featured {
+            background: #87d832;
+            color: #000;
+        }
+
+        .badge-default {
+            background: #333;
+            color: #999;
+        }
+
+        .language-badge {
+            background: #87d832;
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+        }
+
+        .admin-header .admin-actions {
+            flex-wrap: wrap;
+        }
+
+        .info-box {
+            background: #1a1a1a;
+            border-left: 4px solid #87d832;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: #ccc;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .info-box strong {
+            color: #87d832;
+        }
+
+        @media (max-width: 768px) {
+            .admin-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .admin-header .admin-actions {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .admin-header .admin-actions > div {
+                width: 100%;
+                margin-right: 0 !important;
+                margin-bottom: 10px;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                width: 100%;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .language-badge {
+                display: block;
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .loading i {
+            font-size: 32px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <div class="admin-header">
+            <div>
+                <h1>QCode Content Manager</h1>
+                <p style="color: #999; margin-top: 5px;">Manage your content.json data</p>
+            </div>
+            <div class="admin-actions">
+                <div style="display: flex; gap: 10px; align-items: center; margin-right: 15px;">
+                    <label style="color: #87d832; font-size: 14px; font-weight: 500;">Language:</label>
+                    <select id="languageSelector" onchange="switchLanguage()" style="padding: 10px; background: #222; border: 1px solid #333; color: #fff; border-radius: 5px; cursor: pointer;">
+                        <option value="en">🇬🇧 English</option>
+                        <option value="de">🇩🇪 Deutsch</option>
+                    </select>
+                </div>
+                <button class="btn btn-secondary" onclick="loadContent()">
+                    <i class="fas fa-sync-alt"></i> Reload
+                </button>
+                <button class="btn btn-success" onclick="previewJSON()">
+                    <i class="fas fa-eye"></i> Preview JSON
+                </button>
+                <button class="btn btn-primary" onclick="downloadJSON()">
+                    <i class="fas fa-download"></i> Download JSON
+                </button>
+            </div>
+        </div>
+
+        <div class="alert alert-success" id="successAlert"></div>
+        <div class="alert alert-error" id="errorAlert"></div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background: #111; padding: 15px; border-radius: 10px;">
+            <div class="tabs" style="margin: 0; padding: 0; background: transparent; flex: 1;">
+                <button class="tab active" onclick="switchTab('site')">Site Info</button>
+                <button class="tab" onclick="switchTab('projects')">Projects</button>
+                <button class="tab" onclick="switchTab('team')">Team</button>
+                <button class="tab" onclick="switchTab('services')">Services</button>
+                <button class="tab" onclick="switchTab('testimonials')">Testimonials</button>
+                <button class="tab" onclick="switchTab('blog')">Blog</button>
+                <button class="tab" onclick="switchTab('partners')">Partners</button>
+                <button class="tab" onclick="switchTab('imprint')">Imprint</button>
+            </div>
+            <div class="language-badge" id="currentLanguageBadge">
+                🇬🇧 Editing: English
+            </div>
+        </div>
+
+        <div id="site" class="tab-content active">
+            <div class="info-box">
+                <p><strong>ℹ️ Multilingual Content:</strong> You are currently editing the <strong id="currentLangName">English</strong> version. Use the language selector in the header to switch between English and German. All changes are saved per language.</p>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Basic Information</h3>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Site Name</label>
+                        <input type="text" id="site_name" placeholder="Enter site name">
+                    </div>
+                    <div class="form-group">
+                        <label>Tagline</label>
+                        <input type="text" id="site_tagline" placeholder="Enter tagline">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="site_description" placeholder="Enter site description"></textarea>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Hero Section</h3>
+                </div>
+                <div class="form-group">
+                    <label>Hero Headline</label>
+                    <textarea id="hero_headline" placeholder="Enter hero headline (HTML allowed)"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Hero Description</label>
+                    <textarea id="hero_description" placeholder="Enter hero description"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Primary CTA Text</label>
+                        <input type="text" id="hero_primary_text" placeholder="CTA text">
+                    </div>
+                    <div class="form-group">
+                        <label>Primary CTA Link</label>
+                        <input type="text" id="hero_primary_link" placeholder="CTA link">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Secondary CTA Text</label>
+                        <input type="text" id="hero_secondary_text" placeholder="CTA text">
+                    </div>
+                    <div class="form-group">
+                        <label>Secondary CTA Link</label>
+                        <input type="text" id="hero_secondary_link" placeholder="CTA link">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Contact Information</h3>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="contact_email" placeholder="Enter email address">
+                </div>
+            </div>
+
+            <button class="btn btn-primary" onclick="saveSiteInfo()">
+                <i class="fas fa-save"></i> Save Site Info
+            </button>
+        </div>
+
+        <div id="projects" class="tab-content">
+            <div class="info-box">
+                <p><strong>📁 Projects:</strong> Managing projects for <strong id="projectsLang">English</strong>. Switch languages to translate project content.</p>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Projects</h3>
+                    <button class="btn btn-primary btn-small" onclick="openProjectModal()">
+                        <i class="fas fa-plus"></i> Add Project
+                    </button>
+                </div>
+                <div id="projectsList" class="item-list"></div>
+            </div>
+        </div>
+
+        <div id="team" class="tab-content">
+            <div class="info-box">
+                <p><strong>👥 Team:</strong> Managing team members for <strong id="teamLang">English</strong>. Edit team bios in each language separately.</p>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Team Members</h3>
+                    <button class="btn btn-primary btn-small" onclick="openTeamModal()">
+                        <i class="fas fa-plus"></i> Add Team Member
+                    </button>
+                </div>
+                <div id="teamList" class="item-list"></div>
+            </div>
+        </div>
+
+        <div id="services" class="tab-content">
+            <div class="info-box">
+                <p><strong>💼 Services:</strong> Managing services for <strong id="servicesLang">English</strong>. Translate service descriptions for each language.</p>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Services</h3>
+                    <button class="btn btn-primary btn-small" onclick="openServiceModal()">
+                        <i class="fas fa-plus"></i> Add Service
+                    </button>
+                </div>
+                <div id="servicesList" class="item-list"></div>
+            </div>
+        </div>
+
+        <div id="testimonials" class="tab-content">
+            <div class="info-box">
+                <p><strong>💬 Testimonials:</strong> Managing testimonials for <strong id="testimonialsLang">English</strong>. Translate testimonials for international audiences.</p>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Testimonials</h3>
+                    <button class="btn btn-primary btn-small" onclick="openTestimonialModal()">
+                        <i class="fas fa-plus"></i> Add Testimonial
+                    </button>
+                </div>
+                <div id="testimonialsList" class="item-list"></div>
+            </div>
+        </div>
+
+        <div id="blog" class="tab-content">
+            <div class="info-box">
+                <p><strong>📰 Blog:</strong> Managing blog posts for <strong id="blogLang">English</strong>. Create separate posts for each language.</p>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Blog Posts</h3>
+                    <button class="btn btn-primary btn-small" onclick="openBlogModal()">
+                        <i class="fas fa-plus"></i> Add Blog Post
+                    </button>
+                </div>
+                <div id="blogList" class="item-list"></div>
+            </div>
+        </div>
+
+        <div id="partners" class="tab-content">
+            <div class="info-box">
+                <p><strong>🤝 Partners:</strong> Managing partners for <strong id="partnersLang">English</strong>. Partner info is typically language-independent.</p>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Partners</h3>
+                    <button class="btn btn-primary btn-small" onclick="openPartnerModal()">
+                        <i class="fas fa-plus"></i> Add Partner
+                    </button>
+                </div>
+                <div id="partnersList" class="item-list"></div>
+            </div>
+        </div>
+
+        <div id="imprint" class="tab-content">
+            <div class="info-box">
+                <p><strong>⚖️ Imprint/Impressum:</strong> Legal information page. Editing sections for <strong id="imprintLang">English</strong>. Switch languages to edit German version.</p>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Imprint / Impressum</h3>
+                </div>
+                <div class="form-group">
+                    <label>Page Title (English)</label>
+                    <input type="text" id="imprint_title_en" placeholder="Imprint">
+                </div>
+                <div class="form-group">
+                    <label>Page Title (German)</label>
+                    <input type="text" id="imprint_title_de" placeholder="Impressum">
+                </div>
+                <h4 style="color: #87d832; margin: 30px 0 20px 0;">Sections</h4>
+                <div id="imprintSectionsEn"></div>
+                <button class="btn btn-primary" onclick="saveImprint()">
+                    <i class="fas fa-save"></i> Save Imprint
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer Tips -->
+        <div style="background: #111; padding: 30px; margin-top: 40px; border-radius: 10px; border-top: 2px solid #87d832;">
+            <h3 style="color: #87d832; margin-bottom: 20px; font-size: 20px;">💡 Quick Tips</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                <div>
+                    <h4 style="color: #fff; font-size: 16px; margin-bottom: 10px;">📝 Editing Content</h4>
+                    <ul style="color: #999; font-size: 14px; line-height: 1.8; padding-left: 20px;">
+                        <li>Use the language selector to switch between English and German</li>
+                        <li>All changes are per-language</li>
+                        <li>Click "Save" buttons to apply changes in memory</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 16px; margin-bottom: 10px;">💾 Saving Changes</h4>
+                    <ul style="color: #999; font-size: 14px; line-height: 1.8; padding-left: 20px;">
+                        <li>Click "Download JSON" to save your work</li>
+                        <li>Replace content.json on your server with the downloaded file</li>
+                        <li>Changes take effect immediately after file replacement</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; font-size: 16px; margin-bottom: 10px;">🔄 Best Practices</h4>
+                    <ul style="color: #999; font-size: 14px; line-height: 1.8; padding-left: 20px;">
+                        <li>Edit both language versions for consistency</li>
+                        <li>Use "Preview JSON" to check your changes</li>
+                        <li>Download JSON regularly as backup</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="projectModalTitle">Add Project</h2>
+                <button class="close-modal" onclick="closeModal('projectModal')">&times;</button>
+            </div>
+            <input type="hidden" id="project_index">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Project ID</label>
+                    <input type="text" id="project_id" placeholder="unique-id">
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <input type="text" id="project_category" placeholder="Web3 / Platform">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" id="project_title" placeholder="Project Title">
+            </div>
+            <div class="form-group">
+                <label>Slug</label>
+                <input type="text" id="project_slug" placeholder="project-slug">
+            </div>
+            <div class="form-group">
+                <label>Short Description</label>
+                <textarea id="project_short_desc" placeholder="Brief description"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="project_desc" placeholder="Main description"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Long Description</label>
+                <textarea id="project_long_desc" placeholder="Detailed description"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Thumbnail</label>
+                    <input type="text" id="project_thumbnail" placeholder="img/works/1.jpg">
+                </div>
+                <div class="form-group">
+                    <label>Year</label>
+                    <input type="number" id="project_year" placeholder="2024">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Client</label>
+                    <input type="text" id="project_client" placeholder="Client Name">
+                </div>
+                <div class="form-group">
+                    <label>URL (optional)</label>
+                    <input type="url" id="project_url" placeholder="https://example.com">
+                </div>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="project_featured">
+                <label style="margin: 0;">Featured Project</label>
+            </div>
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
+                <button class="btn btn-primary" onclick="saveProject()">
+                    <i class="fas fa-save"></i> Save Project
+                </button>
+                <button class="btn btn-secondary" onclick="closeModal('projectModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Modal -->
+    <div id="teamModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="teamModalTitle">Add Team Member</h2>
+                <button class="close-modal" onclick="closeModal('teamModal')">&times;</button>
+            </div>
+            <input type="hidden" id="team_index">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Member ID</label>
+                    <input type="text" id="team_id" placeholder="unique-id">
+                </div>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="team_name" placeholder="Full Name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Role</label>
+                    <input type="text" id="team_role" placeholder="Job Title">
+                </div>
+                <div class="form-group">
+                    <label>Image</label>
+                    <input type="text" id="team_image" placeholder="img/faces/1.jpg">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Bio</label>
+                <textarea id="team_bio" placeholder="Short bio"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Long Bio</label>
+                <textarea id="team_long_bio" placeholder="Detailed bio"></textarea>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="team_featured">
+                <label style="margin: 0;">Featured Team Member</label>
+            </div>
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
+                <button class="btn btn-primary" onclick="saveTeamMember()">
+                    <i class="fas fa-save"></i> Save Team Member
+                </button>
+                <button class="btn btn-secondary" onclick="closeModal('teamModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Modal -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="serviceModalTitle">Add Service</h2>
+                <button class="close-modal" onclick="closeModal('serviceModal')">&times;</button>
+            </div>
+            <input type="hidden" id="service_index">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Service ID</label>
+                    <input type="text" id="service_id" placeholder="unique-id">
+                </div>
+                <div class="form-group">
+                    <label>Icon (Font Awesome)</label>
+                    <input type="text" id="service_icon" placeholder="fas fa-code">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Title (HTML allowed)</label>
+                <input type="text" id="service_title" placeholder="Service Title">
+            </div>
+            <div class="form-group">
+                <label>Short Title</label>
+                <input type="text" id="service_short_title" placeholder="Short Title">
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="service_description" placeholder="Service description"></textarea>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="service_featured">
+                <label style="margin: 0;">Featured Service</label>
+            </div>
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
+                <button class="btn btn-primary" onclick="saveService()">
+                    <i class="fas fa-save"></i> Save Service
+                </button>
+                <button class="btn btn-secondary" onclick="closeModal('serviceModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial Modal -->
+    <div id="testimonialModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="testimonialModalTitle">Add Testimonial</h2>
+                <button class="close-modal" onclick="closeModal('testimonialModal')">&times;</button>
+            </div>
+            <input type="hidden" id="testimonial_index">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Testimonial ID</label>
+                    <input type="text" id="testimonial_id" placeholder="unique-id">
+                </div>
+                <div class="form-group">
+                    <label>Author</label>
+                    <input type="text" id="testimonial_author" placeholder="Author Name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Role/Company</label>
+                    <input type="text" id="testimonial_role" placeholder="CEO at Company">
+                </div>
+                <div class="form-group">
+                    <label>Avatar</label>
+                    <input type="text" id="testimonial_avatar" placeholder="img/faces/customers/1.jpg">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Testimonial Text</label>
+                <textarea id="testimonial_text" placeholder="Testimonial content" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Rating (1-5)</label>
+                <input type="number" id="testimonial_rating" min="1" max="5" value="5">
+            </div>
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
+                <button class="btn btn-primary" onclick="saveTestimonial()">
+                    <i class="fas fa-save"></i> Save Testimonial
+                </button>
+                <button class="btn btn-secondary" onclick="closeModal('testimonialModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Modal -->
+    <div id="blogModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="blogModalTitle">Add Blog Post</h2>
+                <button class="close-modal" onclick="closeModal('blogModal')">&times;</button>
+            </div>
+            <input type="hidden" id="blog_index">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Post ID</label>
+                    <input type="text" id="blog_id" placeholder="unique-id">
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <input type="text" id="blog_category" placeholder="WEB3">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" id="blog_title" placeholder="Post Title">
+            </div>
+            <div class="form-group">
+                <label>Slug</label>
+                <input type="text" id="blog_slug" placeholder="post-slug">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Author</label>
+                    <input type="text" id="blog_author" placeholder="Author Name">
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" id="blog_date">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Thumbnail</label>
+                <input type="text" id="blog_thumbnail" placeholder="img/blog/1.jpg">
+            </div>
+            <div class="form-group">
+                <label>Excerpt</label>
+                <textarea id="blog_excerpt" placeholder="Post excerpt" rows="3"></textarea>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="blog_featured">
+                <label style="margin: 0;">Featured Post</label>
+            </div>
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
+                <button class="btn btn-primary" onclick="saveBlogPost()">
+                    <i class="fas fa-save"></i> Save Blog Post
+                </button>
+                <button class="btn btn-secondary" onclick="closeModal('blogModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Partner Modal -->
+    <div id="partnerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="partnerModalTitle">Add Partner</h2>
+                <button class="close-modal" onclick="closeModal('partnerModal')">&times;</button>
+            </div>
+            <input type="hidden" id="partner_index">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Partner ID</label>
+                    <input type="text" id="partner_id" placeholder="unique-id">
+                </div>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="partner_name" placeholder="Partner Name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Logo Path</label>
+                    <input type="text" id="partner_logo" placeholder="img/partners/1.svg">
+                </div>
+                <div class="form-group">
+                    <label>URL</label>
+                    <input type="url" id="partner_url" placeholder="https://example.com">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Width (optional)</label>
+                <input type="text" id="partner_width" placeholder="60px">
+            </div>
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
+                <button class="btn btn-primary" onclick="savePartner()">
+                    <i class="fas fa-save"></i> Save Partner
+                </button>
+                <button class="btn btn-secondary" onclick="closeModal('partnerModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JSON Preview Modal -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content" style="max-width: 1000px;">
+            <div class="modal-header">
+                <h2>JSON Preview</h2>
+                <button class="close-modal" onclick="closeModal('previewModal')">&times;</button>
+            </div>
+            <div class="json-preview" id="jsonPreview"></div>
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
+                <button class="btn btn-primary" onclick="downloadJSON()">
+                    <i class="fas fa-download"></i> Download JSON
+                </button>
+                <button class="btn btn-secondary" onclick="closeModal('previewModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/plugins/jquery.min.js"></script>
+    <script src="js/plugins/font-awesome.min.js"></script>
+    <script>
+        let contentData = {};
+        let currentLanguage = 'en';
+
+        // Load content.json on page load
+        window.onload = function() {
+            loadContent();
+        };
+
+        function loadContent() {
+            fetch('content.json')
+                .then(response => response.json())
+                .then(data => {
+                    contentData = data;
+                    // Ensure translations structure exists
+                    if (!contentData.translations) {
+                        contentData.translations = { en: {}, de: {} };
+                    }
+                    if (!contentData.translations.en) contentData.translations.en = {};
+                    if (!contentData.translations.de) contentData.translations.de = {};
+                    
+                    populateAllSections();
+                    showAlert('Content loaded successfully!', 'success');
+                })
+                .catch(error => {
+                    showAlert('Error loading content.json: ' + error.message, 'error');
+                });
+        }
+
+        function switchLanguage() {
+            currentLanguage = document.getElementById('languageSelector').value;
+            const langName = currentLanguage === 'en' ? 'English' : 'German';
+            const langFlag = currentLanguage === 'en' ? '🇬🇧' : '🇩🇪';
+            
+            // Update badge
+            const badge = document.getElementById('currentLanguageBadge');
+            if (badge) {
+                badge.textContent = `${langFlag} Editing: ${langName}`;
+            }
+            
+            // Update all language indicators
+            const langIndicators = [
+                'currentLangName', 'projectsLang', 'teamLang', 'servicesLang', 
+                'testimonialsLang', 'blogLang', 'partnersLang', 'imprintLang'
+            ];
+            
+            langIndicators.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.textContent = langName;
+                }
+            });
+            
+            populateAllSections();
+            showAlert(`Switched to ${langName}`, 'success');
+        }
+
+        function getCurrentTranslation() {
+            return contentData.translations[currentLanguage] || {};
+        }
+
+        function populateAllSections() {
+            populateSiteInfo();
+            renderProjects();
+            renderTeam();
+            renderServices();
+            renderTestimonials();
+            renderBlog();
+            renderPartners();
+            renderImprint();
+        }
+
+        function populateSiteInfo() {
+            const trans = getCurrentTranslation();
+            if (!trans.site) return;
+
+            document.getElementById('site_name').value = trans.site.name || '';
+            document.getElementById('site_tagline').value = trans.site.tagline || '';
+            document.getElementById('site_description').value = trans.site.description || '';
+
+            if (trans.site.hero) {
+                document.getElementById('hero_headline').value = trans.site.hero.headline || '';
+                document.getElementById('hero_description').value = trans.site.hero.description || '';
+                document.getElementById('hero_primary_text').value = trans.site.hero.primaryCTA?.text || '';
+                document.getElementById('hero_primary_link').value = trans.site.hero.primaryCTA?.link || '';
+                document.getElementById('hero_secondary_text').value = trans.site.hero.secondaryCTA?.text || '';
+                document.getElementById('hero_secondary_link').value = trans.site.hero.secondaryCTA?.link || '';
+            }
+
+            if (trans.site.contact) {
+                document.getElementById('contact_email').value = trans.site.contact.email || '';
+            }
+        }
+
+        function saveSiteInfo() {
+            const trans = getCurrentTranslation();
+            if (!trans.site) trans.site = {};
+
+            trans.site.name = document.getElementById('site_name').value;
+            trans.site.tagline = document.getElementById('site_tagline').value;
+            trans.site.description = document.getElementById('site_description').value;
+
+            if (!trans.site.hero) trans.site.hero = {};
+            trans.site.hero.headline = document.getElementById('hero_headline').value;
+            trans.site.hero.description = document.getElementById('hero_description').value;
+
+            if (!trans.site.hero.primaryCTA) trans.site.hero.primaryCTA = {};
+            trans.site.hero.primaryCTA.text = document.getElementById('hero_primary_text').value;
+            trans.site.hero.primaryCTA.link = document.getElementById('hero_primary_link').value;
+
+            if (!trans.site.hero.secondaryCTA) trans.site.hero.secondaryCTA = {};
+            trans.site.hero.secondaryCTA.text = document.getElementById('hero_secondary_text').value;
+            trans.site.hero.secondaryCTA.link = document.getElementById('hero_secondary_link').value;
+
+            if (!trans.site.contact) trans.site.contact = {};
+            trans.site.contact.email = document.getElementById('contact_email').value;
+
+            showAlert('Site info saved successfully!', 'success');
+        }
+
+        // Projects
+        function renderProjects() {
+            const list = document.getElementById('projectsList');
+            const trans = getCurrentTranslation();
+            const projects = trans.projects || [];
+            
+            if (projects.length === 0) {
+                list.innerHTML = '<div class="empty-state"><i class="fas fa-folder-open"></i><p>No projects yet</p></div>';
+                return;
+            }
+
+            list.innerHTML = projects.map((project, index) => `
+                <div class="list-item">
+                    <div class="list-item-info">
+                        <h4>${project.title || 'Untitled'} ${project.featured ? '<span class="badge badge-featured">Featured</span>' : ''}</h4>
+                        <p>${project.category || 'Uncategorized'} • ${project.year || 'N/A'}</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-small" onclick="editProject(${index})">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-danger" onclick="deleteProject(${index})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openProjectModal(index = null) {
+            const modal = document.getElementById('projectModal');
+            const title = document.getElementById('projectModalTitle');
+            const trans = getCurrentTranslation();
+
+            if (index !== null) {
+                title.textContent = 'Edit Project';
+                const project = trans.projects[index];
+                document.getElementById('project_index').value = index;
+                document.getElementById('project_id').value = project.id || '';
+                document.getElementById('project_title').value = project.title || '';
+                document.getElementById('project_slug').value = project.slug || '';
+                document.getElementById('project_category').value = project.category || '';
+                document.getElementById('project_short_desc').value = project.shortDescription || '';
+                document.getElementById('project_desc').value = project.description || '';
+                document.getElementById('project_long_desc').value = project.longDescription || '';
+                document.getElementById('project_thumbnail').value = project.thumbnail || '';
+                document.getElementById('project_year').value = project.year || '';
+                document.getElementById('project_client').value = project.client || '';
+                document.getElementById('project_url').value = project.url || '';
+                document.getElementById('project_featured').checked = project.featured || false;
+            } else {
+                title.textContent = 'Add Project';
+                document.getElementById('project_index').value = '';
+                document.querySelectorAll('#projectModal input, #projectModal textarea').forEach(el => {
+                    if (el.type === 'checkbox') el.checked = false;
+                    else el.value = '';
+                });
+            }
+
+            modal.classList.add('show');
+        }
+
+        function editProject(index) {
+            openProjectModal(index);
+        }
+
+        function saveProject() {
+            const trans = getCurrentTranslation();
+            const index = document.getElementById('project_index').value;
+            const project = {
+                id: document.getElementById('project_id').value,
+                title: document.getElementById('project_title').value,
+                slug: document.getElementById('project_slug').value,
+                category: document.getElementById('project_category').value,
+                shortDescription: document.getElementById('project_short_desc').value,
+                description: document.getElementById('project_desc').value,
+                longDescription: document.getElementById('project_long_desc').value,
+                thumbnail: document.getElementById('project_thumbnail').value,
+                year: parseInt(document.getElementById('project_year').value) || new Date().getFullYear(),
+                client: document.getElementById('project_client').value,
+                url: document.getElementById('project_url').value,
+                featured: document.getElementById('project_featured').checked,
+                images: [],
+                technologies: [],
+                highlights: [],
+                services: []
+            };
+
+            if (index === '') {
+                if (!trans.projects) trans.projects = [];
+                trans.projects.push(project);
+            } else {
+                // Preserve arrays from existing project
+                const existing = trans.projects[parseInt(index)];
+                project.images = existing.images || [];
+                project.technologies = existing.technologies || [];
+                project.highlights = existing.highlights || [];
+                project.services = existing.services || [];
+                project.github = existing.github;
+                trans.projects[parseInt(index)] = project;
+            }
+
+            renderProjects();
+            closeModal('projectModal');
+            showAlert('Project saved successfully!', 'success');
+        }
+
+        function deleteProject(index) {
+            if (confirm('Are you sure you want to delete this project?')) {
+                const trans = getCurrentTranslation();
+                trans.projects.splice(index, 1);
+                renderProjects();
+                showAlert('Project deleted successfully!', 'success');
+            }
+        }
+
+        // Team
+        function renderTeam() {
+            const list = document.getElementById('teamList');
+            const trans = getCurrentTranslation();
+            const team = trans.team || [];
+            
+            if (team.length === 0) {
+                list.innerHTML = '<div class="empty-state"><i class="fas fa-users"></i><p>No team members yet</p></div>';
+                return;
+            }
+
+            list.innerHTML = team.map((member, index) => `
+                <div class="list-item">
+                    <div class="list-item-info">
+                        <h4>${member.name || 'Unnamed'} ${member.featured ? '<span class="badge badge-featured">Featured</span>' : ''}</h4>
+                        <p>${member.role || 'No role'}</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-small" onclick="editTeamMember(${index})">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-danger" onclick="deleteTeamMember(${index})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openTeamModal(index = null) {
+            const modal = document.getElementById('teamModal');
+            const title = document.getElementById('teamModalTitle');
+            const trans = getCurrentTranslation();
+
+            if (index !== null) {
+                title.textContent = 'Edit Team Member';
+                const member = trans.team[index];
+                document.getElementById('team_index').value = index;
+                document.getElementById('team_id').value = member.id || '';
+                document.getElementById('team_name').value = member.name || '';
+                document.getElementById('team_role').value = member.role || '';
+                document.getElementById('team_image').value = member.image || '';
+                document.getElementById('team_bio').value = member.bio || '';
+                document.getElementById('team_long_bio').value = member.longBio || '';
+                document.getElementById('team_featured').checked = member.featured || false;
+            } else {
+                title.textContent = 'Add Team Member';
+                document.getElementById('team_index').value = '';
+                document.querySelectorAll('#teamModal input, #teamModal textarea').forEach(el => {
+                    if (el.type === 'checkbox') el.checked = false;
+                    else el.value = '';
+                });
+            }
+
+            modal.classList.add('show');
+        }
+
+        function editTeamMember(index) {
+            openTeamModal(index);
+        }
+
+        function saveTeamMember() {
+            const trans = getCurrentTranslation();
+            const index = document.getElementById('team_index').value;
+            const member = {
+                id: document.getElementById('team_id').value,
+                name: document.getElementById('team_name').value,
+                role: document.getElementById('team_role').value,
+                image: document.getElementById('team_image').value,
+                bio: document.getElementById('team_bio').value,
+                longBio: document.getElementById('team_long_bio').value,
+                featured: document.getElementById('team_featured').checked,
+                social: {},
+                skills: []
+            };
+
+            if (index === '') {
+                if (!trans.team) trans.team = [];
+                trans.team.push(member);
+            } else {
+                const existing = trans.team[parseInt(index)];
+                member.social = existing.social || {};
+                member.skills = existing.skills || [];
+                trans.team[parseInt(index)] = member;
+            }
+
+            renderTeam();
+            closeModal('teamModal');
+            showAlert('Team member saved successfully!', 'success');
+        }
+
+        function deleteTeamMember(index) {
+            if (confirm('Are you sure you want to delete this team member?')) {
+                const trans = getCurrentTranslation();
+                trans.team.splice(index, 1);
+                renderTeam();
+                showAlert('Team member deleted successfully!', 'success');
+            }
+        }
+
+        // Services
+        function renderServices() {
+            const list = document.getElementById('servicesList');
+            const trans = getCurrentTranslation();
+            const services = trans.services || [];
+            
+            if (services.length === 0) {
+                list.innerHTML = '<div class="empty-state"><i class="fas fa-briefcase"></i><p>No services yet</p></div>';
+                return;
+            }
+
+            list.innerHTML = services.map((service, index) => `
+                <div class="list-item">
+                    <div class="list-item-info">
+                        <h4>${service.shortTitle || service.title || 'Untitled'} ${service.featured ? '<span class="badge badge-featured">Featured</span>' : ''}</h4>
+                        <p>${service.description ? service.description.substring(0, 100) + '...' : ''}</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-small" onclick="editService(${index})">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-danger" onclick="deleteService(${index})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openServiceModal(index = null) {
+            const modal = document.getElementById('serviceModal');
+            const title = document.getElementById('serviceModalTitle');
+            const trans = getCurrentTranslation();
+
+            if (index !== null) {
+                title.textContent = 'Edit Service';
+                const service = trans.services[index];
+                document.getElementById('service_index').value = index;
+                document.getElementById('service_id').value = service.id || '';
+                document.getElementById('service_title').value = service.title || '';
+                document.getElementById('service_short_title').value = service.shortTitle || '';
+                document.getElementById('service_icon').value = service.icon || '';
+                document.getElementById('service_description').value = service.description || '';
+                document.getElementById('service_featured').checked = service.featured || false;
+            } else {
+                title.textContent = 'Add Service';
+                document.getElementById('service_index').value = '';
+                document.querySelectorAll('#serviceModal input, #serviceModal textarea').forEach(el => {
+                    if (el.type === 'checkbox') el.checked = false;
+                    else el.value = '';
+                });
+            }
+
+            modal.classList.add('show');
+        }
+
+        function editService(index) {
+            openServiceModal(index);
+        }
+
+        function saveService() {
+            const trans = getCurrentTranslation();
+            const index = document.getElementById('service_index').value;
+            const service = {
+                id: document.getElementById('service_id').value,
+                title: document.getElementById('service_title').value,
+                shortTitle: document.getElementById('service_short_title').value,
+                icon: document.getElementById('service_icon').value,
+                description: document.getElementById('service_description').value,
+                featured: document.getElementById('service_featured').checked,
+                highlights: [],
+                ctaText: 'Learn More',
+                link: 'pages/service.html'
+            };
+
+            if (index === '') {
+                if (!trans.services) trans.services = [];
+                trans.services.push(service);
+            } else {
+                const existing = trans.services[parseInt(index)];
+                service.highlights = existing.highlights || [];
+                service.ctaText = existing.ctaText || 'Learn More';
+                service.link = existing.link || 'pages/service.html';
+                trans.services[parseInt(index)] = service;
+            }
+
+            renderServices();
+            closeModal('serviceModal');
+            showAlert('Service saved successfully!', 'success');
+        }
+
+        function deleteService(index) {
+            if (confirm('Are you sure you want to delete this service?')) {
+                const trans = getCurrentTranslation();
+                trans.services.splice(index, 1);
+                renderServices();
+                showAlert('Service deleted successfully!', 'success');
+            }
+        }
+
+        // Testimonials
+        function renderTestimonials() {
+            const list = document.getElementById('testimonialsList');
+            const trans = getCurrentTranslation();
+            const testimonials = trans.testimonials || [];
+            
+            if (testimonials.length === 0) {
+                list.innerHTML = '<div class="empty-state"><i class="fas fa-quote-right"></i><p>No testimonials yet</p></div>';
+                return;
+            }
+
+            list.innerHTML = testimonials.map((testimonial, index) => `
+                <div class="list-item">
+                    <div class="list-item-info">
+                        <h4>${testimonial.author || 'Anonymous'}</h4>
+                        <p>${testimonial.role || 'No role'}</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-small" onclick="editTestimonial(${index})">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-danger" onclick="deleteTestimonial(${index})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openTestimonialModal(index = null) {
+            const modal = document.getElementById('testimonialModal');
+            const title = document.getElementById('testimonialModalTitle');
+            const trans = getCurrentTranslation();
+
+            if (index !== null) {
+                title.textContent = 'Edit Testimonial';
+                const testimonial = trans.testimonials[index];
+                document.getElementById('testimonial_index').value = index;
+                document.getElementById('testimonial_id').value = testimonial.id || '';
+                document.getElementById('testimonial_author').value = testimonial.author || '';
+                document.getElementById('testimonial_role').value = testimonial.role || '';
+                document.getElementById('testimonial_avatar').value = testimonial.avatar || '';
+                document.getElementById('testimonial_text').value = testimonial.text || '';
+                document.getElementById('testimonial_rating').value = testimonial.rating || 5;
+            } else {
+                title.textContent = 'Add Testimonial';
+                document.getElementById('testimonial_index').value = '';
+                document.querySelectorAll('#testimonialModal input, #testimonialModal textarea').forEach(el => {
+                    el.value = '';
+                });
+                document.getElementById('testimonial_rating').value = 5;
+            }
+
+            modal.classList.add('show');
+        }
+
+        function editTestimonial(index) {
+            openTestimonialModal(index);
+        }
+
+        function saveTestimonial() {
+            const trans = getCurrentTranslation();
+            const index = document.getElementById('testimonial_index').value;
+            const testimonial = {
+                id: document.getElementById('testimonial_id').value,
+                author: document.getElementById('testimonial_author').value,
+                role: document.getElementById('testimonial_role').value,
+                avatar: document.getElementById('testimonial_avatar').value,
+                text: document.getElementById('testimonial_text').value,
+                rating: parseInt(document.getElementById('testimonial_rating').value)
+            };
+
+            if (index === '') {
+                if (!trans.testimonials) trans.testimonials = [];
+                trans.testimonials.push(testimonial);
+            } else {
+                trans.testimonials[parseInt(index)] = testimonial;
+            }
+
+            renderTestimonials();
+            closeModal('testimonialModal');
+            showAlert('Testimonial saved successfully!', 'success');
+        }
+
+        function deleteTestimonial(index) {
+            if (confirm('Are you sure you want to delete this testimonial?')) {
+                const trans = getCurrentTranslation();
+                trans.testimonials.splice(index, 1);
+                renderTestimonials();
+                showAlert('Testimonial deleted successfully!', 'success');
+            }
+        }
+
+        // Blog
+        function renderBlog() {
+            const list = document.getElementById('blogList');
+            const trans = getCurrentTranslation();
+            const blog = trans.blog || [];
+            
+            if (blog.length === 0) {
+                list.innerHTML = '<div class="empty-state"><i class="fas fa-newspaper"></i><p>No blog posts yet</p></div>';
+                return;
+            }
+
+            list.innerHTML = blog.map((post, index) => `
+                <div class="list-item">
+                    <div class="list-item-info">
+                        <h4>${post.title || 'Untitled'} ${post.featured ? '<span class="badge badge-featured">Featured</span>' : ''}</h4>
+                        <p>${post.category || 'Uncategorized'} • ${post.date || 'No date'}</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-small" onclick="editBlogPost(${index})">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-danger" onclick="deleteBlogPost(${index})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openBlogModal(index = null) {
+            const modal = document.getElementById('blogModal');
+            const title = document.getElementById('blogModalTitle');
+            const trans = getCurrentTranslation();
+
+            if (index !== null) {
+                title.textContent = 'Edit Blog Post';
+                const post = trans.blog[index];
+                document.getElementById('blog_index').value = index;
+                document.getElementById('blog_id').value = post.id || '';
+                document.getElementById('blog_title').value = post.title || '';
+                document.getElementById('blog_slug').value = post.slug || '';
+                document.getElementById('blog_category').value = post.category || '';
+                document.getElementById('blog_author').value = post.author || '';
+                document.getElementById('blog_date').value = post.date || '';
+                document.getElementById('blog_thumbnail').value = post.thumbnail || '';
+                document.getElementById('blog_excerpt').value = post.excerpt || '';
+                document.getElementById('blog_featured').checked = post.featured || false;
+            } else {
+                title.textContent = 'Add Blog Post';
+                document.getElementById('blog_index').value = '';
+                document.querySelectorAll('#blogModal input, #blogModal textarea').forEach(el => {
+                    if (el.type === 'checkbox') el.checked = false;
+                    else el.value = '';
+                });
+                document.getElementById('blog_date').value = new Date().toISOString().split('T')[0];
+            }
+
+            modal.classList.add('show');
+        }
+
+        function editBlogPost(index) {
+            openBlogModal(index);
+        }
+
+        function saveBlogPost() {
+            const trans = getCurrentTranslation();
+            const index = document.getElementById('blog_index').value;
+            const post = {
+                id: document.getElementById('blog_id').value,
+                title: document.getElementById('blog_title').value,
+                slug: document.getElementById('blog_slug').value,
+                category: document.getElementById('blog_category').value,
+                author: document.getElementById('blog_author').value,
+                date: document.getElementById('blog_date').value,
+                thumbnail: document.getElementById('blog_thumbnail').value,
+                excerpt: document.getElementById('blog_excerpt').value,
+                featured: document.getElementById('blog_featured').checked
+            };
+
+            if (index === '') {
+                if (!trans.blog) trans.blog = [];
+                trans.blog.push(post);
+            } else {
+                trans.blog[parseInt(index)] = post;
+            }
+
+            renderBlog();
+            closeModal('blogModal');
+            showAlert('Blog post saved successfully!', 'success');
+        }
+
+        function deleteBlogPost(index) {
+            if (confirm('Are you sure you want to delete this blog post?')) {
+                const trans = getCurrentTranslation();
+                trans.blog.splice(index, 1);
+                renderBlog();
+                showAlert('Blog post deleted successfully!', 'success');
+            }
+        }
+
+        // Partners
+        function renderPartners() {
+            const list = document.getElementById('partnersList');
+            const trans = getCurrentTranslation();
+            const partners = trans.partners || [];
+            
+            if (partners.length === 0) {
+                list.innerHTML = '<div class="empty-state"><i class="fas fa-handshake"></i><p>No partners yet</p></div>';
+                return;
+            }
+
+            list.innerHTML = partners.map((partner, index) => `
+                <div class="list-item">
+                    <div class="list-item-info">
+                        <h4>${partner.name || 'Unnamed'}</h4>
+                        <p>${partner.url || 'No URL'}</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-small" onclick="editPartner(${index})">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-danger" onclick="deletePartner(${index})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openPartnerModal(index = null) {
+            const modal = document.getElementById('partnerModal');
+            const title = document.getElementById('partnerModalTitle');
+            const trans = getCurrentTranslation();
+
+            if (index !== null) {
+                title.textContent = 'Edit Partner';
+                const partner = trans.partners[index];
+                document.getElementById('partner_index').value = index;
+                document.getElementById('partner_id').value = partner.id || '';
+                document.getElementById('partner_name').value = partner.name || '';
+                document.getElementById('partner_logo').value = partner.logo || '';
+                document.getElementById('partner_url').value = partner.url || '';
+                document.getElementById('partner_width').value = partner.width || '';
+            } else {
+                title.textContent = 'Add Partner';
+                document.getElementById('partner_index').value = '';
+                document.querySelectorAll('#partnerModal input').forEach(el => el.value = '');
+            }
+
+            modal.classList.add('show');
+        }
+
+        function editPartner(index) {
+            openPartnerModal(index);
+        }
+
+        function savePartner() {
+            const trans = getCurrentTranslation();
+            const index = document.getElementById('partner_index').value;
+            const partner = {
+                id: document.getElementById('partner_id').value,
+                name: document.getElementById('partner_name').value,
+                logo: document.getElementById('partner_logo').value,
+                url: document.getElementById('partner_url').value,
+                width: document.getElementById('partner_width').value
+            };
+
+            if (index === '') {
+                if (!trans.partners) trans.partners = [];
+                trans.partners.push(partner);
+            } else {
+                trans.partners[parseInt(index)] = partner;
+            }
+
+            renderPartners();
+            closeModal('partnerModal');
+            showAlert('Partner saved successfully!', 'success');
+        }
+
+        function deletePartner(index) {
+            if (confirm('Are you sure you want to delete this partner?')) {
+                const trans = getCurrentTranslation();
+                trans.partners.splice(index, 1);
+                renderPartners();
+                showAlert('Partner deleted successfully!', 'success');
+            }
+        }
+
+        // Utility functions
+        function switchTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('show');
+        }
+
+        function showAlert(message, type) {
+            const alertId = type === 'success' ? 'successAlert' : 'errorAlert';
+            const alert = document.getElementById(alertId);
+            alert.textContent = message;
+            alert.classList.add('show');
+
+            setTimeout(() => {
+                alert.classList.remove('show');
+            }, 3000);
+        }
+
+        function previewJSON() {
+            const preview = document.getElementById('jsonPreview');
+            preview.textContent = JSON.stringify(contentData, null, 2);
+            document.getElementById('previewModal').classList.add('show');
+        }
+
+        function downloadJSON() {
+            if (!confirm('This will download your edited content.json file.\n\nIMPORTANT: You must manually replace the content.json file on your server with this downloaded file for changes to take effect.\n\nContinue?')) {
+                return;
+            }
+            
+            const dataStr = JSON.stringify(contentData, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            const timestamp = new Date().toISOString().split('T')[0];
+            link.download = `content-${timestamp}.json`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+
+            showAlert(`JSON file downloaded as content-${timestamp}.json! Replace your server's content.json with this file.`, 'success');
+        }
+
+        // Imprint
+        function renderImprint() {
+            if (!contentData.translations) return;
+
+            const trans = getCurrentTranslation();
+            const enData = contentData.translations.en;
+            const deData = contentData.translations.de;
+
+            if (enData && enData.imprint) {
+                document.getElementById('imprint_title_en').value = enData.imprint.title || '';
+            }
+
+            if (deData && deData.imprint) {
+                document.getElementById('imprint_title_de').value = deData.imprint.title || '';
+            }
+
+            if (trans && trans.imprint && trans.imprint.sections) {
+                let sectionsHTML = `<h5 style="color: #87d832; margin: 20px 0 15px 0;">${currentLanguage === 'en' ? 'English' : 'German'} Sections</h5>`;
+                trans.imprint.sections.forEach((section, index) => {
+                    sectionsHTML += `
+                        <div class="card" style="margin-bottom: 20px;">
+                            <div class="form-group">
+                                <label>Heading ${index + 1}</label>
+                                <input type="text" id="imprint_heading_${index}" value="${section.heading || ''}" placeholder="Section heading">
+                            </div>
+                            <div class="form-group">
+                                <label>Content ${index + 1}</label>
+                                <textarea id="imprint_content_${index}" rows="4" placeholder="Section content (HTML allowed)">${section.content || ''}</textarea>
+                            </div>
+                        </div>
+                    `;
+                });
+                document.getElementById('imprintSectionsEn').innerHTML = sectionsHTML;
+            }
+        }
+
+        function saveImprint() {
+            if (!contentData.translations) {
+                contentData.translations = { en: {}, de: {} };
+            }
+
+            const trans = getCurrentTranslation();
+
+            // Save titles for both languages
+            if (!contentData.translations.en.imprint) contentData.translations.en.imprint = { sections: [] };
+            contentData.translations.en.imprint.title = document.getElementById('imprint_title_en').value;
+
+            if (!contentData.translations.de.imprint) contentData.translations.de.imprint = { sections: [] };
+            contentData.translations.de.imprint.title = document.getElementById('imprint_title_de').value;
+
+            // Save sections for current language
+            if (!trans.imprint) trans.imprint = { sections: [] };
+            
+            const sections = [];
+            let i = 0;
+            while (document.getElementById(`imprint_heading_${i}`)) {
+                sections.push({
+                    heading: document.getElementById(`imprint_heading_${i}`).value,
+                    content: document.getElementById(`imprint_content_${i}`).value
+                });
+                i++;
+            }
+            trans.imprint.sections = sections;
+
+            showAlert('Imprint saved successfully! Download the JSON to apply changes.', 'success');
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('show');
+            }
+        }
+    </script>
+</body>
+</html>
+

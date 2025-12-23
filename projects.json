@@ -1,0 +1,76 @@
+{
+  "qwellcode_projects": [
+    {
+      "name": "Zeroone Platform",
+      "category": ["Social", "Ownership Economy", "Digital Art", "Community"],
+      "description": "4.5 million digital assets from over 180,000 creators enabling users to form collectives. Actively developed by @qwellcode with ongoing involvement.",
+      "active": true,
+      "tech_stack": ["Web3", "NFTs", "Blockchain", "Decentralized Culture"],
+      "related_projects": ["mocaOS", "POAP Protocol"]
+    },
+    {
+      "name": "Amber Island",
+      "category": ["Whisky Membership", "Physical/Digital Hybrid", "NFT Whisky", "Web3 Collectibles"],
+      "description": "Web3-based whisky membership community (2022) by GHARAGE/Heinemann. Users mint 'Amber Island Key' NFTs (0.15 ETH) to join, gaining access to tokenized whisky bottles (e.g., Glenturret 30YO, CryptoPunk Whisky), exclusive events, and community perks. Technology integrates Meta Anchor™ for authenticity and 3D-printed bottles for events. Currently on a 'strategic pause' due to market conditions, but existing memberships remain valid.",
+      "active": false,
+      "status_details": {
+        "pause_reason": "Challenging market conditions in spirits/blockchain sectors (2024). No new memberships sold; existing members can still redeem free CryptoPunk Whisky and access stored bottles.",
+        "future_outlook": "Strategic pause with belief in future potential; no official resumption date as of late 2025."
+      },
+      "tech_stack": ["NFTs", "Blockchain", "Tokenization", "Physical/Digital Hybrid", "Meta Anchor™"],
+      "related_projects": ["mocaOS"]
+    },
+    {
+      "name": "mocaOS",
+      "category": ["Open Source", "Decentralized Culture", "Digital Art"],
+      "description": "Open-source OS for decentralized culture, including projects like the Museum of Crypto Art and Codex-Archive. Actively maintained by @qwellcode.",
+      "active": true,
+      "tech_stack": ["Open Source", "Blockchain", "Decentralized Apps (DApps)"],
+      "related_projects": ["Zeroone Platform", "Museum of Crypto Art"]
+    },
+    {
+      "name": "POAP Protocol",
+      "category": ["Digital Culture", "NFTs", "Ethereum"],
+      "description": "Pioneering project for digital memory and culture NFTs, active for 7+ years, developed by @qwellcode.",
+      "active": true,
+      "tech_stack": ["Ethereum", "NFTs", "Blockchain"],
+      "related_projects": []
+    },
+    {
+      "name": "Museum of Crypto Art (MoCA)",
+      "category": ["Digital Art", "Web3 Culture", "Artist Collaborations"],
+      "description": "Platform for crypto art and web3 culture, including 'mocaROOMs' and collaborations with artists like @untitledxyz_. Actively promoted by @qwellcode.",
+      "active": true,
+      "tech_stack": ["NFTs", "Blockchain", "Digital Art"],
+      "related_projects": ["mocaOS"]
+    },
+    {
+      "name": "AI & Language Models",
+      "category": ["AI", "On-Premise Assistants", "German Language Models"],
+      "description": "Research into on-premise AI assistants, including a German-speaking model using LeoLM 13B (built on Llama-2), and German document chatbots using h2ogpt.",
+      "active": true,
+      "tech_stack": ["AI", "Machine Learning", "Natural Language Processing (NLP)"],
+      "related_projects": []
+    },
+    {
+      "name": "VR/AR & Immersive Experiences (Historical)",
+      "category": ["VR/AR", "Historical Tours", "Trade Show Installations"],
+      "description": "Early focus (2017–2018) on WebVR tours (e.g., 360-degree explorations like Èze Village) and standalone HMD software for devices like Vive Focus. Worked on conferences like @nifty_hacks. No active development post-2018.",
+      "active": false,
+      "status_details": {
+        "period": "2017–2018",
+        "techniques": ["WebVR", "360-degree tours", "HMD software"]
+      },
+      "tech_stack": ["VR/AR", "WebVR"],
+      "related_projects": []
+    }
+  ],
+  "summary": {
+    "total_projects": 7,
+    "active_projects": 5,
+    "paused_projects": 1,
+    "historical_projects": 1,
+    "key_focus_areas": ["Web3", "NFTs", "Blockchain", "Digital Art", "AI", "Physical/Digital Hybrid"],
+    "historical_focus": ["VR/AR (2017–2018)", "Blockchain Gaming (discontinued projects removed)"]
+  }
+}

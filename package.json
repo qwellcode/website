@@ -1,0 +1,15 @@
+{
+  "name": "qcode-website",
+  "version": "3.0.0",
+  "description": "Qwellcode - Multilingual Website with Dark Mode",
+  "scripts": {
+    "start": "serve -l 3000",
+    "dev": "serve -l 3000",
+    "build:css": "sass scss/style.scss css/style.css",
+    "watch:css": "sass --watch scss/style.scss css/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.97.1",
+    "serve": "^14.2.4"
+  }
+}

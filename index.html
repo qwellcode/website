@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>Qwellcode - Building Permanent Platforms for Permanent Success</title>
+    <meta name="title" content="Qwellcode - Building Permanent Platforms for Permanent Success">
+    <meta name="description" content="Bleeding edge dev shop building permanent platforms for permanent success. From decentralized culture (POAP, MOCA) to enterprise foundations (BEGA, GOP Varieté), we transform bold ideas into technology used by millions.">
+    <meta name="keywords" content="Web3, Ethereum, Smart Contracts, Enterprise Software, Decentralized Culture, NFT, POAP, Museum of Crypto Art, MOCA, Blockchain Development, Scalable Platforms, Software Development, Germany, Salzkotten">
+    <meta name="author" content="Qwellcode Solutions GmbH & Co. KG">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://qwellcode.de">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://qwellcode.de">
+    <meta property="og:site_name" content="Qwellcode">
+    <meta property="og:title" content="Qwellcode - Building Permanent Platforms for Permanent Success">
+    <meta property="og:description" content="We don't chase trends—we build permanent platforms. From Ethereum protocols to enterprise foundations, our systems power millions of users worldwide. Web3 pioneers meet enterprise architects.">
+    <meta property="og:image" content="https://qwellcode.de/data/social.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Qwellcode - Creators and Researchers building the future">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="de_DE">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@qwellcode">
+    <meta name="twitter:creator" content="@qwellcode">
+    <meta name="twitter:url" content="https://qwellcode.de">
+    <meta name="twitter:title" content="Qwellcode - Building Permanent Platforms for Permanent Success">
+    <meta name="twitter:description" content="Bleeding edge dev shop: Creators at Qwellcode Solutions + Researchers at Qwellcode Labs. Building decentralized culture (POAP, MOCA) and enterprise foundations (5,000+ partners). One robust system at a time.">
+    <meta name="twitter:image" content="https://qwellcode.de/data/social.jpg">
+    <meta name="twitter:image:alt" content="Qwellcode - Where Creators and Researchers unite">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#87d832">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="alternate" hreflang="en" href="https://qwellcode.de">
+    <link rel="alternate" hreflang="de" href="https://qwellcode.de">
+    <link rel="alternate" hreflang="x-default" href="https://qwellcode.de">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Qwellcode Solutions GmbH & Co. KG",
+      "alternateName": "Qwellcode",
+      "url": "https://qwellcode.de",
+      "logo": "https://qwellcode.de/logo.png",
+      "description": "Bleeding edge dev shop building permanent platforms for permanent success. From decentralized cultural systems to enterprise foundations, we transform bold ideas into technology used by millions.",
+      "foundingDate": "2019",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Geseker Straße 53a",
+        "addressLocality": "Salzkotten",
+        "postalCode": "33154",
+        "addressCountry": "DE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Business",
+        "email": "info@qwellcode.de",
+        "availableLanguage": ["en", "de"]
+      },
+      "sameAs": [
+        "https://twitter.com/qwellcode",
+        "https://github.com/qwellcode"
+      ],
+      "knowsAbout": ["Web3", "Blockchain", "Ethereum", "NFT", "Enterprise Software", "Decentralized Systems", "Smart Contracts", "POAP", "Museum of Crypto Art"],
+      "slogan": "Building permanent platforms for permanent success"
+    }
+    </script>
+
+    <!-- bootstrap grid css -->
+    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/plugins/swiper.min.css">
+    <!-- fancybox css -->
+    <link rel="stylesheet" href="css/plugins/fancybox.min.css">
+    <!-- qwellcode scss -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Language Switcher Styles */
+        .mil-frame-top {
+            position: relative;
+        }
+
+        .mil-language-switcher {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+            pointer-events: all;
+        }
+
+        .mil-lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+
+        .mil-lang-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            color: rgba(255, 255, 255, 1);
+            transform: translateY(-1px);
+        }
+
+        .mil-lang-btn:active {
+            transform: translateY(0);
+        }
+
+        .mil-lang-btn.active {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .mil-flag {
+            font-size: 18px;
+        }
+
+        .mil-lang-name {
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .mil-language-switcher {
+                margin-right: 15px;
+            }
+
+            .mil-lang-name {
+                display: none;
+            }
+
+            .mil-lang-btn {
+                padding: 6px 10px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .mil-language-switcher {
+                gap: 5px;
+                margin-right: 10px;
+            }
+
+            .mil-lang-btn {
+                padding: 5px 8px;
+                font-size: 12px;
+            }
+
+            .mil-flag {
+                font-size: 16px;
+            }
+        }
+
+        /* Modal Styles */
+        .mil-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mil-modal.mil-active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+        }
+
+        .mil-modal-content {
+            background: #000;
+            padding: 60px;
+            max-width: 1200px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .mil-modal.mil-active .mil-modal-content {
+            transform: scale(1);
+        }
+
+        .mil-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+            z-index: 10000;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+
+        .mil-modal-close:hover {
+            color: rgba(135, 216, 50, 1);
+        }
+
+        .mil-portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .mil-portfolio-item-inline {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background: #000;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0, 0, 0.3642, 1);
+        }
+
+        .mil-portfolio-item-inline:hover {
+            border-color: rgba(135, 216, 50, 1);
+            transform: translateY(-5px);
+        }
+
+        .mil-portfolio-item-inline .mil-cover-frame {
+            position: relative;
+            padding-bottom: 100%;
+            overflow: hidden;
+        }
+
+        .mil-portfolio-item-inline .mil-cover-frame img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.6s cubic-bezier(0, 0, 0.3642, 1);
+        }
+
+        .mil-portfolio-item-inline:hover .mil-cover-frame img {
+            transform: scale(1.1);
+        }
+
+        .mil-portfolio-item-inline .mil-descr {
+            padding: 30px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .mil-modal-content {
+                padding: 30px;
+            }
+
+            .mil-portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Service Cards Alignment Fix */
+        .mil-service-card-lg {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .mil-service-card-lg h4 {
+            min-height: 40px;
+        }
+
+        .mil-service-card-lg .mil-descr {
+            flex: 0 0 auto;
+            min-height: 333px;
+        }
+
+        .mil-service-card-lg .mil-service-list {
+            flex: 1 1 auto;
+            margin-top: auto;
+        }
+
+        .mil-service-card-lg > .mil-link {
+            margin-top: auto;
+        }
+
+        #services .col-lg-4 {
+            display: flex;
+        }
+
+        /* Responsive adjustments for service descriptions */
+        @media screen and (max-width: 992px) {
+            .mil-service-card-lg h4 {
+                min-height: auto;
+            }
+
+            .mil-service-card-lg .mil-descr {
+                min-height: auto;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- wrapper -->
+    <div class="mil-wrapper" id="top">
+
+        <!-- cursor -->
+        <div class="mil-ball">
+            <span class="mil-icon-1">
+                <svg viewBox="0 0 128 128">
+                    <path d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2	c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2	L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2L106.1,41.9	z" />
+                </svg>
+            </span>
+            <div class="mil-more-text">More</div>
+            <div class="mil-choose-text">Сhoose</div>
+        </div>
+        <!-- cursor end -->
+
+        <!-- preloader -->
+        <div class="mil-preloader">
+            <div class="mil-preloader-animation">
+                <div class="mil-pos-abs mil-animation-1">
+                    <p class="mil-h3 mil-muted mil-thin">Refreshing</p>
+                    <p class="mil-h3 mil-muted">Software</p>
+                    <p class="mil-h3 mil-muted mil-thin">Solutions</p>
+                </div>
+                <div class="mil-pos-abs mil-animation-2">
+                    <div class="mil-reveal-frame">
+                        <p class="mil-reveal-box"></p>
+                        <p class="mil-h3 mil-muted mil-thin"><b>qwellcode</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- preloader end -->
+
+        <!-- scrollbar progress -->
+        <div class="mil-progress-track">
+            <div class="mil-progress"></div>
+        </div>
+        <!-- scrollbar progress end -->
+
+        <!-- menu -->
+        <div class="mil-menu-frame">
+            <!-- frame clone -->
+            <div class="mil-frame-top">
+                <a href="index.html" class="mil-logo">[q]</a>
+                <div class="mil-menu-btn">
+                    <span></span>
+                </div>
+            </div>
+            <!-- frame clone end -->
+            <div class="container">
+                <div class="mil-menu-content">
+                    <div class="row">
+                        <div class="col-xl-5">
+
+                            <nav class="mil-main-menu" id="swupMenu">
+                                <ul>
+                                    <li>
+                                        <a href="#about">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#services">What We Build</a>
+                                    </li>
+                                    <li>
+                                        <a href="#portfolio">Portfolio</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                        <div class="col-xl-7">
+
+                            <div class="mil-menu-right-frame">
+                                <div class="mil-animation-in">
+                                    <div class="mil-animation-frame">
+                                        <div class="mil-animation mil-position-1 mil-scale" data-value-1="2" data-value-2="2" data-shape-type="tesseract" data-intensity="calm" data-color="light"></div>
+                                    </div>
+                                </div>
+                                <div class="mil-menu-right">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-8 mil-mb-60">
+                                            <h6 class="mil-muted mil-mb-30">Contact</h6>
+                                            <p class="mil-light-soft mil-up">Qwellcode Solutions GmbH & Co. KG<br>
+                                            Geseker Straße 53a<br>
+                                            33154 Salzkotten<br>
+                                            Deutschland<br><br>
+                                            HRA 7979 | USt-IdNr.: DE 338 758 148</p>
+                                        </div>
+                                        <div class="col-lg-4 mil-mb-60">
+                                            <h6 class="mil-muted mil-mb-30">Follow</h6>
+                                            <ul class="mil-social-icons">
+                                                <li><a href="https://github.com/qwellcode/" target="_blank"><i class="fab fa-github"></i></a></li>
+                                                <li><a href="https://x.com/qwellcode" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://goo.gl/maps/oqL2uEtHh117UewP8" target="_blank"><i class="fas fa-map-marker-alt"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- menu -->
+
+        <!-- curtain -->
+        <div class="mil-curtain"></div>
+        <!-- curtain end -->
+
+        <!-- frame -->
+        <div class="mil-frame">
+            <div class="mil-frame-top">
+                <a href="index.html" class="mil-logo">[q]</a>
+                <div class="mil-language-switcher"></div>
+                <div class="mil-menu-btn">
+                    <span></span>
+                </div>
+            </div>
+            <div class="mil-frame-bottom">
+                <div class="mil-current-page"></div>
+                <div class="mil-back-to-top">
+                    <a href="#top" class="mil-link mil-dark mil-arrow-place">
+                        <span>Back to top</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- frame end -->
+
+        <!-- content -->
+        <div class="mil-content">
+            <div id="swupMain" class="mil-main-transition">
+
+                <!-- banner -->
+                <section class="mil-banner mil-dark-bg">
+                    <div class="mi-invert-fix">
+                        <div class="mil-animation-frame">
+                            <div class="mil-animation mil-position-1 mil-scale" data-value-1="7" data-value-2="1.6" data-shape-type="tesseract" data-intensity="psychedelic" data-color="accent"></div>
+                            <div class="mil-animation mil-position-2 mil-scale" data-value-1="4" data-value-2="1" data-shape-type="mobius" data-intensity="intense" data-color="gradient"></div>
+                            <div class="mil-animation mil-position-3 mil-scale" data-value-1="1.2" data-value-2=".1" data-shape-type="dna-helix" data-intensity="normal" data-color="light"></div>
+                        </div>
+
+                        <div class="mil-gradient"></div>
+
+                        <div class="container">
+                            <div class="mil-banner-content mil-up">
+
+                                <div class="mil-mb-60">
+                                    <img src="logo.png" alt="Qwellcode" style="max-width: 350px; height: auto;">
+                                </div>
+
+                                <h1 class="mil-muted mil-mb-60">Building <span class="mil-thin">the Future,</span><br> One Robust <span class="mil-thin">System at a Time</span></h1>
+                                <div class="row">
+                                    <div class="col-md-7 col-lg-5">
+
+                                        <p class="mil-light-soft mil-mb-60">We're a top-notch dev shop building permanent platforms for permanent success. From decentralized cultural systems to enterprise foundations, we transform bold ideas into technology used by millions.</p>
+
+                                    </div>
+                                </div>
+
+                                <a href="#portfolio" class="mil-button mil-arrow-place">
+                                    <span>View Portfolio</span>
+                                </a>
+
+                                <div class="mil-circle-text">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve" class="mil-ct-svg mil-rotate" data-value="360">
+                                        <defs>
+                                            <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
+                                        </defs>
+                                        <circle cx="150" cy="100" r="75" fill="none" />
+                                        <g>
+                                            <use xlink:href="#circlePath" fill="none" />
+                                            <text style="letter-spacing: 6.5px">
+                                                <!-- circle text -->
+                                                <textPath xlink:href="#circlePath">Scroll down - Scroll down - </textPath>
+                                            </text>
+                                        </g>
+                                    </svg>
+                                    <a href="#about" class="mil-button mil-arrow-place mil-icon-button mil-arrow-down"></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- banner end -->
+
+                <!-- about -->
+                <section id="about">
+                    <div class="container mil-p-120-30">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-6 col-xl-5">
+
+                                <div class="mil-mb-90">
+                                    <h2 class="mil-up mil-mb-60">Our <br><span class="mil-thin">Teams Philosophy</span></h2>
+                                    <p class="mil-up mil-mb-30">Our team has been growing into a bleeding edge dev shop that's structured into two synergistic units: The Creators at <span class="mil-accent">Qwellcode Solutions</span> and the Researchers at <span class="mil-accent">Qwellcode Labs</span>. This powerful mix of research and scalable software—used by vast amounts of users—allows us to build scalable software for the future, one robust platform at a time.</p>
+
+                                    <p class="mil-up mil-mb-60">We don't chase trends; we build permanent platforms for permanent success.</p>
+
+                                    <div class="mil-about-quote">
+                                        <div class="mil-avatar mil-up">
+                                            <img src="img/faces/customers/flask.jpg" alt="Team">
+                                        </div>
+                                        <h6 class="mil-quote mil-up">Tinkerers and Builders teaming up to build Systems <span class="mil-thin">that can scale</span> in the long run</h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-5">
+
+                                <div class="mil-about-photo mil-mb-90">
+                                    <div class="mil-lines-place"></div>
+                                    <div class="mil-up mil-img-frame" style="padding-bottom: 160%;">
+                                        <img src="img/photo/billboard.jpg" alt="img" class="mil-scale" data-value-1="1" data-value-2="1.2">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- about end -->
+
+                <!-- services -->
+                <section id="services" class="mil-dark-bg">
+                    <div class="mi-invert-fix">
+                        <div class="mil-animation-frame">
+                            <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.4" data-value-2="1.4" style="top: 300px; right: -100px" data-shape-type="klein-bottle" data-intensity="intense" data-color="accent"></div>
+                            <div class="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="1" style="left: 150px" data-shape-type="fractal-tetra" data-intensity="normal" data-color="gradient"></div>
+                        </div>
+                        <div class="container mil-p-120-60">
+
+                            <div class="row">
+                                <div class="col-lg-10">
+
+                                    <span class="mil-suptitle mil-light-soft mil-suptitle-right mil-up">From decentralized culture to enterprise foundations,<br> we build systems that millions depend on.</span>
+
+                                </div>
+                            </div>
+
+                            <div class="mil-mb-90">
+                                <h2 class="mil-center mil-up mil-mb-60 mil-muted">What We <span class="mil-thin">Build</span></h2>
+                            </div>
+
+                            <!-- Services will be populated dynamically from content.json -->
+                            <div class="row">
+                                <!-- Dynamic content loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- services end -->
+
+                <!-- portfolio -->
+                <section id="portfolio">
+                    <div class="container mil-p-120-60">
+                        <div class="row align-items-center mil-mb-60">
+                            <div class="col-lg-6 mil-mb-30">
+                                <h2 class="mil-up">Featured <span class="mil-thin">Projects</span></h2>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio items will be populated dynamically from content.json -->
+                        <div class="mil-portfolio-grid">
+                            <!-- Dynamic content loaded here -->
+                        </div>
+
+                        <div class="mil-center mil-mt-suptitle-offset">
+                            <p class="mil-u mil-light-soft mil-mb-30">This is just the beginning. We're building permanent platforms for a permanent future.</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- portfolio end -->
+
+                <!-- reviews -->
+                <section class="mil-soft-bg">
+                    <div class="container mil-p-120-120">
+
+
+                        <h2 class="mil-center mil-up mil-mb-60">Trusted By <span class="mil-thin">Industry Leaders:</span></h2>
+
+                        <div class="mil-revi-pagination mil-up mil-mb-60"></div>
+
+                        <div class="row mil-relative justify-content-center">
+                            <div class="col-lg-8">
+
+                                <div class="mil-slider-nav mil-soft mil-reviews-nav mil-up">
+                                    <div class="mil-slider-arrow mil-prev mil-revi-prev mil-arrow-place"></div>
+                                    <div class="mil-slider-arrow mil-revi-next mil-arrow-place"></div>
+                                </div>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="mil-quote-icon mil-up">
+                                    <path d="M 13.5 10 A 8.5 8.5 0 0 0 13.5 27 A 8.5 8.5 0 0 0 18.291016 25.519531 C 17.422273 29.222843 15.877848 31.803343 14.357422 33.589844 C 12.068414 36.279429 9.9433594 37.107422 9.9433594 37.107422 A 1.50015 1.50015 0 1 0 11.056641 39.892578 C 11.056641 39.892578 13.931586 38.720571 16.642578 35.535156 C 19.35357 32.349741 22 27.072581 22 19 A 1.50015 1.50015 0 0 0 21.984375 18.78125 A 8.5 8.5 0 0 0 13.5 10 z M 34.5 10 A 8.5 8.5 0 0 0 34.5 27 A 8.5 8.5 0 0 0 39.291016 25.519531 C 38.422273 29.222843 36.877848 31.803343 35.357422 33.589844 C 33.068414 36.279429 30.943359 37.107422 30.943359 37.107422 A 1.50015 1.50015 0 1 0 32.056641 39.892578 C 32.056641 39.892578 34.931586 38.720571 37.642578 35.535156 C 40.35357 32.349741 43 27.072581 43 19 A 1.50015 1.50015 0 0 0 42.984375 18.78125 A 8.5 8.5 0 0 0 34.5 10 z" fill="#000000" />
+                                </svg>
+
+                                <div class="swiper-container mil-reviews-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <h5 class="mil-up mil-mb-10">BEGA Partners</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Germany's Largest Furniture Group</p>
+                                                <p class="mil-text-xl mil-up">Qwellcode built us a digital foundation that serves 5,000 partners with unwavering reliability. Their enterprise architecture is robust, scalable, and exactly what we needed to power the future of our business. They don't just build software—they build systems that last.</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <h5 class="mil-up mil-mb-10">GOP Varieté</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Entertainment Platform</p>
+                                                <p class="mil-text-xl mil-up">Serving over a million visitors annually demands perfection. Qwellcode delivered a platform that handles high-stakes entertainment with precision and reliability. Their technical excellence ensures our shows run flawlessly, every single time.</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <h5 class="mil-up mil-mb-10">Zeroone Creators</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">180K+ Creator Community</p>
+                                                <p class="mil-text-xl mil-up">The ownership economy is here, and Qwellcode made it real. With 4.5M+ digital assets created, they've built a platform that transforms our audiences into collectors and turns our digital footprints into tangible value. Revolutionary work.</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <h5 class="mil-up mil-mb-10">Web3 Community</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Ethereum Builders</p>
+                                                <p class="mil-text-xl mil-up">Seven years building on Ethereum, from POAP to mocaOS. Qwellcode is pioneering the decentralized foundation for digital culture. Their technical depth in Web3 combined with real-world scale makes them the go-to team for serious decentralized systems.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- reviews end -->
+
+
+                <!-- footer -->
+                <footer class="mil-dark-bg">
+                    <div class="mi-invert-fix">
+                        <div class="container mil-p-120-60">
+                            <div class="row justify-content-between">
+                                <div class="col-md-5 col-lg-5 mil-mb-60">
+
+                                    <div class="mil-muted mil-logo mil-up mil-mb-30">Qwellcode.</div>
+
+                                    <p class="mil-light-soft mil-up">We don't chase trends—we build <span class="mil-accent">permanent platforms</span> for permanent success. From decentralized culture to enterprise foundations, our systems power millions of users worldwide.</p>
+
+                                </div>
+                                <div class="col-md-7 col-lg-6">
+                                    <div class="row justify-content-between">
+                                        <div class="col-md-6 mil-mb-60">
+                                            <h6 class="mil-muted mil-up mil-mb-30">Contact</h6>
+                                            <p class="mil-light-soft mil-up">Qwellcode Solutions GmbH & Co. KG<br>
+                                            Geseker Straße 53a<br>
+                                            33154 Salzkotten<br>
+                                            Deutschland</p>
+                                        </div>
+                                        <div class="col-md-6 mil-mb-60">
+                                            <h6 class="mil-muted mil-up mil-mb-30">Legal</h6>
+                                            <p class="mil-light-soft mil-up">HRA 7979<br>
+                                            USt-IdNr.: DE 338 758 148<br>
+                                            <a href="#" class="mil-light" data-imprint-trigger>Imprint / Impressum</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-between">
+                                <div class="col-md-12 mil-mb-60">
+
+                                    <div class="mil-vert-between">
+                                        <div class="mil-mb-30">
+                                            <ul class="mil-social-icons mil-up">
+                                                <li><a href="https://github.com/qwellcode/" target="_blank" class="social-icon"> <i class="fab fa-github"></i></a></li>
+                                                <li><a href="https://x.com/qwellcode" target="_blank" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://goo.gl/maps/oqL2uEtHh117UewP8" target="_blank" class="social-icon"> <i class="fas fa-map-marker-alt"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <p class="mil-light mil-up mil-center footer-dark">© qwellcode 2026. All Rights Reserved.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- footer end -->
+
+                <!-- hidden elements -->
+                <div class="mil-hidden-elements">
+                    <!-- Diamond Shape Template -->
+                    <div class="mil-diamond mil-shape">
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                    </div>
+
+                    <!-- Cube Shape Template -->
+                    <div class="mil-cube mil-shape">
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                    </div>
+
+                    <!-- Octahedron Shape Template -->
+                    <div class="mil-octahedron mil-shape">
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                    </div>
+
+                    <!-- Sphere Shape Template -->
+                    <div class="mil-sphere mil-shape">
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                    </div>
+
+                    <!-- Prism Shape Template -->
+                    <div class="mil-prism mil-shape">
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                    </div>
+
+                    <!-- Torus Shape Template -->
+                    <div class="mil-torus mil-shape">
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                    </div>
+
+                    <!-- Icosahedron Shape Template -->
+                    <div class="mil-icosahedron mil-shape">
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                    </div>
+
+                    <!-- Star Shape Template -->
+                    <div class="mil-star mil-shape">
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                    </div>
+
+                    <!-- Helix Shape Template -->
+                    <div class="mil-helix mil-shape">
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                    </div>
+
+                    <!-- Tesseract Shape Template (4D Hypercube) - 20 faces -->
+                    <div class="mil-tesseract mil-shape">
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                    </div>
+
+                    <!-- Klein Bottle Shape Template - 24 faces -->
+                    <div class="mil-klein-bottle mil-shape">
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                    </div>
+
+                    <!-- Möbius Strip Shape Template - 32 faces -->
+                    <div class="mil-mobius mil-shape">
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                    </div>
+
+                    <!-- Fractal Tetrahedron Shape Template - 16 faces -->
+                    <div class="mil-fractal-tetra mil-shape">
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                    </div>
+
+                    <!-- DNA Helix Shape Template - 60 faces -->
+                    <div class="mil-dna-helix mil-shape">
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                        <div class="mil-shape-face"></div>
+                    </div>
+
+                    <!-- Original Dodecahedron Shape Template -->
+                    <div class="mil-dodecahedron mil-shape">
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mil-pentagon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                    <!-- Arrow SVG Template -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mil-arrow">
+                        <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z" />
+                    </svg>
+
+                    <!-- Lines SVG Template -->
+                    <svg width="250" viewBox="0 0 300 1404" fill="none" xmlns="http://www.w3.org/2000/svg" class="mil-lines">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M300 1175H0V1174H300V1175Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z" class="mil-move" />
+                    </svg>
+                </div>
+                <!-- hidden elements end -->
+
+            </div>
+        </div>
+        <!-- content -->
+
+        <!-- Modal -->
+        <div class="mil-modal" id="projectModal">
+            <div class="mil-modal-content">
+                <span class="mil-modal-close">&times;</span>
+                <div class="container">
+                    <h2 class="mil-light mil-mb-60 mil-center">Our <span class="mil-thin">Portfolio</span></h2>
+                    <p class="mil-light-soft mil-center mil-mb-60">From Ethereum protocols to enterprise platforms, here's how we're building the future.</p>
+
+                    <!-- Portfolio projects will be populated dynamically from content.json -->
+                    <div class="row">
+                        <!-- Dynamic content loaded here -->
+                    </div>
+
+                                    <div class="mil-center mil-mt-60">
+                                        <p class="mil-light-soft mil-mb-30">This is just the beginning. We're building permanent platforms for a permanent future.</p>
+                                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal end -->
+
+        <!-- Imprint Modal -->
+        <div class="mil-modal" id="imprintModal">
+            <div class="mil-modal-content">
+                <span class="mil-modal-close">&times;</span>
+                <div class="container">
+                    <h2 class="mil-light mil-mb-60 mil-center" id="imprint-modal-title">Imprint</h2>
+
+                    <!-- Imprint content will be populated dynamically from content.json -->
+                    <div id="imprint-modal-content" class="mil-light">
+                        <!-- Dynamic content loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Imprint Modal end -->
+
+    </div>
+    <!-- wrapper end -->
+
+    <!-- jQuery js -->
+    <script src="js/plugins/jquery.min.js"></script>
+    <!-- swup js -->
+    <script src="js/plugins/swup.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/plugins/swiper.min.js"></script>
+    <!-- fancybox js -->
+    <script src="js/plugins/fancybox.min.js"></script>
+    <!-- gsap js -->
+    <script src="js/plugins/gsap.min.js"></script>
+    <!-- scroll smoother -->
+    <script src="js/plugins/smooth-scroll.js"></script>
+    <!-- scroll trigger js -->
+    <script src="js/plugins/ScrollTrigger.min.js"></script>
+    <!-- scroll to js -->
+    <script src="js/plugins/ScrollTo.min.js"></script>
+    <!-- content manager -->
+    <script src="js/content-manager.js"></script>
+    <!-- qwellcode js -->
+    <script src="js/main.js"></script>
+
+    <!-- Content initialization and Modal functionality -->
+    <script>
+        $(function() {
+            var projectModal = $('#projectModal');
+            var imprintModal = $('#imprintModal');
+
+            console.log('Project modal found:', projectModal.length);
+            console.log('Imprint modal found:', imprintModal.length);
+
+            // Function to update imprint link text based on current language
+            function updateImprintLink() {
+                try {
+                    var translation = QCodeContent.getTranslation();
+                    var linkText = QCodeContent.currentLanguage === 'de' ? 'Impressum' : 'Imprint';
+                    var links = $('[data-imprint-trigger]');
+                    console.log('Found imprint links:', links.length);
+                    links.text(linkText);
+                } catch (error) {
+                    console.error('Error updating imprint link:', error);
+                }
+            }
+
+            // Function to render imprint content
+            function renderImprintContent() {
+                try {
+                    var translation = QCodeContent.getTranslation();
+                    console.log('Rendering imprint for language:', QCodeContent.currentLanguage);
+
+                    if (translation && translation.imprint) {
+                        // Set title
+                        $('#imprint-modal-title').html(translation.imprint.title);
+
+                        // Render sections
+                        var contentHTML = '';
+                        translation.imprint.sections.forEach(function(section) {
+                            contentHTML += '<div class="mil-mb-60">';
+                            contentHTML += '<h4 class="mil-light mil-mb-30">' + section.heading + '</h4>';
+                            contentHTML += '<p class="mil-light-soft">' + section.content + '</p>';
+                            contentHTML += '</div>';
+                        });
+                        $('#imprint-modal-content').html(contentHTML);
+                        console.log('Imprint content rendered successfully');
+                    } else {
+                        console.error('Imprint data not found in translation');
+                    }
+                } catch (error) {
+                    console.error('Error rendering imprint content:', error);
+                }
+            }
+
+            // Load content from JSON and initialize
+            QCodeContent.load(function(data) {
+                console.log('Content loaded:', data);
+                QCodeContent.initAll();
+
+                // Update imprint link text based on language
+                updateImprintLink();
+
+                // Reinitialize scroll animations after content is loaded
+                setTimeout(function() {
+                    ScrollTrigger.refresh();
+                }, 100);
+            });
+
+            // Open project modal
+            $(document).on('click', '[data-modal-trigger]', function(e) {
+                e.preventDefault();
+                console.log('Project modal trigger clicked');
+                projectModal.addClass('mil-active');
+                $('body').css('overflow', 'hidden');
+            });
+
+            // Open imprint modal - using both event delegation and direct binding
+            $(document).on('click', '[data-imprint-trigger]', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Imprint trigger clicked (event delegation)');
+                renderImprintContent();
+                imprintModal.addClass('mil-active');
+                $('body').css('overflow', 'hidden');
+            });
+
+            // Also bind directly (in case event delegation has issues)
+            $('body').on('click', 'a[data-imprint-trigger]', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Imprint trigger clicked (direct binding)');
+                renderImprintContent();
+                imprintModal.addClass('mil-active');
+                $('body').css('overflow', 'hidden');
+            });
+
+            // Close modals
+            $('.mil-modal-close').on('click', function(e) {
+                console.log('Modal close button clicked');
+                $('.mil-modal').removeClass('mil-active');
+                $('body').css('overflow', '');
+            });
+
+            $('.mil-modal').on('click', function(e) {
+                if (e.target === this) {
+                    console.log('Clicked outside modal content');
+                    $(this).removeClass('mil-active');
+                    $('body').css('overflow', '');
+                }
+            });
+
+            // Prevent modal content clicks from closing
+            $('.mil-modal-content').on('click', function(e) {
+                e.stopPropagation();
+            });
+
+            // ESC key to close any open modal
+            $(document).on('keydown', function(e) {
+                if (e.key === 'Escape' && $('.mil-modal.mil-active').length > 0) {
+                    console.log('ESC key pressed, closing modals');
+                    $('.mil-modal').removeClass('mil-active');
+                    $('body').css('overflow', '');
+                }
+            });
+
+            // Listen for language changes and update imprint link
+            $(document).on('languageChanged', function() {
+                console.log('Language changed event received');
+                updateImprintLink();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+

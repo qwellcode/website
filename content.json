@@ -1,0 +1,1311 @@
+{
+  "config": {
+    "languages": [
+      {
+        "code": "en",
+        "name": "English",
+        "flag": "🇬🇧"
+      },
+      {
+        "code": "de",
+        "name": "Deutsch",
+        "flag": "🇩🇪"
+      }
+    ],
+    "defaultLanguage": "en"
+  },
+  "translations": {
+    "en": {
+      "site": {
+        "name": "Qwellcode",
+        "tagline": "Refreshing Software Solutions",
+        "description": "We're a top-notch dev shop building permanent platforms for permanent success.",
+        "hero": {
+          "headline": "Building <span class=\"mil-thin\">the Future,</span><br> One Robust <span class=\"mil-thin\">System at a Time</span>",
+          "description": "We're a top-notch dev shop building permanent platforms for permanent success. From decentralized cultural systems to enterprise foundations, we transform bold ideas into technology used by millions.",
+          "primaryCTA": {
+            "text": "Our Services",
+            "link": "#services"
+          },
+          "secondaryCTA": {
+            "text": "View Portfolio",
+            "link": "#portfolio"
+          }
+        },
+        "about": {
+          "sectionTitle": "Our <br><span class=\"mil-thin\">Teams Philosophy</span>",
+          "description": [
+            "Our team has been growing into a bleeding edge dev shop that's structured into two synergistic units: The Creators at <span class=\"mil-accent\">Qwellcode Solutions</span> and the Researchers at <span class=\"mil-accent\">Qwellcode Labs</span>.",
+            "This powerful mix of research and scalable software—used by vast amounts of users—allows us to build scalable software for the future, one robust platform at a time. We don't chase trends; we build permanent platforms for permanent success."
+          ],
+          "quote": {
+            "text": "<span class=\"mil-thin\">We are tinkerers and builders who build projects that scale over decades.</span>",
+            "avatar": "img/faces/customers/flask.jpg"
+          },
+          "image": "img/photo/billboard.jpg"
+        },
+        "sections": {
+          "services": {
+            "suptitle": "From decentralized culture to enterprise foundations,<br> we build systems that millions depend on.",
+            "title": "What We <span class=\"mil-thin\">Build</span>"
+          },
+          "portfolio": {
+            "title": "Featured <span class=\"mil-thin\">Projects</span>",
+            "buttonText": "Explore All Work",
+            "footer": {
+              "text": "This is just the beginning. We're building permanent platforms for a permanent future.",
+              "linkText": "View complete portfolio"
+            }
+          },
+          "reviews": {
+            "suptitle": "From 5,000 enterprise partners to 180K+ creators,<br> our systems power millions of users worldwide.",
+            "title": "Trusted By <span class=\"mil-thin\">Industry Leaders:</span>"
+          },
+          "blog": {
+            "title": "Insights & Research:",
+            "linkText": "View all articles"
+          }
+        },
+        "contact": {
+          "email": "info@qwellcode.de",
+          "company": "Qwellcode Solutions GmbH & Co. KG",
+          "address": "Geseker Straße 53a",
+          "city": "33154 Salzkotten",
+          "country": "Germany",
+          "phone": "+49 5258 2078834",
+          "locations": [
+            {
+              "name": "Headquarters",
+              "address": "Geseker Straße 53a, 33154 Salzkotten",
+              "phone": "+49 5258 2078834"
+            }
+          ],
+          "legal": {
+            "company": "Qwellcode Solutions GmbH & Co. KG",
+            "managing_partner": "Qwellcode Verwaltungs GmbH",
+            "directors": "Alexander Gees, Rene Schmidt",
+            "register": "Handelsregister Paderborn HRA 7979",
+            "vat_id": "DE 338 758 148"
+          }
+        },
+        "social": [
+          {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/company/qwellcode",
+            "icon": "fab fa-linkedin"
+          },
+          {
+            "platform": "twitter",
+            "url": "https://twitter.com/qwellcode",
+            "icon": "fab fa-twitter"
+          }
+        ]
+      },
+      "partners": [
+        {
+          "id": "partner-1",
+          "name": "Partner 1",
+          "logo": "img/partners/1.svg",
+          "url": "#",
+          "width": "60px"
+        },
+        {
+          "id": "partner-2",
+          "name": "Partner 2",
+          "logo": "img/partners/2.svg",
+          "url": "#",
+          "width": "100px"
+        }
+      ],
+      "projects": [
+        {
+          "id": "bega",
+          "title": "BEGA",
+          "slug": "bega-digital",
+          "category": "Enterprise and Commerce",
+          "featured": true,
+          "status": "Active",
+          "thumbnail": "img/works/1.jpg",
+          "images": [
+            "img/works/1/1.jpg",
+            "img/works/1/2.jpg",
+            "img/works/1/3.jpg",
+            "img/works/1/4.jpg",
+            "img/works/1/5.jpg",
+            "img/works/1/6.jpg",
+            "img/works/1/7.jpg"
+          ],
+          "shortDescription": "Digital foundation powering Germany's largest furniture group.",
+          "description": "Digital foundation powering Germany's largest furniture group, ensuring unwavering quality for 5,000 partners.",
+          "longDescription": "For BEGA, Germany's largest furniture group, we built a comprehensive digital foundation that serves as the backbone of their entire operation. The platform connects 5,000+ partners, handles complex B2B transactions, manages inventory across multiple warehouses, and provides real-time analytics.\n\nOur enterprise architecture ensures 99.99% uptime, handles peak loads during promotional periods, and integrates with legacy ERP systems. The platform includes partner portals, order management, logistics tracking, and business intelligence dashboards that drive strategic decisions.",
+          "technologies": ["Java", "Spring Boot", "React", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
+          "highlights": [
+            "Enterprise Architecture",
+            "5,000+ Partner Network",
+            "Scalable Infrastructure",
+            "99.99% Uptime"
+          ],
+          "year": 2019,
+          "client": "BEGA Furniture Group",
+          "services": ["Enterprise Development", "System Integration", "Infrastructure Design"]
+        },
+        {
+          "id": "tixu",
+          "title": "TIXU",
+          "slug": "tixu-ticketing",
+          "category": "Ticketing Platform",
+          "featured": true,
+          "thumbnail": "img/works/2.jpg",
+          "images": [
+            "img/works/2/1.gif",
+            "img/works/2/2.gif",
+            "img/works/2/3.jpg",
+            "img/works/2/4.gif",
+            "img/works/2/5.jpg",
+            "img/works/2/6.jpg",
+            "img/works/2/7.jpg",
+            "img/works/2/8.jpg"
+          ],
+          "shortDescription": "Bringing ownership to live experiences.",
+          "description": "Bringing ownership to live experiences. Creators get total control over their ticketing and revenue in the new ownership economy.",
+          "longDescription": "Tixu reimagines event ticketing for the ownership economy. We built a platform that gives creators complete control over their ticketing, revenue, and fan relationships, eliminating traditional intermediaries.\n\nThe system includes smart contract-based ticketing, secondary market control, fan verification, and comprehensive analytics. Creators can implement dynamic pricing, create exclusive experiences, and maintain direct connections with their audience.",
+          "technologies": ["React Native", "Node.js", "Ethereum", "Solidity", "PostgreSQL", "Stripe"],
+          "highlights": [
+            "Creator Control",
+            "Smart Ticketing",
+            "Revenue Management",
+            "Secondary Market Control"
+          ],
+          "url": "https://tixu.io",
+          "year": 2023,
+          "client": "Tixu",
+          "services": ["Mobile App Development", "Smart Contracts", "Payment Integration"],
+          "status": "Active"
+        },
+        {
+          "id": "zeroone",
+          "title": "zeroone",
+          "slug": "zeroone",
+          "category": "Social Creator Tools",
+          "featured": true,
+          "thumbnail": "img/works/3.jpg",
+          "images": [
+            "img/works/3/1.jpg",
+            "img/works/3/2.jpg",
+            "img/works/3/3.gif",
+            "img/works/3/4.jpg",
+            "img/works/3/5.gif",
+            "img/works/3/6.jpg",
+            "img/works/3/7.gif"
+          ],
+          "shortDescription": "Transforming audiences into collectors and digital footprints into fortunes.",
+          "description": "Turns every post into a unique digital asset. 180K+ creators and 4.5M+ assets transforming audiences into collectors and footprints into fortunes.",
+          "longDescription": "Zeroone is revolutionizing the creator economy by turning every social media post into a unique, ownable digital asset. With 180K+ creators and 4.5M+ digital assets created, we've built the social layer for the ownership economy.\n\nOur platform seamlessly converts traditional social content into blockchain-backed collectibles, enabling creators to monetize their influence directly. Advanced algorithms handle asset generation, rarity determination, and marketplace dynamics, while our UX makes blockchain invisible to end users.",
+          "technologies": ["Next.js", "PostgreSQL", "Ethereum", "Redis", "Web3", "AWS"],
+          "highlights": [
+            "180K+ Creators",
+            "4.5M+ Digital Assets",
+            "Ownership Economy",
+            "Seamless Web3 UX"
+          ],
+          "url": "https://zeroone.art",
+          "year": 2022,
+          "client": "Zeroone",
+          "services": ["Platform Development", "Blockchain Integration", "Creator Tools"],
+          "status": "Active"
+        },
+        {
+          "id": "codex",
+          "title": "Codex",
+          "slug": "codex",
+          "category": "Web3 Ecosystem",
+          "featured": true,
+          "thumbnail": "img/works/4.jpg",
+          "images": [
+            "img/works/4/1.jpg",
+            "img/works/4/2.jpg",
+            "img/works/4/3.jpg",
+            "img/works/4/4.jpg"
+          ],
+          "shortDescription": "The living archive of 10,000 Art DeCC0s.",
+          "description": "The living archive of 10,000 Art DeCC0s. Preserving and cataloging the decentralized creative commons for future generations.",
+          "longDescription": "Codex is a comprehensive archive and catalog system for Art DeCC0s (Art Decentralized Creative Commons). We built a sophisticated platform that preserves 10,000 artworks with complete provenance, metadata, and cultural context.\n\nThe system implements advanced search, filtering, and discovery features, making the decentralized creative commons accessible to researchers, artists, and the public. Part of the mocaOS ecosystem, Codex represents our commitment to preserving digital culture for future generations.",
+          "technologies": ["TypeScript", "Next.js", "PostgreSQL", "IPFS", "Elasticsearch"],
+          "highlights": [
+            "10,000 Art DeCC0s",
+            "Living Archive",
+            "Cultural Preservation",
+            "Advanced Search"
+          ],
+          "year": 2023,
+          "client": "Museum of Crypto Art",
+          "services": ["Archive Development", "Data Architecture", "Search Implementation"],
+          "status": "Active"
+        },
+        {
+          "id": "moca",
+          "title": "MOCA",
+          "slug": "museum-of-crypto-art",
+          "category": "Digital Arts and Culture",
+          "featured": true,
+          "thumbnail": "img/works/5.jpg",
+          "images": [
+            "img/works/5/1.jpg",
+            "img/works/5/2.jpg",
+            "img/works/5/3.jpg",
+            "img/works/5/4.jpg"
+          ],
+          "shortDescription": "A decentralized museum preserving and showcasing the evolution of crypto art.",
+          "description": "A decentralized museum preserving and showcasing the evolution of crypto art. Building the cultural archive of Web3 with mocaOS, Codex, and Vibe Studio.",
+          "longDescription": "The Museum of Crypto Art (M○C▲) is the world's first decentralized museum dedicated to preserving and celebrating crypto art. We built a comprehensive platform that archives the history of digital art on the blockchain, creating a permanent cultural record.\n\nOur architecture integrates Web3 wallets, IPFS storage, and sophisticated curation tools that enable the community to actively participate in preserving digital culture. The platform features virtual exhibition spaces, artist profiles, and an extensive archive of historical crypto art movements. Through mocaOS, Codex, and Vibe Studio, we've created an open-source ecosystem for decentralized cultural memetics.",
+          "technologies": ["React", "Web3", "IPFS", "Ethereum", "3D.js", "Node.js", "TypeScript", "Next.js"],
+          "highlights": [
+            "Web3 Integration",
+            "Digital Curation",
+            "mocaOS Ecosystem",
+            "Virtual Exhibitions"
+          ],
+          "url": "https://museumofcryptoart.com",
+          "year": 2020,
+          "client": "Museum of Crypto Art",
+          "services": ["Web3 Development", "Platform Architecture", "Digital Curation Tools"],
+          "status": "Active"
+        },
+        {
+          "id": "gop",
+          "title": "variete.de",
+          "slug": "gop-variete",
+          "category": "GOP Entertainment Group",
+          "featured": true,
+          "thumbnail": "img/works/6.jpg",
+          "images": [
+            "img/works/6/1.jpg",
+            "img/works/6/2.jpg",
+            "img/works/6/3.jpg",
+            "img/works/6/4.jpg"
+          ],
+          "shortDescription": "The engine behind high-stakes entertainment.",
+          "description": "The engine behind high-stakes entertainment, orchestrating shows for over a million visitors annually with precision and reliability.",
+          "longDescription": "For GOP Varieté (variete.de), one of Europe's premier entertainment venues, we built a comprehensive platform managing ticketing, reservations, show scheduling, and customer experience for over a million annual visitors.\n\nThe system handles complex seating arrangements, dynamic pricing, VIP packages, and integrates with venue management systems across multiple locations.",
+          "technologies": ["PHP", "Laravel", "Vue.js", "MySQL", "Redis"],
+          "highlights": [
+            "Event Management",
+            "1M+ Annual Users",
+            "Real-time Systems",
+            "Multi-venue Support"
+          ],
+          "url": "https://variete.de",
+          "year": 2020,
+          "client": "GOP Varieté",
+          "services": ["Platform Development", "Ticketing System", "Venue Management"],
+          "status": "Active"
+        },
+        {
+          "id": "amber-island",
+          "title": "Amber",
+          "slug": "amber-island",
+          "category": "Secured Spririts with Gebr. Heinemann",
+          "featured": true,
+          "thumbnail": "img/works/7.jpg",
+          "images": [
+            "img/works/7/1.jpg",
+            "img/works/7/2.jpg",
+            "img/works/7/3.jpg",
+            "img/works/7/4.jpg"
+          ],
+          "shortDescription": "Web3-based whisky membership community bridging physical luxury and digital ownership.",
+          "description": "Innovative Web3 whisky membership platform where users mint NFT keys to access tokenized premium whisky bottles and exclusive community perks.",
+          "longDescription": "Amber Island represents a pioneering experiment in merging physical luxury goods with Web3 technology. Developed for GHARAGE/Heinemann in 2022, the platform allows members to mint 'Amber Island Key' NFTs (0.15 ETH) to join an exclusive whisky community.\n\nMembers gain access to tokenized premium whisky bottles (including Glenturret 30YO and limited CryptoPunk Whisky), exclusive events, and unique community experiences. The technology integrates Meta Anchor™ for authenticity verification and features 3D-printed bottles for special events.\n\nCurrently on strategic pause due to challenging market conditions in the spirits and blockchain sectors, but existing memberships remain valid and members can still access their benefits. The project demonstrates the potential for blockchain technology in luxury goods authentication and community building.",
+          "technologies": ["NFTs", "Blockchain", "Ethereum", "Tokenization", "Meta Anchor™"],
+          "highlights": [
+            "NFT Membership Keys",
+            "Tokenized Whisky Bottles",
+            "Physical-Digital Integration",
+            "Luxury Authentication"
+          ],
+          "url": "#",
+          "year": 2022,
+          "client": "GHARAGE/Heinemann",
+          "services": ["Web3 Development", "NFT Implementation", "Tokenization", "Authentication Systems"],
+          "status": "Paused"
+        },
+        {
+          "id": "poap",
+          "title": "POAP",
+          "slug": "poap-protocol",
+          "category": "EthDenver Founding Team",
+          "featured": true,
+          "thumbnail": "img/works/8.jpg",
+          "images": [
+            "img/works/8/1.jpg",
+            "img/works/8/2.jpg",
+            "img/works/8/3.jpg",
+            "img/works/8/4.jpg",
+            "img/works/8/5.jpg",
+            "img/works/8/6.jpg",
+            "img/works/8/7.jpg"
+          ],
+          "shortDescription": "The foundational protocol for proof of attendance on Ethereum.",
+          "description": "The foundational protocol for proof of attendance on Ethereum. Seven years of building the decentralized foundation for digital culture.",
+          "longDescription": "POAP (Proof of Attendance Protocol) is a pioneering Ethereum-based protocol that transforms event participation into blockchain-verified digital memories. Over seven years, we've built a robust infrastructure that has issued millions of POAPs worldwide, creating a decentralized record of human experiences.\n\nOur work includes smart contract architecture, NFT infrastructure, and global scaling solutions that handle massive concurrent loads during major events. The protocol serves as the foundation for digital culture, enabling communities to build lasting connections through blockchain-verified participation.",
+          "technologies": ["Ethereum", "Solidity", "Smart Contracts", "NFT", "IPFS", "Web3.js"],
+          "highlights": [
+            "Ethereum Smart Contracts",
+            "NFT Infrastructure",
+            "Global Scale",
+            "Millions of POAPs issued"
+          ],
+          "url": "https://poap.xyz",
+          "github": "https://github.com/poap-xyz",
+          "year": 2018,
+          "client": "POAP Foundation",
+          "services": ["Smart Contract Development", "Protocol Design", "Infrastructure"],
+          "status": "Previous Work"
+        },
+        {
+          "id": "ai-language-models",
+          "title": "AGI",
+          "slug": "ai-language-models",
+          "category": "AI Research",
+          "featured": true,
+          "thumbnail": "img/works/9.jpg",
+          "images": [
+            "img/works/9/1.jpg",
+            "img/works/9/2.jpg",
+            "img/works/9/3.jpg",
+            "img/works/9/4.jpg"
+          ],
+          "shortDescription": "On-premise AI assistants and German language models for enterprise applications.",
+          "description": "Research and development of on-premise AI assistants, including German-speaking models and document chatbots for secure enterprise deployment.",
+          "longDescription": "Our AI research focuses on creating on-premise AI solutions that give organizations complete control over their data and AI capabilities. We've developed German language models using LeoLM 13B (built on Llama-2 architecture) specifically optimized for German-language understanding and generation.\n\nAdditionally, we've implemented German document chatbots using h2ogpt technology, enabling organizations to query their document repositories using natural language. These on-premise solutions are crucial for enterprises requiring data sovereignty, especially in regulated industries and government applications.\n\nOur work ensures that powerful AI capabilities can be deployed without sending sensitive data to external cloud services, maintaining complete privacy and compliance with European data protection regulations.",
+          "technologies": ["AI", "Machine Learning", "LeoLM 13B", "Llama-2", "h2ogpt", "NLP", "Python"],
+          "highlights": [
+            "On-Premise AI",
+            "German Language Models",
+            "Document Chatbots",
+            "Data Sovereignty"
+          ],
+          "year": 2023,
+          "client": "Qwellcode Labs",
+          "services": ["AI Research", "Model Training", "NLP Development", "Enterprise AI Solutions"],
+          "status": "Active"
+        }
+      ],
+      "team": [
+        {
+          "id": "john-doe",
+          "name": "John Doe",
+          "role": "Founder & CEO",
+          "bio": "Visionary leader with 15+ years in software architecture and blockchain technology.",
+          "longBio": "John has been at the forefront of decentralized technology since 2015. With a background in distributed systems and enterprise architecture, he leads Qwellcode's vision of building permanent platforms for permanent success. Before founding Qwellcode, John led engineering teams at Fortune 500 companies and pioneered early Ethereum development.",
+          "image": "img/faces/1.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/johndoe",
+            "twitter": "https://twitter.com/johndoe",
+            "github": "https://github.com/johndoe"
+          },
+          "skills": ["System Architecture", "Blockchain", "Leadership", "Product Strategy"],
+          "featured": true
+        },
+        {
+          "id": "jane-smith",
+          "name": "Jane Smith",
+          "role": "CTO",
+          "bio": "Full-stack architect specializing in scalable Web3 infrastructure.",
+          "longBio": "Jane brings deep expertise in building systems that scale. With a PhD in Computer Science and years of experience in distributed systems, she architects the technical foundation that powers millions of users. Jane has published numerous papers on blockchain scalability and consensus mechanisms.",
+          "image": "img/faces/2.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/janesmith",
+            "twitter": "https://twitter.com/janesmith",
+            "github": "https://github.com/janesmith"
+          },
+          "skills": ["Distributed Systems", "Smart Contracts", "DevOps", "Security"],
+          "featured": true
+        },
+        {
+          "id": "mike-johnson",
+          "name": "Mike Johnson",
+          "role": "Head of Product",
+          "bio": "Product strategist transforming complex technology into delightful user experiences.",
+          "longBio": "Mike has a unique ability to bridge the gap between bleeding-edge technology and user needs. With a background in design thinking and behavioral psychology, he ensures our platforms are not just powerful, but also intuitive. Mike has led product at successful startups and understands what it takes to build products people love.",
+          "image": "img/faces/3.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/mikejohnson",
+            "twitter": "https://twitter.com/mikejohnson"
+          },
+          "skills": ["Product Strategy", "UX Design", "User Research", "Agile"],
+          "featured": true
+        },
+        {
+          "id": "sarah-williams",
+          "name": "Sarah Williams",
+          "role": "Lead Smart Contract Engineer",
+          "bio": "Ethereum expert securing millions in digital assets through battle-tested contracts.",
+          "longBio": "Sarah is one of the industry's leading smart contract engineers. She has audited hundreds of contracts and written secure code managing billions in digital assets. Her expertise in Solidity, gas optimization, and security patterns ensures our blockchain infrastructure is bulletproof.",
+          "image": "img/faces/4.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/sarahwilliams",
+            "github": "https://github.com/sarahwilliams"
+          },
+          "skills": ["Solidity", "Smart Contracts", "Security Audits", "DeFi"],
+          "featured": true
+        },
+        {
+          "id": "david-chen",
+          "name": "David Chen",
+          "role": "Senior Full-Stack Developer",
+          "bio": "Polyglot engineer building performant applications across the entire stack.",
+          "longBio": "David is a versatile engineer comfortable with any technology stack. From React frontends to Node.js backends to DevOps infrastructure, he delivers high-quality code quickly. David has contributed to numerous open-source projects and is passionate about clean architecture.",
+          "image": "img/faces/5.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/davidchen",
+            "github": "https://github.com/davidchen"
+          },
+          "skills": ["React", "Node.js", "TypeScript", "AWS"],
+          "featured": false
+        },
+        {
+          "id": "emily-taylor",
+          "name": "Emily Taylor",
+          "role": "UI/UX Designer",
+          "bio": "Design wizard crafting beautiful, accessible interfaces that users love.",
+          "longBio": "Emily combines aesthetic sensibility with deep understanding of user behavior. Her designs are not just beautiful—they're functional, accessible, and conversion-optimized. Emily has won multiple design awards and her work has been featured in leading design publications.",
+          "image": "img/faces/6.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/emilytaylor",
+            "dribbble": "https://dribbble.com/emilytaylor"
+          },
+          "skills": ["UI Design", "UX Research", "Figma", "Design Systems"],
+          "featured": false
+        },
+        {
+          "id": "alex-rodriguez",
+          "name": "Alex Rodriguez",
+          "role": "DevOps Engineer",
+          "bio": "Infrastructure expert ensuring 99.99% uptime for mission-critical systems.",
+          "longBio": "Alex keeps our systems running smoothly at scale. With expertise in Kubernetes, AWS, and CI/CD pipelines, he builds infrastructure that's reliable, scalable, and cost-effective. Alex previously worked at major cloud providers and understands infrastructure at internet scale.",
+          "image": "img/faces/7.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/alexrodriguez",
+            "github": "https://github.com/alexrodriguez"
+          },
+          "skills": ["Kubernetes", "AWS", "CI/CD", "Monitoring"],
+          "featured": false
+        },
+        {
+          "id": "lisa-anderson",
+          "name": "Lisa Anderson",
+          "role": "Head of Research",
+          "bio": "Research lead exploring the frontiers of decentralized systems.",
+          "longBio": "Lisa leads Qwellcode Labs, our research division. With a PhD in Cryptography, she investigates cutting-edge concepts in decentralized systems, zero-knowledge proofs, and consensus mechanisms. Her research directly informs our production systems, ensuring we stay at the technological forefront.",
+          "image": "img/faces/8.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/lisaanderson",
+            "twitter": "https://twitter.com/lisaanderson"
+          },
+          "skills": ["Cryptography", "Research", "ZK Proofs", "Protocol Design"],
+          "featured": true
+        }
+      ],
+      "services": [
+        {
+          "id": "enterprise",
+          "title": "Industry and Society",
+          "shortTitle": "Industry and Society",
+          "description": "We build systems that last. For BEGA, we forged a digital foundation to power Germany's largest furniture group, ensuring unwavering quality for their 5,000 partners. For GOP Varieté, we crafted the engine behind their high-stakes entertainment, orchestrating shows for over a million visitors a year. We don't chase trends; we build permanent platforms for permanent success.",
+          "icon": "fas fa-building",
+          "highlights": [
+            "BEGA Digital Foundation",
+            "5,000+ Partner Network",
+            "GOP Varieté Platform",
+            "Enterprise Architecture"
+          ],
+          "ctaText": "View Enterprise",
+          "link": "pages/service.html",
+          "featured": true
+        },
+        {
+          "id": "web3",
+          "title": "Ethereum",
+          "shortTitle": "Ethereum",
+          "description": "Seven years ago, we began building the decentralized foundation for digital culture. Our early Ethereum work gave birth to POAP and the Museum of Crypto Art. Now, that mission continues through mocaOS—the open-source operating system for decentralized cultural memetics. Codex is the living archive of our 10,000 Art DeCC0s, while Vibe Studio provides the tools to create and interact with this new cultural commons. We are channeling our passion into the decentralized internet of culture.",
+          "icon": "fab fa-ethereum",
+          "highlights": [
+            "Museum of Crypto Art",
+            "Codex & Vibe Studio",
+            "mocaOS Platform",
+            "POAP Protocol"
+          ],
+          "ctaText": "Explore Ethereum",
+          "link": "pages/service.html",
+          "featured": true
+        },
+        {
+          "id": "social",
+          "title": "Social Media",
+          "shortTitle": "Social Media",
+          "description": "We're developers building the social layer for the ownership economy. Zeroone turns every post into a unique digital asset, with 180K+ creators and 4.5M+ assets already transforming audiences into collectors and digital footprints into fortunes. Tixu brings ownership to live experiences, giving creators total control over their ticketing and revenue. We're building the future of digital culture, one owned moment at a time.",
+          "icon": "fas fa-users",
+          "highlights": [
+            "Zeroone Platform",
+            "4.5M+ Digital Assets",
+            "Tixu Ticketing",
+            "Creator Ownership Tools"
+          ],
+          "ctaText": "Discover Social",
+          "link": "pages/service.html",
+          "featured": true
+        }
+      ],
+      "testimonials": [
+        {
+          "id": "bega",
+          "author": "BEGA Partners",
+          "role": "Germany's Largest Furniture Group",
+          "avatar": "img/faces/customers/bega.jpg",
+          "text": "Qwellcode built us a digital foundation that serves 5,000 partners with unwavering reliability. Their enterprise architecture is robust, scalable, and exactly what we needed to power the future of our business. They don't just build software—they build systems that last.",
+          "rating": 5
+        },
+        {
+          "id": "moca",
+          "author": "Museum of Crypto Art",
+          "role": "Web3 Cultural Institution",
+          "avatar": "img/faces/customers/tixu.jpg",
+          "text": "Seven years building on Ethereum, from POAP to mocaOS. Qwellcode is pioneering the decentralized foundation for digital culture. Their technical depth in Web3 combined with real-world scale makes them the go-to team for serious decentralized systems.",
+          "rating": 5
+        },
+        {
+          "id": "zeroone",
+          "author": "Zeroone",
+          "role": "180K+ Creator Community",
+          "avatar": "img/faces/customers/zeroone.jpg",
+          "text": "The ownership economy is here, and Qwellcode made it real. With 4.5M+ digital assets created, they've built a platform that transforms our audiences into collectors and turns our digital footprints into tangible value. Revolutionary work.",
+          "rating": 5
+        },
+        {
+          "id": "tixu",
+          "author": "Tixu",
+          "role": "Next-Gen Ticketing Platform",
+          "avatar": "img/faces/customers/moca.jpg",
+          "text": "Tixu reimagines event ticketing for the ownership economy. Qwellcode gave us complete control over ticketing, revenue, and fan relationships. Their smart contract expertise and platform architecture eliminated traditional intermediaries and empowered creators.",
+          "rating": 5
+        }
+      ],
+      "blog": [
+        {
+          "id": "web3-culture",
+          "title": "The Decentralized Internet of Culture",
+          "slug": "decentralized-internet-of-culture",
+          "category": "WEB3",
+          "date": "2024-12-15",
+          "author": "Lisa Anderson",
+          "thumbnail": "img/blog/1.jpg",
+          "excerpt": "Seven years of building on Ethereum taught us that decentralized culture needs its own operating system. Explore how mocaOS is becoming the foundation for cultural memetics in Web3.",
+          "featured": true
+        },
+        {
+          "id": "ownership-economy",
+          "title": "From Audiences to Collectors: The New Creator Economy",
+          "slug": "audiences-to-collectors-creator-economy",
+          "category": "OWNERSHIP ECONOMY",
+          "date": "2024-12-10",
+          "author": "Mike Johnson",
+          "thumbnail": "img/blog/2.jpg",
+          "excerpt": "With 180K+ creators and 4.5M+ digital assets on Zeroone, we're witnessing the transformation of social media into an ownership economy. Learn how creators are building real value.",
+          "featured": true
+        }
+      ],
+      "imprint": {
+        "title": "Imprint",
+        "sections": [
+          {
+            "heading": "Information according to § 5 TMG",
+            "content": "Qwellcode Solutions GmbH & Co. KG<br>Geseker Straße 53a<br>33154 Salzkotten<br>Germany"
+          },
+          {
+            "heading": "Represented by",
+            "content": "General Partner: Qwellcode Verwaltungs GmbH<br>Managing Directors: Alexander Gees, Rene Schmidt"
+          },
+          {
+            "heading": "Contact",
+            "content": "Phone: +49 5258 2078834<br>Email: info@qwellcode.de"
+          },
+          {
+            "heading": "Commercial Register",
+            "content": "Registration Court: Amtsgericht Paderborn<br>Registration Number: HRA 7979"
+          },
+          {
+            "heading": "VAT ID",
+            "content": "VAT Identification Number according to § 27a UStG:<br>DE 338 758 148"
+          },
+          {
+            "heading": "Responsible for Content",
+            "content": "Alexander Gees, Rene Schmidt<br>Geseker Straße 53a<br>33154 Salzkotten<br>Germany"
+          },
+          {
+            "heading": "Liability for Content",
+            "content": "As a service provider, we are responsible for our own content on these pages in accordance with § 7 para. 1 TMG (German Telemedia Act) and general laws. According to §§ 8 to 10 TMG, however, we are not obligated as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.<br><br>Obligations to remove or block the use of information in accordance with general laws remain unaffected. However, liability in this regard is only possible from the time of knowledge of a specific legal violation. As soon as we become aware of such legal violations, we will remove this content immediately."
+          },
+          {
+            "heading": "Liability for Links",
+            "content": "Our website contains links to external third-party websites over whose content we have no influence. Therefore, we cannot accept any liability for this third-party content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking.<br><br>However, permanent monitoring of the content of the linked pages is not reasonable without concrete evidence of a legal violation. If we become aware of legal violations, we will remove such links immediately."
+          },
+          {
+            "heading": "Copyright",
+            "content": "The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use.<br><br>Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is marked as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. If we become aware of legal violations, we will remove such content immediately."
+          },
+          {
+            "heading": "Image Credits",
+            "content": "© Qwellcode Solutions GmbH & Co. KG<br>All images and graphics are protected by copyright."
+          }
+        ]
+      }
+    },
+    "de": {
+      "site": {
+        "name": "Qwellcode",
+        "tagline": "Erfrischende Softwarelösungen",
+        "description": "Wir sind ein erstklassiger Entwicklungsshop, der permanente Plattformen für dauerhaften Erfolg baut.",
+        "hero": {
+          "headline": "Die Zukunft <span class=\"mil-thin\">gestalten,</span><br> Ein robustes <span class=\"mil-thin\">System nach dem anderen</span>",
+          "description": "Wir sind ein erstklassiger Entwicklungsshop, der permanente Plattformen für dauerhaften Erfolg baut. Von dezentralen Kultursystemen bis hin zu Enterprise-Fundamenten verwandeln wir kühne Ideen in Technologie, die von Millionen genutzt wird.",
+          "primaryCTA": {
+            "text": "Unsere Services",
+            "link": "#services"
+          },
+          "secondaryCTA": {
+            "text": "Portfolio ansehen",
+            "link": "#portfolio"
+          }
+        },
+        "about": {
+          "sectionTitle": "Unsere <br><span class=\"mil-thin\">Teamphilosophie</span>",
+          "description": [
+            "Unser Team entwickelt sich zu einem hochmodernen Entwicklungsshop, der in zwei synergetische Einheiten strukturiert ist: Die Entwickler bei <span class=\"mil-accent\">Qwellcode Solutions</span> und die Forscher bei <span class=\"mil-accent\">Qwellcode Labs</span>.",
+            "Diese kraftvolle Mischung aus Forschung und skalierbarer Software—genutzt von einer Vielzahl von Nutzern—ermöglicht es uns, skalierbare Software für die Zukunft zu entwickeln, eine robuste Plattform nach der anderen. Wir jagen keine Trends; wir bauen dauerhafte Plattformen für dauerhaften Erfolg."
+          ],
+          "quote": {
+            "text": "<span class=\"mil-thin\">Wir sind Tüftler und Entwickler die zusammen skalierbare Systeme bauen.</span>",
+            "avatar": "img/faces/customers/flask.jpg"
+          },
+          "image": "img/photo/billboard.jpg"
+        },
+        "sections": {
+          "services": {
+            "suptitle": "Von dezentraler Kultur bis zu Enterprise-Fundamenten,<br> wir bauen Systeme, auf die Millionen vertrauen.",
+            "title": "Was wir <span class=\"mil-thin\">entwickeln</span>"
+          },
+          "portfolio": {
+            "title": "Ausgewählte <span class=\"mil-thin\">Projekte</span>",
+            "buttonText": "Alle Arbeiten erkunden",
+            "footer": {
+              "text": "Das ist erst der Anfang. Wir bauen permanente Plattformen für eine dauerhafte Zukunft.",
+              "linkText": "Komplettes Portfolio ansehen"
+            }
+          },
+          "reviews": {
+            "suptitle": "Von 5.000 Unternehmenspartnern bis zu 180.000+ Kreativen,<br> unsere Systeme unterstützen Millionen Nutzer weltweit.",
+            "title": "Vertraut von <span class=\"mil-thin\">Branchenführern:</span>"
+          },
+          "blog": {
+            "title": "Insights & Forschung:",
+            "linkText": "Alle Artikel ansehen"
+          }
+        },
+        "contact": {
+          "email": "info@qwellcode.de",
+          "company": "Qwellcode Solutions GmbH & Co. KG",
+          "address": "Geseker Straße 53a",
+          "city": "33154 Salzkotten",
+          "country": "Deutschland",
+          "phone": "+49 5258 2078834",
+          "locations": [
+            {
+              "name": "Hauptsitz",
+              "address": "Geseker Straße 53a, 33154 Salzkotten",
+              "phone": "+49 5258 2078834"
+            }
+          ],
+          "legal": {
+            "company": "Qwellcode Solutions GmbH & Co. KG",
+            "managing_partner": "Qwellcode Verwaltungs GmbH",
+            "directors": "Alexander Gees, Rene Schmidt",
+            "register": "Handelsregister Paderborn HRA 7979",
+            "vat_id": "DE 338 758 148"
+          }
+        },
+        "social": [
+          {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/company/qwellcode",
+            "icon": "fab fa-linkedin"
+          },
+          {
+            "platform": "twitter",
+            "url": "https://twitter.com/qwellcode",
+            "icon": "fab fa-twitter"
+          }
+        ]
+      },
+      "partners": [
+        {
+          "id": "partner-1",
+          "name": "Partner 1",
+          "logo": "img/partners/1.svg",
+          "url": "#",
+          "width": "60px"
+        },
+        {
+          "id": "partner-2",
+          "name": "Partner 2",
+          "logo": "img/partners/2.svg",
+          "url": "#",
+          "width": "100px"
+        }
+      ],
+      "projects": [
+        {
+          "id": "bega",
+          "title": "BEGA",
+          "slug": "bega-digital",
+          "category": "Industrie und Handel",
+          "featured": true,
+          "status": "Active",
+          "thumbnail": "img/works/1.jpg",
+          "images": [
+            "img/works/1/1.jpg",
+            "img/works/1/2.jpg",
+            "img/works/1/3.jpg",
+            "img/works/1/4.jpg",
+            "img/works/1/5.jpg",
+            "img/works/1/6.jpg",
+            "img/works/1/7.jpg"
+          ],
+          "shortDescription": "Digitales Fundament für Deutschlands größte Möbelgruppe.",
+          "description": "Digitales Fundament für Deutschlands größte Möbelgruppe, das unwankende Qualität für 5.000 Partner gewährleistet.",
+          "longDescription": "Für BEGA, Deutschlands größte Möbelgruppe, haben wir ein umfassendes digitales Fundament gebaut, das als Rückgrat ihres gesamten Betriebs dient. Die Plattform verbindet 5.000+ Partner, verarbeitet komplexe B2B-Transaktionen, verwaltet Lagerbestände in mehreren Lagerhäusern und bietet Echtzeit-Analysen.\n\nUnsere Enterprise-Architektur gewährleistet 99,99% Verfügbarkeit, bewältigt Spitzenlasten während Aktionszeiträumen und integriert sich in Legacy-ERP-Systeme. Die Plattform umfasst Partnerportale, Auftragsverwaltung, Logistik-Tracking und Business-Intelligence-Dashboards, die strategische Entscheidungen vorantreiben.",
+          "technologies": ["Java", "Spring Boot", "React", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
+          "highlights": [
+            "Enterprise-Architektur",
+            "5.000+ Partner-Netzwerk",
+            "Skalierbare Infrastruktur",
+            "99,99% Verfügbarkeit"
+          ],
+          "year": 2019,
+          "client": "BEGA Möbelgruppe",
+          "services": ["Enterprise-Entwicklung", "Systemintegration", "Infrastruktur-Design"]
+        },
+        {
+          "id": "tixu",
+          "title": "TIXU",
+          "slug": "tixu-ticketing",
+          "category": "Ticketing Plattform",
+          "featured": true,
+          "status": "Active",
+          "thumbnail": "img/works/2.jpg",
+          "images": [
+            "img/works/2/1.gif",
+            "img/works/2/2.gif",
+            "img/works/2/3.jpg",
+            "img/works/2/4.gif",
+            "img/works/2/5.jpg",
+            "img/works/2/6.jpg",
+            "img/works/2/7.jpg",
+            "img/works/2/8.jpg"
+          ],
+          "shortDescription": "Ownership für Live-Erlebnisse.",
+          "description": "Bringt Ownership zu Live-Erlebnissen. Kreative erhalten vollständige Kontrolle über ihr Ticketing und ihre Einnahmen in der neuen Ownership Economy.",
+          "longDescription": "Tixu denkt Event-Ticketing für die Ownership Economy neu. Wir haben eine Plattform gebaut, die Kreativen vollständige Kontrolle über ihr Ticketing, ihre Einnahmen und Fanbeziehungen gibt und traditionelle Zwischenhändler eliminiert.\n\nDas System umfasst Smart-Contract-basiertes Ticketing, Kontrolle des Sekundärmarktes, Fan-Verifizierung und umfassende Analysen. Kreative können dynamische Preisgestaltung implementieren, exklusive Erlebnisse schaffen und direkte Verbindungen zu ihrem Publikum aufrechterhalten.",
+          "technologies": ["React Native", "Node.js", "Ethereum", "Solidity", "PostgreSQL", "Stripe"],
+          "highlights": [
+            "Creator-Kontrolle",
+            "Smart Ticketing",
+            "Einnahmenverwaltung",
+            "Sekundärmarkt-Kontrolle"
+          ],
+          "url": "https://tixu.io",
+          "year": 2023,
+          "client": "Tixu",
+          "services": ["Mobile App Entwicklung", "Smart Contracts", "Zahlungsintegration"]
+        },
+        {
+          "id": "zeroone",
+          "title": "zeroone",
+          "slug": "zeroone",
+          "category": "Social Creator Tools",
+          "featured": true,
+          "status": "Active",
+          "thumbnail": "img/works/3.jpg",
+          "images": [
+            "img/works/3/1.jpg",
+            "img/works/3/2.jpg",
+            "img/works/3/3.gif",
+            "img/works/3/4.jpg",
+            "img/works/3/5.gif",
+            "img/works/3/6.jpg",
+            "img/works/3/7.gif"
+          ],
+          "shortDescription": "Verwandlung von Zielgruppen in Sammler und digitalen Fußabdrücken in Vermögen.",
+          "description": "Verwandelt jeden Post in ein einzigartiges digitales Asset. 180K+ Kreative und 4,5M+ Assets verwandeln Zielgruppen in Sammler und Fußabdrücke in Vermögen.",
+          "longDescription": "Zeroone revolutioniert die Creator-Economy, indem es jeden Social-Media-Post in ein einzigartiges, besitzbares digitales Asset verwandelt. Mit 180K+ Kreativen und 4,5M+ erstellten digitalen Assets haben wir die soziale Schicht für die Ownership Economy gebaut.\n\nUnsere Plattform konvertiert nahtlos traditionelle soziale Inhalte in blockchain-gestützte Sammlerstücke und ermöglicht es Kreativen, ihren Einfluss direkt zu monetarisieren. Fortgeschrittene Algorithmen handhaben Asset-Generierung, Seltenheitsbestimmung und Marktplatz-Dynamiken, während unsere UX die Blockchain für Endnutzer unsichtbar macht.",
+          "technologies": ["Next.js", "PostgreSQL", "Ethereum", "Redis", "Web3", "AWS"],
+          "highlights": [
+            "180K+ Kreative",
+            "4,5M+ digitale Assets",
+            "Ownership Economy",
+            "Nahtlose Web3 UX"
+          ],
+          "url": "https://zeroone.art",
+          "year": 2022,
+          "client": "Zeroone",
+          "services": ["Plattform-Entwicklung", "Blockchain-Integration", "Creator-Tools"]
+        },
+        {
+          "id": "codex",
+          "title": "Codex",
+          "slug": "codex",
+          "category": "Web3 Ökosystem",
+          "featured": true,
+          "status": "Active",
+          "thumbnail": "img/works/4.jpg",
+          "images": [
+            "img/works/4/1.jpg",
+            "img/works/4/2.jpg",
+            "img/works/4/3.jpg",
+            "img/works/4/4.jpg"
+          ],
+          "shortDescription": "Das lebendige Archiv von 10.000 Art DeCC0s.",
+          "description": "Das lebendige Archiv von 10.000 Art DeCC0s. Bewahrung und Katalogisierung der dezentralen Creative Commons für zukünftige Generationen.",
+          "longDescription": "Codex ist ein umfassendes Archiv- und Katalogsystem für Art DeCC0s (Art Decentralized Creative Commons). Wir haben eine ausgeklügelte Plattform gebaut, die 10.000 Kunstwerke mit vollständiger Provenienz, Metadaten und kulturellem Kontext bewahrt.\n\nDas System implementiert erweiterte Such-, Filter- und Entdeckungsfunktionen und macht die dezentralen Creative Commons für Forscher, Künstler und die Öffentlichkeit zugänglich. Als Teil des mocaOS-Ökosystems repräsentiert Codex unser Engagement für die Bewahrung digitaler Kultur für zükünftige Generationen.",
+          "technologies": ["TypeScript", "Next.js", "PostgreSQL", "IPFS", "Elasticsearch"],
+          "highlights": [
+            "10.000 Art DeCC0s",
+            "Lebendiges Archiv",
+            "Kulturelle Bewahrung",
+            "Erweiterte Suche"
+          ],
+          "year": 2023,
+          "client": "Museum of Crypto Art",
+          "services": ["Archiv-Entwicklung", "Datenarchitektur", "Such-Implementierung"]
+        },
+        {
+          "id": "moca",
+          "title": "MOCA",
+          "slug": "museum-of-crypto-art",
+          "category": "Digitale Kunst und Kultur",
+          "featured": true,
+          "status": "Active",
+          "thumbnail": "img/works/5.jpg",
+          "images": [
+            "img/works/5/1.jpg",
+            "img/works/5/2.jpg",
+            "img/works/5/3.jpg",
+            "img/works/5/4.jpg"
+          ],
+          "shortDescription": "Ein dezentrales Museum, das die Evolution der Kryptokunst bewahrt und präsentiert.",
+          "description": "Ein dezentrales Museum, das die Evolution der Kryptokunst bewahrt und präsentiert. Aufbau des kulturellen Archivs von Web3 mit mocaOS, Codex und Vibe Studio.",
+          "longDescription": "Das Museum of Crypto Art (M○C▲) ist das weltweit erste dezentrale Museum zur Bewahrung und Feier von Kryptokunst. Wir haben eine umfassende Plattform gebaut, die die Geschichte digitaler Kunst auf der Blockchain archiviert und eine permanente Kulturaufzeichnung schafft.\n\nUnsere Architektur integriert Web3-Wallets, IPFS-Speicher und ausgeklügelte Kurations-Tools, die der Gemeinschaft ermöglichen, aktiv an der Bewahrung digitaler Kultur teilzunehmen. Die Plattform bietet virtuelle Ausstellungsräume, Künstlerprofile und ein umfangreiches Archiv historischer Kryptokunstbewegungen. Durch mocaOS, Codex und Vibe Studio haben wir ein Open-Source-Ökosystem für dezentrale kulturelle Memetik geschaffen.",
+          "technologies": ["React", "Web3", "IPFS", "Ethereum", "3D.js", "Node.js", "TypeScript", "Next.js"],
+          "highlights": [
+            "Web3-Integration",
+            "Digitale Kuration",
+            "mocaOS-Ökosystem",
+            "Virtuelle Ausstellungen"
+          ],
+          "url": "https://museumofcryptoart.com",
+          "year": 2020,
+          "client": "Museum of Crypto Art",
+          "services": ["Web3-Entwicklung", "Plattform-Architektur", "Digitale Kurations-Tools"]
+        },
+        {
+          "id": "gop",
+          "title": "variete.de",
+          "slug": "gop-variete",
+          "category": "GOP Entertainment Group",
+          "featured": true,
+          "status": "Active",
+          "thumbnail": "img/works/6.jpg",
+          "images": [
+            "img/works/6/1.jpg",
+            "img/works/6/2.jpg",
+            "img/works/6/3.jpg",
+            "img/works/6/4.jpg"
+          ],
+          "shortDescription": "Die Engine hinter High-Stakes-Entertainment.",
+          "description": "Die Engine hinter High-Stakes-Entertainment, orchestriert Shows für über eine Million Besucher jährlich mit Präzision und Zuverlässigkeit.",
+          "longDescription": "Für GOP Varieté (variete.de), eine der führenden Entertainment-Locations Europas, haben wir eine umfassende Plattform gebaut, die Ticketing, Reservierungen, Show-Planung und Kundenerlebnis für über eine Million jährliche Besucher verwaltet.\n\nDas System verarbeitet komplexe Sitzplatzanordnungen, dynamische Preisgestaltung, VIP-Pakete und integriert sich in Venue-Management-Systeme an mehreren Standorten.",
+          "technologies": ["PHP", "Laravel", "Vue.js", "MySQL", "Redis"],
+          "highlights": [
+            "Event-Management",
+            "1M+ jährliche Nutzer",
+            "Echtzeit-Systeme",
+            "Multi-Venue-Support"
+          ],
+          "url": "https://variete.de",
+          "year": 2020,
+          "client": "GOP Varieté",
+          "services": ["Plattform-Entwicklung", "Ticketing-System", "Venue-Management"]
+        },
+        {
+          "id": "amber-island",
+          "title": "Amber",
+          "slug": "amber-island",
+          "category": "Secured Spririts with Gebr. Heinemann",
+          "featured": true,
+          "status": "Paused",
+          "thumbnail": "img/works/7.jpg",
+          "images": [
+            "img/works/7/1.jpg",
+            "img/works/7/2.jpg",
+            "img/works/7/3.jpg",
+            "img/works/7/4.jpg"
+          ],
+          "shortDescription": "Web3-basierte Whisky-Mitgliedschafts-Community, die physischen Luxus mit digitalem Eigentum verbindet.",
+          "description": "Innovative Web3-Whisky-Mitgliedschaftsplattform, auf der Nutzer NFT-Schlüssel prägen, um Zugang zu tokenisierten Premium-Whiskyflaschen und exklusiven Community-Vorteilen zu erhalten.",
+          "longDescription": "Amber Island stellt ein wegweisendes Experiment dar, das physische Luxusgüter mit Web3-Technologie verbindet. Entwickelt für GHARAGE/Heinemann im Jahr 2022, ermöglicht die Plattform Mitgliedern, 'Amber Island Key' NFTs (0,15 ETH) zu prägen, um einer exklusiven Whisky-Community beizutreten.\n\nMitglieder erhalten Zugang zu tokenisierten Premium-Whiskyflaschen (einschließlich Glenturret 30YO und limitiertem CryptoPunk Whisky), exklusiven Events und einzigartigen Community-Erlebnissen. Die Technologie integriert Meta Anchor™ zur Authentizitätsüberprüfung und verfügt über 3D-gedruckte Flaschen für besondere Veranstaltungen.\n\nDerzeit in strategischer Pause aufgrund herausfordernder Marktbedingungen in den Spirituosen- und Blockchain-Sektoren, aber bestehende Mitgliedschaften bleiben gültig und Mitglieder können weiterhin auf ihre Vorteile zugreifen. Das Projekt demonstriert das Potenzial der Blockchain-Technologie für die Authentifizierung von Luxusgütern und den Aufbau von Communities.",
+          "technologies": ["NFTs", "Blockchain", "Ethereum", "Tokenisierung", "Meta Anchor™"],
+          "highlights": [
+            "NFT-Mitgliedschaftsschlüssel",
+            "Tokenisierte Whiskyflaschen",
+            "Physical-Digital Integration",
+            "Luxus-Authentifizierung"
+          ],
+          "url": "#",
+          "year": 2022,
+          "client": "GHARAGE/Heinemann",
+          "services": ["Web3-Entwicklung", "NFT-Implementierung", "Tokenisierung", "Authentifizierungssysteme"]
+        },
+        {
+          "id": "poap",
+          "title": "POAP",
+          "slug": "poap-protocol",
+          "category": "EthDenver Founding Team",
+          "featured": true,
+          "status": "Previous Work",
+          "thumbnail": "img/works/8.jpg",
+          "images": [
+            "img/works/8/1.jpg",
+            "img/works/8/2.jpg",
+            "img/works/8/3.jpg",
+            "img/works/8/4.jpg",
+            "img/works/8/5.jpg",
+            "img/works/8/6.jpg",
+            "img/works/8/7.jpg"
+          ],
+          "shortDescription": "Das grundlegende Protokoll für Teilnahmenachweise auf Ethereum.",
+          "description": "Das grundlegende Protokoll für Teilnahmenachweise auf Ethereum. Sieben Jahre Aufbau der dezentralen Grundlage für digitale Kultur.",
+          "longDescription": "POAP (Proof of Attendance Protocol) ist ein bahnbrechendes Ethereum-basiertes Protokoll, das Veranstaltungsteilnahmen in blockchain-verifizierte digitale Erinnerungen verwandelt. Über sieben Jahre hinweg haben wir eine robuste Infrastruktur aufgebaut, die Millionen von POAPs weltweit ausgegeben hat und eine dezentrale Aufzeichnung menschlicher Erfahrungen schafft.\n\nUnsere Arbeit umfasst Smart-Contract-Architektur, NFT-Infrastruktur und globale Skalierungslösungen, die massive gleichzeitige Lasten bei großen Veranstaltungen bewältigen. Das Protokoll dient als Fundament für digitale Kultur und ermöglicht Gemeinschaften, dauerhafte Verbindungen durch blockchain-verifizierte Teilnahme aufzubauen.",
+          "technologies": ["Ethereum", "Solidity", "Smart Contracts", "NFT", "IPFS", "Web3.js"],
+          "highlights": [
+            "Ethereum Smart Contracts",
+            "NFT-Infrastruktur",
+            "Globale Skalierung",
+            "Millionen ausgegebene POAPs"
+          ],
+          "url": "https://poap.xyz",
+          "github": "https://github.com/poap-xyz",
+          "year": 2018,
+          "client": "POAP Foundation",
+          "services": ["Smart Contract Entwicklung", "Protokoll-Design", "Infrastruktur"]
+        },
+        {
+          "id": "ai-language-models",
+          "title": "AGI",
+          "slug": "ki-sprachmodelle",
+          "category": "KI Forschung",
+          "featured": true,
+          "thumbnail": "img/works/9.jpg",
+          "images": [
+            "img/works/9/1.jpg",
+            "img/works/9/2.jpg",
+            "img/works/9/3.jpg",
+            "img/works/9/4.jpg"
+          ],
+          "shortDescription": "On-Premise KI-Assistenten und deutsche Sprachmodelle für Unternehmensanwendungen.",
+          "description": "Forschung und Entwicklung von On-Premise KI-Assistenten, einschließlich deutschsprachiger Modelle und Dokumenten-Chatbots für sichere Unternehmensbereitstellung.",
+          "longDescription": "Unsere KI-Forschung konzentriert sich auf die Entwicklung von On-Premise KI-Lösungen, die Organisationen vollständige Kontrolle über ihre Daten und KI-Fähigkeiten geben. Wir haben deutsche Sprachmodelle mit LeoLM 13B (basierend auf Llama-2-Architektur) entwickelt, die speziell für deutsches Sprachverständnis und -generation optimiert sind.\n\nZusätzlich haben wir deutsche Dokumenten-Chatbots mit h2ogpt-Technologie implementiert, die es Organisationen ermöglichen, ihre Dokumenten-Repositories mit natürlicher Sprache abzufragen. Diese On-Premise-Lösungen sind entscheidend für Unternehmen, die Datensouveränität benötigen, insbesondere in regulierten Branchen und staatlichen Anwendungen.\n\nUnsere Arbeit stellt sicher, dass leistungsstarke KI-Fähigkeiten bereitgestellt werden können, ohne sensible Daten an externe Cloud-Dienste zu senden, und vollständige Privatsphäre und Compliance mit europäischen Datenschutzbestimmungen gewährleistet.",
+          "technologies": ["KI", "Machine Learning", "LeoLM 13B", "Llama-2", "h2ogpt", "NLP", "Python"],
+          "highlights": [
+            "On-Premise KI",
+            "Deutsche Sprachmodelle",
+            "Dokumenten-Chatbots",
+            "Datensouveränität"
+          ],
+          "year": 2023,
+          "client": "Qwellcode Labs",
+          "services": ["KI-Forschung", "Modell-Training", "NLP-Entwicklung", "Enterprise KI-Lösungen"],
+          "status": "Active"
+        }
+      ],
+      "team": [
+        {
+          "id": "john-doe",
+          "name": "John Doe",
+          "role": "Gründer & CEO",
+          "bio": "Visionärer Leiter mit über 15 Jahren Erfahrung in Software-Architektur und Blockchain-Technologie.",
+          "longBio": "John steht seit 2015 an der Spitze der dezentralen Technologie. Mit einem Hintergrund in verteilten Systemen und Enterprise-Architektur leitet er Qwellcodes Vision, permanente Plattformen für dauerhaften Erfolg zu bauen. Vor der Gründung von Qwellcode leitete John Engineering-Teams bei Fortune-500-Unternehmen und war Pionier in der frühen Ethereum-Entwicklung.",
+          "image": "img/faces/1.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/johndoe",
+            "twitter": "https://twitter.com/johndoe",
+            "github": "https://github.com/johndoe"
+          },
+          "skills": ["System-Architektur", "Blockchain", "Leadership", "Produkt-Strategie"],
+          "featured": true
+        },
+        {
+          "id": "jane-smith",
+          "name": "Jane Smith",
+          "role": "CTO",
+          "bio": "Full-Stack-Architektin spezialisiert auf skalierbare Web3-Infrastruktur.",
+          "longBio": "Jane bringt tiefe Expertise im Aufbau skalierbarer Systeme mit. Mit einem PhD in Informatik und jahrelanger Erfahrung in verteilten Systemen entwirft sie das technische Fundament, das Millionen von Nutzern unterstützt. Jane hat zahlreiche Arbeiten über Blockchain-Skalierbarkeit und Konsensmechanismen veröffentlicht.",
+          "image": "img/faces/2.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/janesmith",
+            "twitter": "https://twitter.com/janesmith",
+            "github": "https://github.com/janesmith"
+          },
+          "skills": ["Verteilte Systeme", "Smart Contracts", "DevOps", "Security"],
+          "featured": true
+        },
+        {
+          "id": "mike-johnson",
+          "name": "Mike Johnson",
+          "role": "Head of Product",
+          "bio": "Produkt-Stratege, der komplexe Technologie in begeisternde Benutzererlebnisse verwandelt.",
+          "longBio": "Mike hat eine einzigartige Fähigkeit, die Lücke zwischen modernster Technologie und Nutzerbedürfnissen zu überbrücken. Mit einem Hintergrund in Design Thinking und Verhaltenspsychologie stellt er sicher, dass unsere Plattformen nicht nur leistungsstark, sondern auch intuitiv sind. Mike hat Produktentwicklung bei erfolgreichen Startups geleitet und versteht, was es braucht, um Produkte zu bauen, die Menschen lieben.",
+          "image": "img/faces/3.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/mikejohnson",
+            "twitter": "https://twitter.com/mikejohnson"
+          },
+          "skills": ["Produkt-Strategie", "UX-Design", "Nutzerforschung", "Agile"],
+          "featured": true
+        },
+        {
+          "id": "sarah-williams",
+          "name": "Sarah Williams",
+          "role": "Lead Smart Contract Engineer",
+          "bio": "Ethereum-Expertin, die Millionen in digitalen Assets durch kampferprobte Contracts sichert.",
+          "longBio": "Sarah ist eine der führenden Smart-Contract-Ingenieurinnen der Branche. Sie hat Hunderte von Contracts auditiert und sicheren Code geschrieben, der Milliarden in digitalen Assets verwaltet. Ihre Expertise in Solidity, Gas-Optimierung und Sicherheitsmustern stellt sicher, dass unsere Blockchain-Infrastruktur kugelsicher ist.",
+          "image": "img/faces/4.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/sarahwilliams",
+            "github": "https://github.com/sarahwilliams"
+          },
+          "skills": ["Solidity", "Smart Contracts", "Security Audits", "DeFi"],
+          "featured": true
+        },
+        {
+          "id": "david-chen",
+          "name": "David Chen",
+          "role": "Senior Full-Stack Developer",
+          "bio": "Polyglott-Ingenieur, der performante Anwendungen über den gesamten Stack baut.",
+          "longBio": "David ist ein vielseitiger Ingenieur, der mit jedem Technologie-Stack vertraut ist. Von React-Frontends über Node.js-Backends bis zu DevOps-Infrastruktur liefert er schnell hochwertigen Code. David hat zu zahlreichen Open-Source-Projekten beigetragen und ist leidenschaftlich für saubere Architektur.",
+          "image": "img/faces/5.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/davidchen",
+            "github": "https://github.com/davidchen"
+          },
+          "skills": ["React", "Node.js", "TypeScript", "AWS"],
+          "featured": false
+        },
+        {
+          "id": "emily-taylor",
+          "name": "Emily Taylor",
+          "role": "UI/UX Designer",
+          "bio": "Design-Zauberin, die schöne, zugängliche Interfaces erstellt, die Nutzer lieben.",
+          "longBio": "Emily kombiniert ästhetische Sensibilität mit tiefem Verständnis für Nutzerverhalten. Ihre Designs sind nicht nur schön – sie sind funktional, zugänglich und conversion-optimiert. Emily hat mehrere Design-Auszeichnungen gewonnen und ihre Arbeit wurde in führenden Design-Publikationen vorgestellt.",
+          "image": "img/faces/6.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/emilytaylor",
+            "dribbble": "https://dribbble.com/emilytaylor"
+          },
+          "skills": ["UI-Design", "UX-Forschung", "Figma", "Design-Systeme"],
+          "featured": false
+        },
+        {
+          "id": "alex-rodriguez",
+          "name": "Alex Rodriguez",
+          "role": "DevOps Engineer",
+          "bio": "Infrastruktur-Experte, der 99,99% Verfügbarkeit für unternehmenskritische Systeme sicherstellt.",
+          "longBio": "Alex hält unsere Systeme reibungslos im großen Maßstab am Laufen. Mit Expertise in Kubernetes, AWS und CI/CD-Pipelines baut er Infrastruktur, die zuverlässig, skalierbar und kosteneffizient ist. Alex hat zuvor bei großen Cloud-Anbietern gearbeitet und versteht Infrastruktur im Internet-Maßstab.",
+          "image": "img/faces/7.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/alexrodriguez",
+            "github": "https://github.com/alexrodriguez"
+          },
+          "skills": ["Kubernetes", "AWS", "CI/CD", "Monitoring"],
+          "featured": false
+        },
+        {
+          "id": "lisa-anderson",
+          "name": "Lisa Anderson",
+          "role": "Head of Research",
+          "bio": "Forschungsleiterin, die die Grenzen dezentraler Systeme erkundet.",
+          "longBio": "Lisa leitet Qwellcode Labs, unsere Forschungsabteilung. Mit einem PhD in Kryptographie erforscht sie hochmoderne Konzepte in dezentralen Systemen, Zero-Knowledge-Proofs und Konsensmechanismen. Ihre Forschung informiert direkt unsere Produktionssysteme und stellt sicher, dass wir an der technologischen Spitze bleiben.",
+          "image": "img/faces/8.jpg",
+          "social": {
+            "linkedin": "https://linkedin.com/in/lisaanderson",
+            "twitter": "https://twitter.com/lisaanderson"
+          },
+          "skills": ["Kryptographie", "Forschung", "ZK Proofs", "Protokoll-Design"],
+          "featured": true
+        }
+      ],
+      "services": [
+        {
+          "id": "enterprise",
+          "title": "Industrie und Gesellschaft",
+          "shortTitle": "Industrie und Gesellschaft",
+          "description": "Wir bauen Systeme, die Bestand haben. Für BEGA haben wir ein digitales Fundament geschmiedet, um Deutschlands größte Möbelgruppe anzutreiben und unwankende Qualität für ihre 5.000 Partner zu gewährleisten. Für GOP Varieté haben wir die Engine hinter ihrem High-Stakes-Entertainment gebaut, die Shows für über eine Million Besucher pro Jahr orchestriert. Wir jagen keine Trends; wir bauen permanente Plattformen für dauerhaften Erfolg.",
+          "icon": "fas fa-building",
+          "highlights": [
+            "BEGA Digital Foundation",
+            "5.000+ Partner-Netzwerk",
+            "GOP Varieté Platform",
+            "Enterprise-Architektur"
+          ],
+          "ctaText": "Enterprise ansehen",
+          "link": "pages/service.html",
+          "featured": true
+        },
+        {
+          "id": "web3",
+          "title": "Ethereum",
+          "shortTitle": "Ethereum",
+          "description": "Vor sieben Jahren begannen wir mit dem Aufbau der dezentralen Grundlage für digitale Kultur. Unsere frühe Ethereum-Arbeit brachte POAP und das Museum of Crypto Art hervor. Jetzt setzt sich diese Mission durch mocaOS fort – das Open-Source-Betriebssystem für dezentrale kulturelle Memetik. Codex ist das lebendige Archiv unserer 10.000 Art DeCC0s, während Vibe Studio die Tools zum Erstellen und Interagieren mit diesen neuen kulturellen Commons bereitstellt. Wir kanalisieren unsere Leidenschaft in das dezentrale Internet der Kultur.",
+          "icon": "fab fa-ethereum",
+          "highlights": [
+            "Museum of Crypto Art",
+            "Codex & Vibe Studio",
+            "mocaOS Platform",
+            "POAP Protocol"
+          ],
+          "ctaText": "Ethereum erkunden",
+          "link": "pages/service.html",
+          "featured": true
+        },
+        {
+          "id": "social",
+          "title": "Social Media",
+          "shortTitle": "Social Media",
+          "description": "Wir sind Entwickler, die die soziale Schicht für die Ownership Economy bauen. Zeroone verwandelt jeden Post in ein einzigartiges digitales Asset, mit 180K+ Kreativen und 4,5M+ Assets, die bereits Zielgruppen in Sammler und digitale Fußabdrücke in Vermögen verwandeln. Tixu bringt Ownership zu Live-Erlebnissen und gibt Kreativen vollständige Kontrolle über ihr Ticketing und ihre Einnahmen. Wir bauen die Zukunft digitaler Kultur, einen besessenen Moment nach dem anderen.",
+          "icon": "fas fa-users",
+          "highlights": [
+            "Zeroone Platform",
+            "4,5M+ digitale Assets",
+            "Tixu Ticketing",
+            "Creator Ownership Tools"
+          ],
+          "ctaText": "Social entdecken",
+          "link": "pages/service.html",
+          "featured": true
+        }
+      ],
+      "testimonials": [
+        {
+          "id": "bega",
+          "author": "BEGA Partners",
+          "role": "Deutschlands größte Möbelgruppe",
+          "avatar": "img/faces/customers/bega.jpg",
+          "text": "Qwellcode hat uns ein digitales Fundament gebaut, das 5.000 Partner mit unwankender Zuverlässigkeit bedient. Ihre Enterprise-Architektur ist robust, skalierbar und genau das, was wir brauchten, um die Zukunft unseres Geschäfts anzutreiben. Sie bauen nicht nur Software – sie bauen Systeme, die Bestand haben.",
+          "rating": 5
+        },
+        {
+          "id": "moca",
+          "author": "Museum of Crypto Art",
+          "role": "Web3 Kulturinstitution",
+          "avatar": "img/faces/customers/tixu.jpg",
+          "text": "Sieben Jahre Aufbau auf Ethereum, von POAP bis mocaOS. Qwellcode ist Pionier der dezentralen Grundlage für digitale Kultur. Ihre technische Tiefe in Web3 kombiniert mit realer Skalierung macht sie zum Go-to-Team für ernsthafte dezentrale Systeme.",
+          "rating": 5
+        },
+        {
+          "id": "zeroone",
+          "author": "Zeroone",
+          "role": "180K+ Creator-Community",
+          "avatar": "img/faces/customers/zeroone.jpg",
+          "text": "Die Ownership Economy ist hier, und Qwellcode hat sie real gemacht. Mit 4,5M+ erstellten digitalen Assets haben sie eine Plattform gebaut, die unsere Zielgruppen in Sammler verwandelt und unsere digitalen Fußabdrücke in greifbaren Wert verwandelt. Revolutionäre Arbeit.",
+          "rating": 5
+        },
+        {
+          "id": "tixu",
+          "author": "Tixu",
+          "role": "Next-Gen Ticketing-Plattform",
+          "avatar": "img/faces/customers/moca.jpg",
+          "text": "Tixu denkt Event-Ticketing für die Ownership Economy neu. Qwellcode gab uns vollständige Kontrolle über Ticketing, Einnahmen und Fan-Beziehungen. Ihre Smart-Contract-Expertise und Plattform-Architektur eliminierten traditionelle Zwischenhändler und befähigten Kreative.",
+          "rating": 5
+        }
+      ],
+      "blog": [
+        {
+          "id": "web3-culture",
+          "title": "Das dezentrale Internet der Kultur",
+          "slug": "dezentrales-internet-der-kultur",
+          "category": "WEB3",
+          "date": "2024-12-15",
+          "author": "Lisa Anderson",
+          "thumbnail": "img/blog/1.jpg",
+          "excerpt": "Sieben Jahre Aufbau auf Ethereum lehrten uns, dass dezentrale Kultur ihr eigenes Betriebssystem braucht. Erkunden Sie, wie mocaOS zum Fundament für kulturelle Memetik in Web3 wird.",
+          "featured": true
+        },
+        {
+          "id": "ownership-economy",
+          "title": "Von Zielgruppen zu Sammlern: Die neue Creator Economy",
+          "slug": "zielgruppen-zu-sammlern-creator-economy",
+          "category": "OWNERSHIP ECONOMY",
+          "date": "2024-12-10",
+          "author": "Mike Johnson",
+          "thumbnail": "img/blog/2.jpg",
+          "excerpt": "Mit 180K+ Kreativen und 4,5M+ digitalen Assets auf Zeroone erleben wir die Transformation von Social Media in eine Ownership Economy. Erfahren Sie, wie Kreative echten Wert aufbauen.",
+          "featured": true
+        }
+      ],
+      "imprint": {
+        "title": "Impressum",
+        "sections": [
+          {
+            "heading": "Angaben gemäß § 5 TMG",
+            "content": "Qwellcode Solutions GmbH & Co. KG<br>Geseker Straße 53a<br>33154 Salzkotten<br>Deutschland"
+          },
+          {
+            "heading": "Vertreten durch",
+            "content": "Komplementär: Qwellcode Verwaltungs GmbH<br>Geschäftsführer: Alexander Gees, Rene Schmidt"
+          },
+          {
+            "heading": "Kontakt",
+            "content": "Telefon: +49 5258 2078834<br>E-Mail: info@qwellcode.de"
+          },
+          {
+            "heading": "Handelsregister",
+            "content": "Registergericht: Amtsgericht Paderborn<br>Registernummer: HRA 7979"
+          },
+          {
+            "heading": "Umsatzsteuer-ID",
+            "content": "Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:<br>DE 338 758 148"
+          },
+          {
+            "heading": "Verantwortlich für den Inhalt",
+            "content": "Alexander Gees, Rene Schmidt<br>Geseker Straße 53a<br>33154 Salzkotten<br>Deutschland"
+          },
+          {
+            "heading": "Haftung für Inhalte",
+            "content": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.<br><br>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen."
+          },
+          {
+            "heading": "Haftung für Links",
+            "content": "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.<br><br>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen."
+          },
+          {
+            "heading": "Urheberrecht",
+            "content": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.<br><br>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen."
+          },
+          {
+            "heading": "Quellenangaben für verwendete Bilder und Grafiken",
+            "content": "© Qwellcode Solutions GmbH & Co. KG<br>Alle Bilder und Grafiken sind urheberrechtlich geschützt."
+          }
+        ]
+      }
+    }
+  }
+}

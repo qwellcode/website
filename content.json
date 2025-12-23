@@ -37,7 +37,7 @@
           "copyright": "© qwellcode 2026. All Rights Reserved."
         },
         "hero": {
-          "headline": "Building <span class=\"mil-thin\">the Future,</span><br> One Robust <span class=\"mil-thin\">System at a Time</span>",
+          "headline": "We build <span class=\"mil-thin\">the Future,</span><br> One System <span class=\"mil-thin\">at a Time</span>",
           "description": "We're a top-notch dev shop building permanent platforms for permanent success. From decentralized cultural systems to enterprise foundations, we transform bold ideas into technology used by millions.",
           "primaryCTA": {
             "text": "Our Services",
@@ -49,7 +49,7 @@
           }
         },
         "about": {
-          "sectionTitle": "Our <br><span class=\"mil-thin\">Teams Philosophy</span>",
+          "sectionTitle": "<span class=\"mil-thin\">Our Teams</span> Philosophy",
           "description": [
             "Our team has been growing into a bleeding edge dev shop that's structured into two synergistic units: The Creators at <span class=\"mil-accent\">Qwellcode Solutions</span> and the Researchers at <span class=\"mil-accent\">Qwellcode Labs</span>.",
             "This powerful mix of research and scalable software—used by vast amounts of users—allows us to build scalable software for the future, one robust platform at a time. We don't chase trends; we build permanent platforms for permanent success."
@@ -326,7 +326,7 @@
         },
         {
           "id": "amber-island",
-          "title": "Amber",
+          "title": "Amber Island",
           "slug": "amber-island",
           "category": "RWAs with Gebr. Heinemann",
           "featured": true,
@@ -355,9 +355,9 @@
         },
         {
           "id": "poap",
-          "title": "POAP",
+          "title": "Proof of Attendance Protocol",
           "slug": "poap-protocol",
-          "category": "EthDenver Founding Team",
+          "category": "Unterstützt bei EthDenver 2019",
           "featured": true,
           "thumbnail": "img/works/8.jpg",
           "images": [
@@ -587,11 +587,11 @@
           "imprintLink": "Impressum"
         },
         "footer": {
-          "tagline": "Wir jagen keine Trends – wir bauen <span class=\"mil-accent\">dauerhafte Plattformen</span> für dauerhaften Erfolg. Von dezentraler Kultur bis zu Enterprise-Fundamenten unterstützen unsere Systeme Millionen Nutzer weltweit.",
+          "tagline": "Wir jagen keine Trends – wir bauen <span class=\"mil-accent\">persistente Plattformen</span> für dauerhaften Erfolg. Von dezentraler Kultur bis zu Enterprise Lösungen nutzen unsere Systeme Millionen Nutzer weltweit.",
           "copyright": "© qwellcode 2026. Alle Rechte vorbehalten."
         },
         "hero": {
-          "headline": "Die Zukunft <span class=\"mil-thin\">gestalten,</span><br> Ein robustes <span class=\"mil-thin\">System nach dem anderen</span>",
+          "headline": "Wir bauen <span class=\"mil-thin\">die Zukunft</span><br>Systeme<span class=\"mil-thin\"> für digitale Pioniere</span>",
           "description": "Wir sind ein erstklassiger Entwicklungsshop, der permanente Plattformen für dauerhaften Erfolg baut. Von dezentralen Kultursystemen bis hin zu Enterprise-Fundamenten verwandeln wir kühne Ideen in Technologie, die von Millionen genutzt wird.",
           "primaryCTA": {
             "text": "Unsere Services",
@@ -603,10 +603,10 @@
           }
         },
         "about": {
-          "sectionTitle": "Unsere <br><span class=\"mil-thin\">Teamphilosophie</span>",
+          "sectionTitle": "<span class=\"mil-thin\">Unsere Team</span> Philosophie",
           "description": [
             "Unser Team entwickelt sich zu einem hochmodernen Entwicklungsshop, der in zwei synergetische Einheiten strukturiert ist: Die Entwickler bei <span class=\"mil-accent\">Qwellcode Solutions</span> und die Forscher bei <span class=\"mil-accent\">Qwellcode Labs</span>.",
-            "Diese kraftvolle Mischung aus Forschung und skalierbarer Software—genutzt von einer Vielzahl von Nutzern—ermöglicht es uns, skalierbare Software für die Zukunft zu entwickeln, eine robuste Plattform nach der anderen. Wir jagen keine Trends; wir bauen dauerhafte Plattformen für dauerhaften Erfolg."
+            "Diese kraftvolle Mischung aus Forschung und skalierbarer Software—genutzt von einer Vielzahl von Nutzern—ermöglicht es uns, skalierbare Software für die Zukunft zu entwickeln, eine robuste Plattform nach der anderen. Wir jagen keine Trends; wir bauen persistente Plattformen für dauerhaften Erfolg."
           ],
           "quote": {
             "text": "<span class=\"mil-thin\">Wir vereinen Tüftler und Entwickler um skalierbare Systeme zu erschaffen.</span>",
@@ -616,7 +616,7 @@
         },
         "sections": {
           "about": {
-            "permanentPlatforms": "Wir jagen keine Trends; wir bauen dauerhafte Plattformen für dauerhaften Erfolg."
+            "permanentPlatforms": "Wir jagen keine Trends; wir bauen persistente Plattformen für dauerhaften Erfolg."
           },
           "services": {
             "suptitle": "Von dezentraler Kultur bis zu Enterprise-Fundamenten,<br> wir bauen Systeme, auf die Millionen vertrauen.",
@@ -880,7 +880,7 @@
         },
         {
           "id": "amber-island",
-          "title": "Amber",
+          "title": "Amber Island",
           "slug": "amber-island",
           "category": "RWAs with Gebr. Heinemann",
           "featured": true,
@@ -909,9 +909,9 @@
         },
         {
           "id": "poap",
-          "title": "POAP",
+          "title": "Proof of Attendance Protocol",
           "slug": "poap-protocol",
-          "category": "EthDenver Founding Team",
+          "category": "Supported at EthDenver 2019",
           "featured": true,
           "status": "Previous Work",
           "thumbnail": "img/works/8.jpg",

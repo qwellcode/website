@@ -216,7 +216,7 @@ Loads and manages content from content.json
                             <img src="${project.thumbnail}" alt="${project.title}">
                         </div>
                         <div class="mil-descr">
-                            <h4 class="mil-mb-15">${project.title}</h4>
+                            <h4 class="mil-mb-5">${project.title}</h4>
                             <p class="mil-text-sm mil-light-soft">${project.category}</p>
                         </div>
                     </div>

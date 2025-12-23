@@ -42,7 +42,8 @@ This is a **static multi-page creative agency website template** (Ashley/QCode) 
 │   └── _components.scss      # UI components (preloader, cursor, menu, cards, 3D shapes)
 ├── js/
 │   ├── content-manager.js    # ⭐ Content loading and rendering system
-│   ├── main.js               # All custom JavaScript
+│   ├── main.js               # All custom JavaScript (animations, interactions)
+│   ├── qcode.js              # ⭐ Initialization (modals, events, content loading)
 │   └── plugins/              # Third-party JS (jquery, gsap, swiper, swup, fancybox)
 └── img/                      # Images organized by type (blog, faces, works, partners, etc.)
 ```
@@ -1107,8 +1108,9 @@ When content is dynamically loaded, ensure:
 - **Common styles**: `scss/_common.scss`
 - **Custom QCode CSS**: `css/qcode.css` (modals, portfolio, language switcher)
 - **Compiled CSS**: `css/style.css` (DO NOT EDIT - compiled from SCSS)
-- **JavaScript**: `js/main.js`
-- **Content Manager**: `js/content-manager.js`
+- **JavaScript**: `js/main.js` (animations, interactions)
+- **Content Manager**: `js/content-manager.js` (content system)
+- **QCode Init**: `js/qcode.js` (initialization, modals)
 - **Content Database**: `content.json`
 - **Homepage**: `index.html`
 - **Admin Panel**: `admin.html`

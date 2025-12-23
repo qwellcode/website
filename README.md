@@ -125,7 +125,9 @@ qcode-website/
 ├── pages/                  # Additional HTML pages
 ├── js/
 │   ├── content-manager.js  # Content loading & rendering
-│   └── main.js             # Animations & interactions
+│   ├── main.js             # Animations & interactions
+│   ├── qcode.js            # Initialization & modals
+│   └── plugins/            # Third-party libraries
 │
 ├── scss/                   # Source styles (compiled to CSS)
 │   ├── _variables.scss     # Colors, fonts, sizes

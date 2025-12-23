@@ -4,7 +4,7 @@
       {
         "code": "en",
         "name": "English",
-        "flag": "🇬🇧"
+        "flag": "🇺🇸"
       },
       {
         "code": "de",
@@ -51,7 +51,7 @@
         "about": {
           "sectionTitle": "<span class=\"mil-thin\">Our Teams</span> Philosophy",
           "description": [
-            "Our team has been growing into a bleeding edge dev shop that's structured into two synergistic units: The Creators at <span class=\"mil-accent\">Qwellcode Solutions</span> and the Researchers at <span class=\"mil-accent\">Qwellcode Labs</span>.",
+            "Our team has been growing into a bleeding edge dev shop that's structured into two synergistic units: Creators at <span class=\"mil-accent\">Qwellcode Solutions</span> build in symbiosiswith the Researchers at <span class=\"mil-accent\">Qwellcode Labs</span>.",
             "This powerful mix of research and scalable software—used by vast amounts of users—allows us to build scalable software for the future, one robust platform at a time. We don't chase trends; we build permanent platforms for permanent success."
           ],
           "quote": {
@@ -591,7 +591,7 @@
           "copyright": "© qwellcode 2026. Alle Rechte vorbehalten."
         },
         "hero": {
-          "headline": "Wir bauen <span class=\"mil-thin\">die Zukunft</span><br>Systeme<span class=\"mil-thin\"> für digitale Pioniere</span>",
+          "headline": "Wir bauen <span class=\"mil-thin\">die Zukunft,</span><br>ein System<span class=\"mil-thin\"> nach dem anderen</span>",
           "description": "Wir sind ein erstklassiger Entwicklungsshop, der permanente Plattformen für dauerhaften Erfolg baut. Von dezentralen Kultursystemen bis hin zu Enterprise Lösungen verwandeln wir Ideen in Technologie, die von Millionen genutzt wird.",
           "primaryCTA": {
             "text": "Unsere Services",
@@ -606,7 +606,7 @@
           "sectionTitle": "<span class=\"mil-thin\">Unsere Team</span> Philosophie",
           "description": [
             "Unser Team entwickelt sich zu einem hochmodernen Entwicklungsshop, der in zwei synergetische Einheiten strukturiert ist: Die Entwickler bei <span class=\"mil-accent\">Qwellcode Solutions</span> und die Forscher bei <span class=\"mil-accent\">Qwellcode Labs</span>.",
-            "Diese kraftvolle Mischung aus Forschung und skalierbarer Software—genutzt von einer Vielzahl von Nutzern—ermöglicht es uns, skalierbare Software für die Zukunft zu entwickeln, eine robuste Plattform nach der anderen. Wir jagen keine Trends; wir bauen persistente Plattformen für dauerhaften Erfolg."
+            "Diese Mischung aus Forschung und skalierbarer Software—genutzt von einer Vielzahl von Nutzern—ermöglicht es uns, skalierbare Software für die Zukunft zu entwickeln, eine robuste Plattform nach der anderen. Wir jagen keine Trends; wir bauen persistente Plattformen für dauerhaften Erfolg."
           ],
           "quote": {
             "text": "<span class=\"mil-thin\">Wir vereinen Tüftler und Entwickler um skalierbare Systeme zu erschaffen.</span>",

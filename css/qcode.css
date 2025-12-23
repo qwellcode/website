@@ -61,7 +61,7 @@ h1, .mil-h1{
     font-size: 80px;
 }
 
-.mil-main-transition p{
+.mil-main-transition .mil-banner p{
     font-size: 22px;
     line-height: 32px;
 }

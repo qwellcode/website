@@ -1,0 +1,1186 @@
+# QCode Website - Cursor Rules
+
+## Project Overview
+
+This is a **static multi-page creative agency website template** (Ashley/QCode) built with HTML5, SCSS, jQuery, and GSAP animations. It uses Swup.js for SPA-like page transitions and features a **JSON-based content management system** for easy content updates.
+
+## Tech Stack
+
+- **HTML5** - Static pages with dynamic content loading
+- **SCSS** - Compiled to CSS via Prepros (check `prepros.config`)
+- **jQuery 3.x** - DOM manipulation and event handling
+- **GSAP 3.x + ScrollTrigger** - Scroll-based animations
+- **Swiper.js** - Touch sliders and carousels
+- **Swup.js** - Page transitions (SPA-like navigation without full reload)
+- **Fancybox** - Lightbox/gallery functionality
+- **Bootstrap Grid** - CSS grid system only (no Bootstrap JS)
+- **Font Awesome 5** - Icon library
+- **JSON Content Management** - Centralized content database
+
+## Project Structure
+
+```
+├── index.html                # Standalone landing page (main entry point)
+├── 404.html                  # Error page
+├── content.json              # ⭐ CONTENT DATABASE - Edit this for all content updates
+├── pages/                    # All other HTML pages
+│   ├── home-2.html
+│   ├── portfolio-*.html
+│   ├── project-*.html
+│   ├── services.html, service.html
+│   ├── blog.html, publication.html
+│   ├── team.html
+│   └── contact.html
+├── css/
+│   ├── style.css             # Compiled CSS (DO NOT EDIT - edit SCSS instead)
+│   └── plugins/              # Third-party CSS (bootstrap-grid, swiper, fancybox, font-awesome)
+├── scss/
+│   ├── style.scss            # Main SCSS entry point
+│   ├── _variables.scss       # Colors, fonts, sizes, transitions
+│   ├── _common.scss          # Base styles, typography, utilities, forms, backgrounds
+│   └── _components.scss      # UI components (preloader, cursor, menu, cards, etc.)
+├── js/
+│   ├── content-manager.js    # ⭐ Content loading and rendering system
+│   ├── main.js               # All custom JavaScript
+│   └── plugins/              # Third-party JS (jquery, gsap, swiper, swup, fancybox)
+└── img/                      # Images organized by type (blog, faces, works, partners, etc.)
+```
+
+## ⭐ Content Management System
+
+### Overview
+All site content is managed through `content.json`. No HTML editing required for content updates!
+
+### Multilingual Support
+The site supports multiple languages through a structured translation system:
+- **Languages Configured**: English (en) and German (de)
+- **Structure**: `content.json` has a `translations` object with language codes as keys
+- **Default Language**: English (en)
+- **Language Switcher**: One-click toggle button in header (🇬🇧 EN → 🇩🇪)
+  - Click to switch between languages instantly
+  - Shows current language → next language
+  - Persistent via localStorage and URL parameter
+  - Updates ALL content dynamically without page reload
+- All content (site info, projects, team, services, testimonials, blog) has translations
+
+### Content Types
+- **Projects** - Portfolio items with details, images, technologies
+- **Team Members** - Staff profiles with bios, photos, social links
+- **Services** - Service offerings with highlights and CTAs
+- **Testimonials** - Client reviews with avatars
+- **Blog Posts** - Articles with thumbnails and excerpts
+- **Partners** - Partner logos for carousel
+- **Site Info** - Hero text, about section, contact details, social media
+- **Social Media Links** - LinkedIn, Twitter (Xing removed)
+
+### Quick Edit Guide
+1. Open `content.json`
+2. Navigate to the appropriate language: `translations.en` or `translations.de`
+3. Find the section you want to edit (e.g., `"projects"`, `"team"`, `"blog"`)
+4. Edit the content (text, images, links, etc.)
+5. **Important**: Update both language versions to keep content in sync
+6. Save and refresh your browser - changes appear instantly!
+
+### Recent Content Updates
+- **Team Section**: Updated from "Our Team" to "Our Teams Philosophy"
+- **Description**: Changed to emphasize "bleeding edge dev shop" with "Creators at Qwellcode Solutions" and "Researchers at Qwellcode Labs"
+- **Social Links**: Removed Xing, kept LinkedIn and Twitter
+
+### API Access
+```javascript
+// Language functions
+QCodeContent.getLanguages()             // Get available languages
+QCodeContent.currentLanguage            // Current language code (en/de)
+QCodeContent.setLanguage(langCode)      // Set language
+QCodeContent.switchLanguage(langCode)   // Switch language and reload content
+QCodeContent.getTranslation()           // Get current translation data
+
+// Get content (automatically uses current language)
+QCodeContent.getProjects(featured)      // Get projects (featured=true for homepage)
+QCodeContent.getTeam(featured)          // Get team members
+QCodeContent.getServices()              // Get services
+QCodeContent.getTestimonials()          // Get testimonials
+QCodeContent.getBlogPosts(featured)     // Get blog posts
+QCodeContent.getSiteInfo()              // Get site information
+
+// Render content
+QCodeContent.renderLanguageSwitcher(selector)    // Render toggle button
+QCodeContent.renderFeaturedProjects(selector)    // Render 6 featured projects to grid
+QCodeContent.renderProjectsModal(selector)       // Render all projects to modal
+QCodeContent.renderServices(selector)
+QCodeContent.renderTeam(selector, featured)
+QCodeContent.renderBlogPosts(selector, featured)
+QCodeContent.updateHeroSection()                 // Update hero content
+QCodeContent.updateAboutSection()                // Update about section
+```
+
+### Portfolio Content Structure
+Each project in `content.json` has the following structure:
+```javascript
+{
+  "id": "project-slug",
+  "title": "Project Name",
+  "slug": "project-slug",
+  "category": "Category / Type",
+  "featured": true,              // true = shows on homepage grid
+  "thumbnail": "img/works/1.jpg", // Main thumbnail (718KB placeholder)
+  "images": [                     // Detail images for project pages
+    "img/works/1/1.jpg",
+    "img/works/1/2.jpg"
+  ],
+  "description": "Short description",
+  "highlights": [
+    "Feature 1",
+    "Feature 2"
+  ]
+}
+```
+
+**Image Strategy**: Currently all portfolio images use a unified green digital/binary placeholder (718KB). Replace with actual project screenshots as they become available. See `PORTFOLIO-IMAGES-UPDATE.md` for details.
+
+## CSS/SCSS Conventions
+
+### Naming Convention
+All custom classes use the `mil-` prefix (BEM-like):
+- **Block**: `mil-button`, `mil-card`, `mil-banner`
+- **Modifier**: `mil-dark-bg`, `mil-soft-bg`, `mil-active`, `mil-muted`
+- **Utility**: `mil-up`, `mil-mb-30`, `mil-mb-60`, `mil-p-120-60`
+
+### Key SCSS Variables (`_variables.scss`)
+```scss
+// Colors
+$dark: rgba(0, 0, 0, 1);
+$light: rgba(255, 255, 255, 1);
+$accent: rgba(255, 152, 0, 1);  // Orange accent color
+
+// Transparency variants
+$dt-50: rgba(0, 0, 0, .5);      // Dark transparent
+$lt-50: rgba(255, 255, 255, .5); // Light transparent
+
+// Typography
+$font-1: 'Outfit', sans-serif;
+$h1: 86px; $h2: 68px; $h3: 42px; $h4: 28px; $h5: 20px; $h6: 18px;
+$text: 16px;
+
+// Transitions
+$t-sm: .2s cubic-bezier(0, 0, 0.3642, 1);
+$t-md: .4s cubic-bezier(0, 0, 0.3642, 1);
+$t-lg: .6s cubic-bezier(0, 0, 0.3642, 1);
+```
+
+### Spacing Classes
+- `mil-mb-{n}`: margin-bottom (5, 10, 15, 30, 60, 90, 120)
+- `mil-p-{top}-{bottom}`: padding shorthand (e.g., `mil-p-120-60`)
+
+### Responsive Breakpoints
+```scss
+@media screen and (max-width: 1200px) { }  // Large tablets/small desktops
+@media screen and (max-width: 992px) { }   // Tablets
+@media screen and (max-width: 768px) { }   // Mobile landscape
+@media screen and (max-width: 576px) { }   // Mobile portrait
+```
+
+## JavaScript Patterns
+
+### Main.js Structure
+The file is wrapped in jQuery's document ready and uses "use strict":
+```javascript
+$(function () {
+    "use strict";
+    // All code here
+});
+```
+
+### Color Variables in JS (must match SCSS)
+```javascript
+var accent = 'rgba(255, 152, 0, 1)';
+var dark = '#000';
+var light = '#fff';
+```
+
+### GSAP Animation Patterns
+```javascript
+// Scroll reveal animation
+gsap.fromTo(element, {
+    opacity: 0,
+    y: 40,
+    scale: .98,
+}, {
+    y: 0,
+    opacity: 1,
+    scale: 1,
+    scrollTrigger: {
+        trigger: element,
+        toggleActions: 'play none none reverse',
+    }
+});
+
+// Scale on scroll
+gsap.fromTo(element, {
+    scale: value1,
+}, {
+    scale: value2,
+    scrollTrigger: {
+        trigger: element,
+        scrub: true,
+    }
+});
+```
+
+### Swup Page Transitions - CRITICAL
+Swup handles navigation without full page reloads. **All dynamic functionality must be reinitialized** in the `swup:contentReplaced` event:
+
+```javascript
+document.addEventListener("swup:contentReplaced", function () {
+    // Reset scroll position
+    $('html, body').animate({ scrollTop: 0 }, 0);
+
+    // Refresh ScrollTrigger
+    ScrollTrigger.refresh();
+
+    // Reinitialize: accordions, cursor effects, menus, sliders, scroll animations, fancybox
+    // (See main.js REINIT section for full implementation)
+});
+```
+
+**Swup containers** (content that gets replaced):
+- `#swupMain` - Main page content
+- `#swupMenu` - Navigation menu state
+
+### Slider Configurations
+```javascript
+// Reviews slider (fade effect)
+new Swiper('.mil-reviews-slider', {
+    effect: 'fade',
+    parallax: true,
+    pagination: { el: '.mil-revi-pagination', clickable: true },
+    navigation: { nextEl: '.mil-revi-next', prevEl: '.mil-revi-prev' },
+});
+
+// Infinite auto-scroll slider (partners)
+new Swiper('.mil-infinite-show', {
+    slidesPerView: 2,
+    speed: 5000,
+    autoplay: { delay: 0 },
+    loop: true,
+    freeMode: true,
+});
+```
+
+## HTML Structure
+
+### Common Page Elements (present on all pages)
+```html
+<div class="mil-wrapper" id="top">
+    <!-- Custom cursor -->
+    <div class="mil-ball">...</div>
+
+    <!-- Preloader animation -->
+    <div class="mil-preloader">...</div>
+
+    <!-- Scroll progress bar -->
+    <div class="mil-progress-track"><div class="mil-progress"></div></div>
+
+    <!-- Full-screen menu -->
+    <div class="mil-menu-frame">...</div>
+
+    <!-- Menu overlay -->
+    <div class="mil-curtain"></div>
+
+    <!-- Fixed frame (logo, menu button, back-to-top) -->
+    <div class="mil-frame">...</div>
+
+    <!-- Main content wrapper -->
+    <div class="mil-content">
+        <div id="swupMain" class="mil-main-transition">
+            <!-- Page-specific sections go here -->
+            <!-- Footer -->
+        </div>
+    </div>
+
+    <!-- Hidden SVG elements (arrows, decorative shapes) -->
+    <div class="mil-hidden-elements">...</div>
+</div>
+```
+
+### Section Pattern
+```html
+<section class="mil-dark-bg"> <!-- or no class for light bg, or mil-soft-bg -->
+    <div class="mi-invert-fix"> <!-- Only needed for dark backgrounds -->
+        <div class="mil-animation-frame">
+            <div class="mil-animation mil-position-1 mil-scale" data-value-1="2" data-value-2="1"></div>
+        </div>
+        <div class="container mil-p-120-60">
+            <!-- Content with Bootstrap grid -->
+        </div>
+    </div>
+</section>
+```
+
+## Animation System
+
+### Scroll Reveal (mil-up)
+Add `mil-up` class to any element for fade-in-up animation on scroll:
+```html
+<h2 class="mil-up">Title</h2>
+<p class="mil-up mil-mb-30">Paragraph</p>
+```
+
+### Scale Animation (mil-scale)
+```html
+<img class="mil-scale" data-value-1="1" data-value-2="1.2">
+<!-- Scales from 1 to 1.2 as user scrolls -->
+```
+
+### Parallax Animation (mil-parallax)
+```html
+<div class="mil-parallax" data-value-1="-100" data-value-2="100">
+<!-- Moves from -100px to 100px on Y axis during scroll -->
+```
+
+### Rotation Animation (mil-rotate)
+```html
+<svg class="mil-rotate" data-value="360">
+<!-- Rotates 360 degrees during scroll -->
+```
+
+## Important Guidelines
+
+### DO:
+- Edit SCSS files, not compiled CSS (except for page-specific inline styles in `index.html`)
+- Use `mil-` prefix for all new classes
+- Add `mil-up` class for scroll animations
+- Reinitialize functionality in `swup:contentReplaced` event when adding new interactive features
+- Use Bootstrap grid classes (`container`, `row`, `col-*`) for layout
+- Keep color values in sync between `_variables.scss` and `main.js`
+- Use relative paths for assets (e.g., `img/photo/1.jpg`)
+- When using padding-bottom technique for aspect ratios, always position images absolutely with object-fit: cover
+
+### DON'T:
+- Edit `css/style.css` directly (it's compiled from SCSS)
+- Edit files in `js/plugins/` or `css/plugins/` (third-party libraries)
+- Remove `#swupMain` or `#swupMenu` IDs (breaks page transitions)
+- Add inline styles when SCSS classes exist
+- Use `!important` unless absolutely necessary
+- Forget to reinitialize sliders/animations after Swup transitions
+
+### When Adding New Pages:
+1. Copy structure from existing page (e.g., `home-1.html`)
+2. Keep all common elements (cursor, preloader, menu, frame, hidden-elements)
+3. Only modify content inside `#swupMain`
+4. Update navigation menu on all pages if adding to main nav
+5. Set appropriate `mil-active` class on current menu item
+
+### When Adding New Components:
+1. Define styles in `scss/_components.scss`
+2. Use existing variables from `_variables.scss`
+3. Follow `mil-` naming convention
+4. Add responsive styles within component definition
+5. If interactive, add JS in `main.js` and reinit in `swup:contentReplaced`
+
+## Complete Class Reference
+
+### Layout & Container Classes
+
+#### Wrapper & Structure
+- `mil-wrapper` - Main site wrapper
+- `mil-content` - Main content container (wraps #swupMain)
+- `mil-relative` - Position relative
+- `mil-o-hidden` - Overflow hidden
+- `mil-flex` - Display flex
+- `mil-vert-between` - Flex column with space-between, height 100%
+- `mil-mobile-hidden` - Hidden on screens ≤992px
+
+### Typography Classes
+
+#### Heading Classes
+- `mil-h1` to `mil-h6` - Heading styles (also work with h1-h6 tags)
+- `mil-complex-title` - Line height normal
+
+#### Text Sizes
+- `mil-text-sm` - Small text (15px)
+- `mil-text-lg` - Large text (18px)
+- `mil-text-xl` - Extra large text (22px)
+
+#### Text Modifiers
+- `mil-upper` - Uppercase, 12px, font-weight 500, letter-spacing 2px
+- `mil-bold` - Font weight 500
+- `mil-thin` - Font weight 100
+- `mil-no-wrap` - White-space nowrap
+
+#### Color Classes
+- `mil-accent` - Accent color (lime green #87d832)
+- `mil-light` - White color + forces child links white
+- `mil-muted` - Light 90% opacity ($lt-90)
+- `mil-dark` - Dark/black color
+- `mil-light-soft` - Light 40% opacity ($lt-40)
+- `mil-dark-soft` - Dark 50% opacity ($dt-50)
+- `mil-marker` - Background accent color, padding 0 5px
+
+#### Text Alignment
+- `mil-center` - Text align center
+- `mil-left` - Text align left
+- `mil-right` - Text align right
+- `mil-sm-center` - Center on mobile (≤576px)
+
+#### Special Typography Components
+- `mil-suptitle` - Section subtitle with decorative line
+  - `mil-suptitle-right` - Right aligned variant
+  - `mil-suptitle-dark` - Dark line variant
+- `mil-divider` - 1px horizontal divider
+- `mil-img-frame` - Image container with 140% padding-bottom
+
+### Interactive Elements
+
+#### Links
+- `mil-link` - Styled link with icon
+  - Modifiers: `mil-accent`, `mil-dark`, `mil-down-arrow`, `mil-icon-left`
+
+#### Buttons
+- `mil-button` - Primary button style
+  - `mil-icon-button` - Icon-only variant (padding 15px)
+  - `mil-icon-button-sm` - Small icon button (40px height)
+  - `mil-arrow-down` - Button with downward arrow
+
+#### Forms
+- Form inputs/textareas have built-in styles (70px height, uppercase, letter-spacing 2px)
+
+#### Breadcrumbs
+- `mil-breadcrumbs` - Breadcrumb navigation
+  - `mil-light` - Light theme variant
+  - `mil-center` - Centered breadcrumbs
+
+### Background Classes
+- `mil-dark-bg` - Dark background using CSS invert filter
+  - Must wrap content in `mi-invert-fix` div
+- `mil-soft-bg` - Soft grey background ($gs-5)
+
+### Spacing Utilities
+
+#### Margins
+- `mil-mr-30` - Margin right 30px
+- `mil-mb-5` - Margin bottom 5px
+- `mil-mb-10` - Margin bottom 10px
+- `mil-mb-15` - Margin bottom 15px
+- `mil-mb-20` - Margin bottom 20px (actually 15px - typo in source)
+- `mil-mb-30` - Margin bottom 30px
+- `mil-mb-60` - Margin bottom 60px
+- `mil-mb-90` - Margin bottom 90px
+- `mil-mb-120` - Margin bottom 120px (90px on ≤992px)
+- `mil-mt-suptitle-offset` - Margin top 70px (30px on ≤992px)
+
+#### Padding
+- `mil-p-120-120` - Padding top/bottom 120px (90px on mobile)
+- `mil-p-120-90` - Padding 120px top, 90px bottom
+- `mil-p-0-120` - Padding bottom 120px only
+- `mil-p-120-0` - Padding top 120px only
+- `mil-p-120-60` - Padding 120px top, 60px bottom
+- `mil-p-90-90` - Padding top/bottom 90px
+- `mil-p-90-120` - Padding 90px top, 120px bottom
+- `mil-p-0-90` - Padding bottom 90px
+- `mil-p-0-30` - Padding bottom 30px
+- `mil-p-120-30` - Padding 120px top, 30px bottom
+
+#### Layout Helpers
+- `mil-adaptive-right` - Flex end justify (flex-start on ≤992px)
+- `mil-btn-space` - Margin right 30px (50px + bottom 30px on ≤500px)
+
+### Core Components
+
+#### Preloader
+- `mil-preloader` - Full screen preloader overlay
+  - `mil-preloader-animation` - Animation container
+  - `mil-animation-1`, `mil-animation-2` - Animation states
+  - `mil-pos-abs` - Absolute positioned flex center
+  - `mil-reveal-frame` - Reveal animation wrapper
+  - `mil-reveal-box` - Animated reveal box
+  - `mil-hidden` - Added when preloader complete
+
+#### Cursor
+- `mil-ball` - Custom cursor element
+  - `mil-icon-1` - Cursor icon container
+  - `mil-more-text` - "More" cursor text
+  - `mil-choose-text` - "Choose" cursor text
+  - `mil-accent` - Accent colored cursor state
+
+#### Cursor Trigger Classes (add to elements)
+- `mil-drag` - Shows drag icon on cursor
+- `mil-more` - Shows "More" text on cursor
+- `mil-choose` - Shows "Choose" text on cursor
+- `mil-accent-cursor` - Changes cursor to accent color
+
+#### Progress Bar
+- `mil-progress-track` - Fixed progress bar container
+- `mil-progress` - Animated progress fill
+
+#### Frame & Navigation
+- `mil-frame` - Fixed frame containing logo and menu
+  - `mil-frame-top` - Top section with logo/menu button
+  - `mil-frame-bottom` - Bottom section (desktop only)
+- `mil-logo` - Logo text (42px, weight 500)
+- `mil-menu-btn` - Hamburger menu button
+  - `mil-active` - Open state
+- `mil-current-page` - Current page indicator (rotated, desktop only)
+- `mil-back-to-top` - Back to top link (rotated, desktop only)
+
+#### Menu System
+- `mil-menu-frame` - Full screen menu overlay
+  - `mil-active` - Open state
+- `mil-main-menu` - Primary navigation menu
+  - `mil-has-children` - Parent menu item with submenu
+  - `mil-active` - Active/open menu item
+- `mil-menu-list` - Simple menu list
+  - `mil-hori-list` - Horizontal variant
+  - `mil-dark` - Dark text variant
+- `mil-menu-right-frame` - Right side menu content (desktop)
+  - `mil-menu-right` - Right menu content wrapper
+  - `mil-animation-in` - Animation wrapper
+- `mil-curtain` - Page transition overlay
+
+### Banner Components
+
+#### Banner Types
+- `mil-banner` - Full height banner (100vh)
+  - `mil-banner-content` - Banner content wrapper
+- `mil-inner-banner` - Inner page banner variant
+- `mil-banner-personal` - Personal/homepage hero banner
+  - `mil-personal-text` - Personal text section
+  - `mil-banner-panel` - Bottom panel with CTA
+
+#### Banner Elements
+- `mil-portrait-frame` - Portrait image container
+  - `mil-nimbus` - Radial gradient background effect
+- `mil-circle-text` - Circular rotating text
+  - `mil-ct-svg` - SVG text element
+- `mil-lines-place` - Container for decorative lines
+  - `mil-light` - Light colored lines
+  - `mil-lines-long` - Extended lines variant
+
+### Animation Elements
+
+#### Animation Containers
+- `mil-animation-frame` - Main animation wrapper (100vh, animates)
+- `mil-animation` - Individual animation element (300x300px)
+  - `mil-position-1` - Top right position
+  - `mil-position-2` - Top left position
+  - `mil-position-3` - Bottom center position
+  - `mil-position-4` - Top right alternate (with dark variant)
+
+#### Psychedelic Geometric Shapes Framework
+A comprehensive system for 3D wireframe shapes with line art aesthetics. Shapes are dynamically assigned via `data-shape-type` attribute.
+
+**Available Shapes:**
+- `torus` - Donut/ring shape with 24 segments creating smooth circular wireframe
+- `icosahedron` - 20-sided polyhedron with complex triangular faces
+- `star` - 12-pointed stellated star with dynamic angular geometry
+- `helix` - Spiral/DNA-like structure with 16 segments
+- `diamond` - 4-sided pyramid shape
+- `cube` - Classic 6-sided box
+- `octahedron` - 8-sided double pyramid
+- `sphere` - Geodesic sphere approximation with 12 faces
+- `prism` - Triangular prism
+- `dodecahedron` - Original 12-sided polyhedron (preserved from original design)
+
+**Shape System Classes:**
+- `.mil-shape` - Base class for all geometric shapes
+- `.mil-shape-face` - Individual face/edge element within shapes
+- Each shape has its own class (e.g., `.mil-torus`, `.mil-icosahedron`, etc.)
+
+**Usage Example:**
+```html
+<div class="mil-animation-frame">
+  <div class="mil-animation mil-position-1 mil-scale"
+       data-value-1="7" data-value-2="1.6"
+       data-shape-type="torus"></div>
+  <div class="mil-animation mil-position-2 mil-scale"
+       data-value-1="4" data-value-2="1"
+       data-shape-type="icosahedron"></div>
+</div>
+```
+
+**Shape Animations:**
+- `rotate` - Standard 100s rotation animation
+- `rotatePsychedelic` - Complex multi-axis rotation (60-90s depending on shape)
+- Each shape has unique rotation speeds and patterns
+
+**JavaScript Integration:**
+- Shapes are stored as templates in `.mil-hidden-elements`
+- `initializeShapes()` function dynamically clones shapes based on `data-shape-type`
+- Must be reinitialized on Swup page transitions
+
+#### Animation Triggers (add to elements)
+- `mil-up` - Fade up on scroll (most common)
+- `mil-scale` - Scale on scroll (requires data-value-1 and data-value-2)
+- `mil-parallax` - Parallax Y movement (requires data-value-1 and data-value-2)
+- `mil-rotate` - Rotation on scroll (requires data-value attribute)
+
+### About Section
+- `mil-about-quote` - Quote with avatar
+  - `mil-avatar` - Circular avatar image
+  - `mil-quote` - Quote text
+- `mil-about-photo` - About photo section
+
+### Partners Section
+- `mil-infinite-show` - Infinite scrolling slider
+- `mil-partner-frame` - Partner logo container
+
+### Services Components
+
+#### Service Cards
+- `mil-service-card-sm` - Small service card
+  - Hover reveals description and button
+- `mil-service-card-lg` - Large service card
+  - `mil-offset` - Vertical offset variant
+  - `mil-other-card` - Bordered variant with hover effect
+  - `mil-descr` - Description text container
+
+#### Service Layout
+- `mil-services-grid` - Services grid layout
+  - `mil-services-grid-item` - Grid item
+- `mil-service-list` - Service list
+  - `mil-light` - Light colored variant
+  - `mil-dark` - Dark bordered variant
+
+#### Service Content
+- `mil-complex-text` - Text with inline button
+- `mil-text-image` - Inline rounded image (80x250px)
+
+### Team Components
+- `mil-team-card` - Team member card
+  - `mil-offset-card` - Vertical offset variant
+  - `mil-description` - Overlay description (shows on hover)
+  - `mil-secrc-text` - Secondary description text
+- `mil-team-list` - Team list container
+
+### Social Media
+- `mil-social-icons` - Social icon list
+  - `mil-center` - Centered variant
+  - `mil-dark` - Dark icons variant
+- `mil-social-frame` - Social icons frame (rounded background)
+
+### Reviews/Testimonials
+
+#### Review Slider
+- `mil-reviews-slider` - Swiper slider container
+- `mil-revi-pagination` - Custom avatar pagination
+  - `mil-custom-dot` - Individual avatar dot
+  - `mil-slide-1` through `mil-slide-7` - Customer avatar backgrounds
+- `mil-quote-icon` - Quote SVG icon
+
+#### Slider Navigation
+- `mil-slider-nav` - Slider navigation container
+  - `mil-reviews-nav` - Reviews specific positioning
+  - `mil-soft` - Soft grey background variant
+- `mil-slider-arrow` - Individual arrow button
+  - `mil-prev` - Previous button (rotated 180deg)
+  - `mil-revi-next` - Next button (reviews)
+  - `mil-revi-prev` - Previous button (reviews)
+
+### Blog Components
+
+#### Blog Cards
+- `mil-blog-card` - Blog post card
+  - `mil-blog-card-hori` - Horizontal layout variant
+  - `mil-cover-frame` - Image container (65% padding)
+  - `mil-post-descr` - Post description
+  - `mil-post-text` - Truncated post excerpt
+
+#### Blog Elements
+- `mil-labels` - Label container
+  - `mil-label` - Individual label
+- `mil-category-list` - Category filter list
+
+#### Pagination
+- `mil-pagination` - Pagination container
+- `mil-pagination-btn` - Pagination button
+  - `mil-active` - Active page
+
+### Footer Components
+- `mil-footer-menu` - Large footer menu
+- `mil-subscribe-form` - Newsletter subscription form
+  - `mil-subscribe-form-2` - Dark background variant
+
+### Portfolio Components
+
+#### Portfolio Items
+- `mil-portfolio-item` - Portfolio item card (for sliders)
+  - `mil-slider-item` - Slider variant (fullscreen)
+  - `mil-cover-frame` - Image container
+    - `mil-vert` - Vertical aspect (130%)
+    - `mil-hori` - Horizontal aspect (65%)
+  - `mil-cover` - Image wrapper
+  - `mil-descr` - Description panel
+  - `mil-descr-text` - Description text
+- `mil-portfolio-item-inline` - Portfolio card for grid layouts (homepage)
+  - Uses CSS grid with square aspect ratio (100% padding-bottom)
+  - Images must be absolutely positioned with object-fit: cover
+  - Hover effect scales image to 110%
+
+#### Portfolio Layout
+- `mil-portfolio` - Portfolio section container
+- `mil-portfolio-grid` - Grid layout for featured projects (homepage)
+  - Uses CSS Grid with auto-fit columns (min 300px)
+  - 30px gap between items
+  - Dynamically populated by `QCodeContent.renderFeaturedProjects()`
+- `mil-portfolio-slider-frame` - Slider container
+- `mil-portfolio-slider` - Swiper slider
+- `mil-portfolio-nav` - Slider navigation panel
+  - `mil-portfolio-btns-frame` - Button container
+  - `mil-portfolio-next` - Next button
+  - `mil-portfolio-prev` - Previous button
+- `swiper-portfolio-pagination` - Fraction pagination
+
+#### Portfolio Navigation
+- `mil-info` - Project info bar
+- `mil-works-nav` - Project navigation
+  - `mil-disabled` - Disabled nav item
+
+#### Portfolio Grid Implementation (index.html)
+The homepage uses a custom grid implementation with special styling:
+
+```css
+.mil-portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.mil-portfolio-item-inline .mil-cover-frame {
+    position: relative;           /* Required for absolute positioning */
+    padding-bottom: 100%;         /* Creates square aspect ratio */
+    overflow: hidden;
+}
+
+.mil-portfolio-item-inline .mil-cover-frame img {
+    position: absolute;           /* Takes image out of flow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;            /* Covers area without distortion */
+    object-position: center;      /* Centers the image */
+    transition: transform 0.6s cubic-bezier(0, 0, 0.3642, 1);
+}
+```
+
+**Important**: The `.mil-cover-frame` container must have `position: relative` and images must be `position: absolute` with `object-fit: cover` to work correctly with the padding-bottom technique.
+
+### Map Component
+- `mil-map-frame` - Map container (600px height)
+  - `mil-map` - Map wrapper with hover zoom
+
+### Accordion Component
+- `mil-accordion-group` - Accordion item
+  - `mil-accordion-menu` - Clickable header
+  - `mil-accordion-head` - Header text
+  - `mil-symbol` - Plus/minus icon
+    - `mil-plus` - Plus icon
+    - `mil-minus` - Minus icon
+  - `mil-accordion-content` - Collapsible content
+
+### Price Component
+- `mil-price-card` - Pricing card
+  - `mil-price-number` - Price display
+
+### 404 Page
+- `mil-404-banner` - 404 banner section
+- `mil-404-frame` - 404 content frame
+- `mil-404-text` - 404 description text
+- `mil-scale-frame` - Scaled container
+- `mil-404` - Animated 404 text with glitch effect
+
+### Image Components
+- `mil-image-frame` - Responsive image container
+  - `mil-horizontal` - 65% aspect ratio
+  - `mil-vertical` - 140% aspect ratio
+  - `mil-square` - 100% aspect ratio
+  - `mil-fw` - Full width 50% aspect ratio
+  - `mil-zoom-btn` - Fancybox trigger button
+
+### Page Transitions
+- `mil-main-transition` - Main content transition wrapper
+- `mil-curtain` - Transition overlay
+
+### Modal System
+
+#### Modal Container
+- `mil-modal` - Full-screen modal overlay (z-index: 9999)
+  - `mil-active` - Open state (adds display: flex and opacity: 1)
+- `mil-modal-content` - Modal content wrapper with scroll
+  - Padding: 60px (30px on mobile)
+  - Max-width: 1200px, Max-height: 90vh
+  - Transform scale animation on open
+- `mil-modal-close` - Close button (×)
+  - Position: absolute top-right
+  - Click to close modal
+
+#### Modal Triggers
+- `data-modal-trigger` - Add to any element to open `#projectModal`
+- Click outside modal content to close
+- ESC key to close
+- Body scroll locked when modal open
+
+#### Portfolio Modal (index.html)
+```javascript
+// Open modal
+$('[data-modal-trigger]').click() → adds 'mil-active' class
+
+// Close modal  
+$('.mil-modal-close').click() → removes 'mil-active' class
+$('.mil-modal').click(outside content) → closes modal
+$(document).keydown('Escape') → closes modal
+```
+
+**Content**: Populated by `QCodeContent.renderProjectsModal('#projectModal .row')` showing all projects in a 3-column grid
+
+### Swiper Slider Classes (Swiper.js)
+- `mil-reviews-slider` - Reviews slider
+- `mil-infinite-show` - Infinite auto-scroll
+- `mil-portfolio-slider` - Portfolio fullscreen slider
+- `mil-1-slider` - Single item slider
+- `mil-2-slider` - Two item slider (responsive)
+
+### Hidden Elements
+- `mil-hidden-elements` - Container for SVG and shape templates (completely hidden from view)
+  - Hidden with `display: none`, `visibility: hidden`, and positioned off-screen
+  - Contains templates that are cloned by JavaScript
+  - `mil-arrow` - Arrow SVG template
+  - `mil-shape` - All geometric shape templates (torus, icosahedron, diamond, cube, etc.)
+  - `mil-dodecahedron` - Original dodecahedron shape template
+  - `mil-lines` - Decorative lines SVG template
+  - `mil-arrow-place` - Clone destination for arrows
+
+### Data Attributes
+
+#### Animation Data Attributes
+- `data-value-1` - Start value for scale/parallax animations
+- `data-value-2` - End value for scale/parallax animations
+- `data-value` - Rotation value for rotate animations
+- `data-shape-type` - Assigns geometric shape type to animation containers (e.g., "torus", "icosahedron", "diamond")
+
+#### Fancybox
+- `data-fancybox="gallery"` - Gallery lightbox trigger
+
+#### Swup
+- `data-no-swup` - Exclude link from Swup page transitions
+
+## JavaScript Objects & Functions Reference
+
+### Core Libraries
+- **jQuery** - DOM manipulation
+- **GSAP** - Animation engine
+- **ScrollTrigger** - Scroll-based animations (GSAP plugin)
+- **ScrollToPlugin** - Smooth scroll (GSAP plugin)
+- **Swup** - Page transition library
+- **Swiper** - Touch slider library
+- **Fancybox** - Lightbox/gallery
+
+### Color Variables (must match SCSS)
+```javascript
+var accent = 'rgba(135, 216, 50, 1)';  // Lime green
+var dark = '#000';                      // Black
+var light = '#fff';                     // White
+```
+
+### Swup Configuration
+```javascript
+const options = {
+    containers: ['#swupMain', '#swupMenu'],
+    animateHistoryBrowsing: true,
+    linkSelector: 'a:not([data-no-swup])',
+    animationSelector: '[class="mil-main-transition"]'
+};
+```
+
+### Main JavaScript Functions
+
+#### Preloader Timeline
+- GSAP timeline animation sequence
+- Animates text reveal, box animation, fade out
+
+#### Shape System
+- `initializeShapes()` - Dynamically assigns geometric shapes to animation containers
+  - Reads `data-shape-type` attribute from `.mil-animation` elements
+  - Clones appropriate shape template from `.mil-hidden-elements`
+  - Defaults to dodecahedron if shape type not found
+  - Must be called on page load and after Swup transitions
+
+#### Accordion System
+- `createAnimation(element)` - Creates accordion animation
+- `toggleMenu(clickedMenu)` - Handles accordion toggle
+
+#### Cursor Tracking
+- `movecursor(e)` - GSAP cursor position update
+- Hover effects for `.mil-drag`, `.mil-more`, `.mil-choose`, `.mil-accent-cursor`
+
+#### Menu Toggle
+- Click handler for `.mil-menu-btn`
+- Toggles `mil-active` class on menu elements
+
+#### Scroll Animations
+- Targets: `.mil-up`, `.mil-scale`, `.mil-parallax`, `.mil-rotate`
+- GSAP fromTo animations with ScrollTrigger
+
+#### Slider Instances
+
+**Reviews Slider**
+```javascript
+new Swiper('.mil-reviews-slider', {
+    pagination: { el: '.mil-revi-pagination', clickable: true },
+    navigation: { nextEl: '.mil-revi-next', prevEl: '.mil-revi-prev' },
+    speed: 800,
+    effect: 'fade',
+    parallax: true
+});
+```
+
+**Infinite Slider**
+```javascript
+new Swiper('.mil-infinite-show', {
+    slidesPerView: 2,  // 4 on desktop
+    speed: 5000,
+    autoplay: { delay: 0 },
+    loop: true,
+    freeMode: true
+});
+```
+
+**Portfolio Slider**
+```javascript
+new Swiper('.mil-portfolio-slider', {
+    slidesPerView: 1,
+    speed: 800,
+    parallax: true,
+    mousewheel: { enable: true },
+    pagination: { el: '.swiper-portfolio-pagination', type: 'fraction' }
+});
+```
+
+**1-Item & 2-Item Sliders**
+- Similar config to portfolio slider
+- 2-item shows 2 slides on desktop (992px+)
+
+#### Fancybox Gallery
+```javascript
+$('[data-fancybox="gallery"]').fancybox({
+    buttons: ["slideShow", "zoom", "fullScreen", "close"],
+    loop: false,
+    protect: true
+});
+```
+
+#### Anchor Scroll
+- Smooth scroll to `#anchor` links
+- 90px offset on mobile
+
+#### Progress Bar
+- GSAP animation tied to scroll position
+
+#### Back to Top
+- Appears after scrolling 40% down page
+
+### Swup Event: contentReplaced
+
+**ALL animations and interactive elements must be reinitialized in this event:**
+- Reset scroll position
+- Refresh ScrollTrigger
+- Close menu
+- Re-append cloned elements (arrows, lines, shapes)
+- Reinitialize shape system with `initializeShapes()`
+- Reinitialize accordions
+- Reinitialize cursor effects
+- Reinitialize menu interactions
+- Reinitialize scroll animations
+- Reinitialize Fancybox
+- Reinitialize all sliders
+
+## Content Management Best Practices
+
+### Editing Content
+1. **Always edit `content.json`** for content updates (projects, team, blog, etc.)
+2. **Never hardcode content** in HTML files - use the content system
+3. **Validate JSON** before deploying (use jsonlint.com)
+4. **Backup `content.json`** before major changes
+5. **Optimize images** before adding (< 500KB recommended)
+
+### Adding New Content
+- **Projects**: Add to `"projects"` array with all required fields
+- **Team Members**: Add to `"team"` array, set `featured: true` for homepage
+- **Blog Posts**: Add to `"blog"` array with date, thumbnail, excerpt
+- **Services**: Add to `"services"` array with highlights and CTA text
+
+### File Organization
+- **Root Directory**: Only `index.html`, `404.html`, `content.json`
+- **Pages Folder**: All other HTML pages use `../` for asset paths
+- **Navigation**: Update links to use `pages/` prefix where needed
+- **Images**: Organize in `/img/[type]/` folders (works, faces, blog, partners)
+
+### Swup Integration with Content Manager
+When content is dynamically loaded, ensure:
+1. Content loads before Swup initializes page transitions
+2. ScrollTrigger refreshes after content rendering
+3. Event handlers work with dynamically added elements
+4. Modal content is populated before opening
+
+## File References
+
+- **Main styles**: `scss/style.scss` (imports others)
+- **Variables**: `scss/_variables.scss`
+- **Components**: `scss/_components.scss`
+- **JavaScript**: `js/main.js`
+- **Content Manager**: `js/content-manager.js`
+- **Content Database**: `content.json`
+- **Homepage**: `index.html`
+- **Documentation**: `README.md` (start here)
+- **Portfolio Images**: `img/works/` (thumbnails and detail images)
+- **Image Update Log**: `PORTFOLIO-IMAGES-UPDATE.md`
+
+## Quick Reference: Portfolio Implementation
+
+### Homepage Portfolio Grid
+**File**: `index.html`
+**Section**: Lines 493-522
+**Container**: `.mil-portfolio-grid`
+**Rendering**: `QCodeContent.renderFeaturedProjects('.mil-portfolio-grid')`
+**Shows**: 6 featured projects (where `featured: true` in content.json)
+**Styling**: Inline styles (lines 162-207) - CSS Grid with square cards
+
+### Portfolio Modal (All Projects)
+**File**: `index.html`
+**Section**: Lines 1101-1120
+**Container**: `#projectModal .row`
+**Rendering**: `QCodeContent.renderProjectsModal('#projectModal .row')`
+**Shows**: All 11 projects
+**Trigger**: Click "Explore All Work" button
+
+### Adding New Portfolio Projects
+1. Add project object to `content.json` → `translations.en.projects` (and `de`)
+2. Set `featured: true` to show on homepage (max 6 recommended)
+3. Add thumbnail image to `img/works/[n].jpg`
+4. Add detail images to `img/works/[n]/[1-n].jpg`
+5. Images currently use unified placeholder (718KB green digital theme)
+6. Refresh page - project appears automatically via content manager
+
+### Portfolio Image Paths
+- **Thumbnails**: `img/works/1.jpg` through `11.jpg`
+- **Project 1 Details**: `img/works/1/1.jpg`, `1/2.jpg`, etc.
+- **Current State**: All 55 images unified with `data/placeholder.jpeg` (718KB)
+- **Future**: Replace with actual screenshots maintaining same file structure
+
+## Recent Enhancements
+
+### Psychedelic Geometric Shapes System
+A bleeding-edge animation framework featuring 10 different 3D wireframe shapes:
+
+**Implementation:**
+1. **SCSS** (`_components.scss`): Defines all shape geometries with CSS 3D transforms
+2. **HTML** (`.mil-hidden-elements`): Contains shape templates
+3. **JavaScript** (`main.js`): `initializeShapes()` function dynamically assigns shapes
+
+**Key Features:**
+- Data-driven shape assignment via `data-shape-type` attribute
+- Psychedelic rotation animations with multi-axis movement
+- Line art aesthetic with customizable border widths and colors
+- Responsive and performant using CSS 3D transforms
+- Easy to extend with new shapes
+
+**Adding New Shapes:**
+1. Define shape class in `_components.scss` with `.mil-shape-face` elements
+2. Add HTML template in `.mil-hidden-elements` section
+3. Use `data-shape-type="shapename"` to assign to animation containers
+
+### Multilingual System
+Full internationalization support with language switcher:
+
+**Features:**
+- English and German translations
+- Flag emoji indicators (🇬🇧 🇩🇪)
+- Structured JSON translation system
+- Easy to add new languages
+
+**Adding New Language:**
+1. Add language config to `content.json` → `config.languages`
+2. Create new translation object under `translations.{langcode}`
+3. Translate all content sections
+4. Update language switcher in header
+
+### Content Updates
+- Team philosophy section updated with new messaging
+- Social media links streamlined (removed Xing)
+- Emphasis on "bleeding edge" development approach
+- Clear distinction between Creators (Solutions) and Researchers (Labs)
+
+### Portfolio Grid Fix (December 2024)
+Fixed portfolio item height bug where images displayed at thousands of pixels instead of squares:
+
+**Problem**: `.mil-portfolio-item-inline .mil-cover-frame` used `padding-bottom: 100%` for square aspect ratio, but images weren't positioned correctly.
+
+**Solution**: Added proper CSS positioning:
+- Container: `position: relative`
+- Images: `position: absolute` with `width: 100%`, `height: 100%`, `object-fit: cover`
+- This allows the padding-bottom technique to create square containers while images fill them properly
+
+**Location**: `index.html` inline styles (lines 182-201)
+
+## Common Issues & Troubleshooting
+
+### Portfolio Grid Issues
+
+**Problem**: Portfolio images are too tall (thousands of pixels)
+- **Cause**: Missing `position: absolute` on images inside `.mil-cover-frame`
+- **Fix**: Ensure images have absolute positioning with width/height 100% and object-fit: cover
+
+**Problem**: Portfolio grid not showing projects
+- **Cause**: Content not loaded or wrong selector
+- **Fix**: Check that `QCodeContent.load()` completes before rendering, and `.mil-portfolio-grid` selector exists
+
+**Problem**: Portfolio images not updating after JSON changes
+- **Cause**: Browser cache or incorrect image paths
+- **Fix**: Hard refresh (Ctrl+Shift+R), verify image paths in `content.json` match actual files
+
+### Content Management Issues
+
+**Problem**: Language toggle not working
+- **Cause**: `QCodeContent.currentLanguage` not set or translations missing
+- **Fix**: Check `content.json` has both `en` and `de` translations, verify `initAll()` is called
+
+**Problem**: Dynamic content not appearing
+- **Cause**: `QCodeContent.load()` callback not executed or selectors don't match
+- **Fix**: Check browser console for errors, verify container selectors exist in HTML
+
+### Animation Issues
+
+**Problem**: Scroll animations not working after Swup transition
+- **Cause**: ScrollTrigger not refreshed after content change
+- **Fix**: Call `ScrollTrigger.refresh()` in `swup:contentReplaced` event
+
+**Problem**: Shapes not appearing
+- **Cause**: `initializeShapes()` not called or shape templates missing
+- **Fix**: Verify `.mil-hidden-elements` contains shape templates, call `initializeShapes()` on load and after Swup transitions
+
+## Best Practices
+
+### Performance
+- Shapes use CSS 3D transforms (GPU accelerated)
+- Hidden elements properly removed from layout flow
+- GSAP animations optimized with ScrollTrigger
+- Images should be optimized before upload
+
+### Maintainability
+- All content changes go through `content.json`
+- SCSS organized by component type
+- JavaScript functions are modular and reusable
+- Consistent naming conventions with `mil-` prefix
+
+### Accessibility
+- Semantic HTML structure
+- Proper heading hierarchy
+- Alt text for images (add via content.json)
+- Keyboard navigation support
+
+### Browser Support
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- CSS 3D transforms required for shape animations
+- Graceful degradation for older browsers
+- Mobile-first responsive design
+

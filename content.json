@@ -38,7 +38,7 @@
         },
         "hero": {
           "headline": "We build <span class=\"mil-thin\">the Future,</span><br> One System <span class=\"mil-thin\">at a Time</span>",
-          "description": "We're a top-notch dev shop building permanent platforms for permanent success. From decentralized cultural systems to enterprise foundations, we transform bold ideas into technology used by millions.",
+          "description": "We're a boutique dev shop building permanent platforms for permanent success. From decentralized cultural systems to enterprise foundations, we transform bold ideas into technology used by millions of users around the world.",
           "primaryCTA": {
             "text": "Our Services",
             "link": "#services"
@@ -420,7 +420,7 @@
           "id": "enterprise",
           "title": "Industry and Society",
           "shortTitle": "Industry and Society",
-          "description": "We build systems that last. For BEGA, we forged a digital foundation to power Germany's largest furniture group, ensuring unwavering quality for their 5,000 partners. For GOP Varieté, we crafted the engine behind their high-stakes entertainment, orchestrating shows for over a million visitors a year. We don't chase trends; we build permanent platforms for permanent success.",
+          "description": "We build systems that last. For BEGA, we forged a digital foundation to power Germany's largest furniture group, ensuring unwavering quality for their 5,000 partners. For GOP Varieté, we crafted the engine behind their high-stakes entertainment, orchestrating shows for over a million visitors a year..",
           "icon": "fas fa-building",
           "highlights": [
             "Enterprise Architecture",
@@ -436,7 +436,7 @@
           "id": "web3",
           "title": "Ethereum Ecosystem",
           "shortTitle": "Ethereum Ecosystem",
-          "description": "Seven years ago, we began building the decentralized foundation for digital culture. Our early Ethereum work gave birth to POAP and the Museum of Crypto Art. Now, that mission continues through mocaOS—the open-source operating system for decentralized cultural memetics. Codex is the living archive of our 10,000 Art DeCC0s, while Vibe Studio provides the tools to create and interact with this new cultural commons. We are channeling our passion into the decentralized internet of culture.",
+          "description": "Seven years ago, we began building the decentralized foundation for digital culture. Our early Ethereum work gave birth to POAP and the Museum of Crypto Art. Now, that mission continues through mocaOS—the open-source operating system for decentralized cultural memetics. We are channeling our passion into the decentralized internet of culture.",
           "icon": "fab fa-ethereum",
           "highlights": [
             "Museum of Crypto Art",
@@ -452,7 +452,7 @@
           "id": "social",
           "title": "Social Media",
           "shortTitle": "Social Media",
-          "description": "We're developers building the social layer for the ownership economy. Zeroone turns every post into a unique digital asset, with 180K+ creators and 4.5M+ assets already transforming audiences into collectors and digital footprints into fortunes. Tixu brings ownership to live experiences, giving creators total control over their ticketing and revenue. We're building the future of digital culture, one owned moment at a time.",
+          "description": "We're developers building the social layer for the ownership economy. Zeroone turns every post into a unique digital asset, with 180K+ creators and 4.5M+ assets already transforming audiences into collectors and digital footprints into fortunes. Tixu brings ownership to live experiences, giving creators total control over their ticketing and revenue. We're building the future of digital culture.",
           "icon": "fas fa-users",
           "highlights": [
             "Creator Ownership Tools",
@@ -592,7 +592,7 @@
         },
         "hero": {
           "headline": "Wir bauen <span class=\"mil-thin\">die Zukunft</span><br>Systeme<span class=\"mil-thin\"> für digitale Pioniere</span>",
-          "description": "Wir sind ein erstklassiger Entwicklungsshop, der permanente Plattformen für dauerhaften Erfolg baut. Von dezentralen Kultursystemen bis hin zu Enterprise-Fundamenten verwandeln wir kühne Ideen in Technologie, die von Millionen genutzt wird.",
+          "description": "Wir sind ein erstklassiger Entwicklungsshop, der permanente Plattformen für dauerhaften Erfolg baut. Von dezentralen Kultursystemen bis hin zu Enterprise Lösungen verwandeln wir Ideen in Technologie, die von Millionen genutzt wird.",
           "primaryCTA": {
             "text": "Unsere Services",
             "link": "#services"
@@ -1090,7 +1090,7 @@
           "id": "enterprise",
           "title": "Industrie und Gesellschaft",
           "shortTitle": "Industrie und Gesellschaft",
-          "description": "Wir bauen Systeme, die Bestand haben. Für BEGA haben wir ein digitales Fundament geschmiedet, um Deutschlands größte Möbelgruppe anzutreiben und unwankende Qualität für ihre 5.000 Partner zu gewährleisten. Für GOP Varieté haben wir die Engine hinter ihrem High-Stakes-Entertainment gebaut, die Shows für über eine Million Besucher pro Jahr orchestriert. Wir jagen keine Trends; wir bauen permanente Plattformen für dauerhaften Erfolg.",
+          "description": "Wir bauen Systeme, die Bestand haben. Für BEGA haben wir ein digitales Fundament geschmiedet, um Deutschlands größte Möbelgruppe anzutreiben und unwankende Qualität für ihre 5.000 Partner zu gewährleisten. Für GOP Varieté haben wir die Engine hinter ihrem High-Stakes-Entertainment gebaut, die Shows für über eine Million Besucher pro Jahr orchestriert.",
           "icon": "fas fa-building",
           "highlights": [
             "BEGA Digital Foundation",
@@ -1106,7 +1106,7 @@
           "id": "web3",
           "title": "Ethereum Ecosystem",
           "shortTitle": "Ethereum Ecosystem",
-          "description": "Vor sieben Jahren begannen wir mit dem Aufbau der dezentralen Grundlage für digitale Kultur. Unsere frühe Ethereum-Arbeit brachte POAP und das Museum of Crypto Art hervor. Jetzt setzt sich diese Mission durch mocaOS fort – das Open-Source-Betriebssystem für dezentrale kulturelle Memetik. Codex ist das lebendige Archiv unserer 10.000 Art DeCC0s, während Vibe Studio die Tools zum Erstellen und Interagieren mit diesen neuen kulturellen Commons bereitstellt. Wir kanalisieren unsere Leidenschaft in das dezentrale Internet der Kultur.",
+          "description": "Vor sieben Jahren begannen wir mit dem Aufbau der dezentralen Grundlage für digitale Kultur. Unsere frühe Ethereum-Arbeit brachte POAP und das Museum of Crypto Art hervor. Jetzt setzt sich diese Mission durch mocaOS fort – das Open-Source-Betriebssystem für dezentrale kulturelle Memetik. Wir kanalisieren unsere Leidenschaft in das dezentrale Internet der Kultur.",
           "icon": "fab fa-ethereum",
           "highlights": [
             "Museum of Crypto Art",
@@ -1122,7 +1122,7 @@
           "id": "social",
           "title": "Social Media",
           "shortTitle": "Social Media",
-          "description": "Wir sind Entwickler, die die soziale Schicht für die Ownership Economy bauen. Zeroone verwandelt jeden Post in ein einzigartiges digitales Asset, mit 180K+ Kreativen und 4,5M+ Assets, die bereits Zielgruppen in Sammler und digitale Fußabdrücke in Vermögen verwandeln. Tixu bringt Ownership zu Live-Erlebnissen und gibt Kreativen vollständige Kontrolle über ihr Ticketing und ihre Einnahmen. Wir bauen die Zukunft digitaler Kultur, einen besessenen Moment nach dem anderen.",
+          "description": "Wir sind Entwickler, die die soziale Schicht für die Ownership Economy bauen. Zeroone verwandelt jeden Post in ein einzigartiges digitales Asset, mit 180K+ Kreativen und 4,5M+ Assets, die bereits Zielgruppen in Sammler und digitale Fußabdrücke in Vermögen verwandeln. Tixu bringt Ownership zu Live-Erlebnissen und gibt Kreativen vollständige Kontrolle über ihr Ticketing und ihre Einnahmen. Wir bauen digitale Kultur für das 21. Jahrhundert.",
           "icon": "fas fa-users",
           "highlights": [
             "Creator Ownership Tools",
@@ -1141,7 +1141,7 @@
           "author": "BEGA Group",
           "role": "Europas größter Möbelvertrieb",
           "avatar": "img/faces/customers/bega.jpg",
-          "text": "Qwellcode hat uns ein digitales Fundament gebaut, das 5.000 Partner mit unwankender Zuverlässigkeit bedient. Ihre Enterprise-Architektur ist robust, skalierbar und genau das, was wir brauchten, um die Zukunft unseres Geschäfts anzutreiben. Sie bauen nicht nur Software – sie bauen Systeme, die Bestand haben.",
+          "text": "Qwellcode hat uns ein digitales Fundament gebaut, das 5.000 Partner mit unwankender Zuverlässigkeit bedient. Unsere Software ist robust, skalierbar und genau das, was wir brauchten, um die Zukunft unseres Geschäfts anzutreiben. Sie bauen Lösungen, die Bestand haben.",
           "rating": 5
         },
         {

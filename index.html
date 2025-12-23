@@ -234,6 +234,82 @@
             color: rgba(135, 216, 50, 1);
         }
 
+        /* Project Details Modal Specific Styles */
+        #project-details-content .mil-labels {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        #project-details-content .mil-label {
+            padding: 8px 15px;
+            background: rgba(135, 216, 50, 0.1);
+            border: 1px solid rgba(135, 216, 50, 0.3);
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        #project-details-content .mil-service-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        #project-details-content .mil-service-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        #project-details-content .mil-service-list li:before {
+            content: "→";
+            margin-right: 10px;
+            color: rgba(135, 216, 50, 1);
+        }
+
+        #project-details-content .mil-image-frame {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #project-details-content .mil-image-frame:hover {
+            border-color: rgba(135, 216, 50, 1);
+            transform: translateY(-2px);
+        }
+
+        #project-details-content .mil-image-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        #project-details-content .mil-image-frame:hover img {
+            transform: scale(1.05);
+        }
+
+        #project-details-content .mil-image-frame.mil-fw {
+            padding-bottom: 50%;
+        }
+
+        #project-details-content .mil-image-frame.mil-horizontal {
+            padding-bottom: 65%;
+        }
+
+        #project-details-content .mil-image-frame.mil-fw img,
+        #project-details-content .mil-image-frame.mil-horizontal img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .mil-portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -424,9 +500,7 @@
                                         <div class="col-lg-4 mil-mb-60">
                                             <h6 class="mil-muted mil-mb-30">Follow</h6>
                                             <ul class="mil-social-icons">
-                                                <li><a href="https://github.com/qwellcode/" target="_blank"><i class="fab fa-github"></i></a></li>
-                                                <li><a href="https://x.com/qwellcode" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://goo.gl/maps/oqL2uEtHh117UewP8" target="_blank"><i class="fas fa-map-marker-alt"></i></a></li>
+                                                <!-- Social links populated dynamically from content.json -->
                                             </ul>
                                         </div>
                                     </div>
@@ -610,11 +684,11 @@
                 <!-- portfolio end -->
 
                 <!-- reviews -->
-                <section class="mil-soft-bg">
+                <section class="mil-soft-bg" id="reviews">
                     <div class="container mil-p-120-120">
 
-
-                        <h2 class="mil-center mil-up mil-mb-60">Trusted By <span class="mil-thin">Industry Leaders:</span></h2>
+                        <!-- Title will be populated dynamically from content.json -->
+                        <h2 class="mil-center mil-up mil-mb-60" id="reviews-title">Trusted By <span class="mil-thin">Industry Leaders:</span></h2>
 
                         <div class="mil-revi-pagination mil-up mil-mb-60"></div>
 
@@ -632,34 +706,7 @@
 
                                 <div class="swiper-container mil-reviews-slider">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
-                                                <h5 class="mil-up mil-mb-10">BEGA Partners</h5>
-                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Germany's Largest Furniture Group</p>
-                                                <p class="mil-text-xl mil-up">Qwellcode built us a digital foundation that serves 5,000 partners with unwavering reliability. Their enterprise architecture is robust, scalable, and exactly what we needed to power the future of our business. They don't just build software—they build systems that last.</p>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
-                                                <h5 class="mil-up mil-mb-10">GOP Varieté</h5>
-                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Entertainment Platform</p>
-                                                <p class="mil-text-xl mil-up">Serving over a million visitors annually demands perfection. Qwellcode delivered a platform that handles high-stakes entertainment with precision and reliability. Their technical excellence ensures our shows run flawlessly, every single time.</p>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
-                                                <h5 class="mil-up mil-mb-10">Zeroone Creators</h5>
-                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">180K+ Creator Community</p>
-                                                <p class="mil-text-xl mil-up">The ownership economy is here, and Qwellcode made it real. With 4.5M+ digital assets created, they've built a platform that transforms our audiences into collectors and turns our digital footprints into tangible value. Revolutionary work.</p>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
-                                                <h5 class="mil-up mil-mb-10">Web3 Community</h5>
-                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Ethereum Builders</p>
-                                                <p class="mil-text-xl mil-up">Seven years building on Ethereum, from POAP to mocaOS. Qwellcode is pioneering the decentralized foundation for digital culture. Their technical depth in Web3 combined with real-world scale makes them the go-to team for serious decentralized systems.</p>
-                                            </div>
-                                        </div>
+                                        <!-- Testimonials will be populated dynamically from content.json -->
                                     </div>
                                 </div>
 
@@ -708,9 +755,7 @@
                                     <div class="mil-vert-between">
                                         <div class="mil-mb-30">
                                             <ul class="mil-social-icons mil-up">
-                                                <li><a href="https://github.com/qwellcode/" target="_blank" class="social-icon"> <i class="fab fa-github"></i></a></li>
-                                                <li><a href="https://x.com/qwellcode" target="_blank" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://goo.gl/maps/oqL2uEtHh117UewP8" target="_blank" class="social-icon"> <i class="fas fa-map-marker-alt"></i></a></li>
+                                                <!-- Social links populated dynamically from content.json -->
                                             </ul>
                                         </div>
                                         <p class="mil-light mil-up mil-center footer-dark">© qwellcode 2026. All Rights Reserved.</p>
@@ -1152,26 +1197,16 @@
         </div>
         <!-- content -->
 
-        <!-- Modal -->
-        <div class="mil-modal" id="projectModal">
+        <!-- Project Details Modal -->
+        <div class="mil-modal" id="projectDetailsModal">
             <div class="mil-modal-content">
                 <span class="mil-modal-close">&times;</span>
-                <div class="container">
-                    <h2 class="mil-light mil-mb-60 mil-center">Our <span class="mil-thin">Portfolio</span></h2>
-                    <p class="mil-light-soft mil-center mil-mb-60">From Ethereum protocols to enterprise platforms, here's how we're building the future.</p>
-
-                    <!-- Portfolio projects will be populated dynamically from content.json -->
-                    <div class="row">
-                        <!-- Dynamic content loaded here -->
-                    </div>
-
-                                    <div class="mil-center mil-mt-60">
-                                        <p class="mil-light-soft mil-mb-30">This is just the beginning. We're building permanent platforms for a permanent future.</p>
-                                    </div>
+                <div class="container" id="project-details-content">
+                    <!-- Project details will be populated dynamically -->
                 </div>
             </div>
         </div>
-        <!-- Modal end -->
+        <!-- Project Details Modal end -->
 
         <!-- Imprint Modal -->
         <div class="mil-modal" id="imprintModal">
@@ -1216,10 +1251,10 @@
     <!-- Content initialization and Modal functionality -->
     <script>
         $(function() {
-            var projectModal = $('#projectModal');
+            var projectDetailsModal = $('#projectDetailsModal');
             var imprintModal = $('#imprintModal');
 
-            console.log('Project modal found:', projectModal.length);
+            console.log('Project details modal found:', projectDetailsModal.length);
             console.log('Imprint modal found:', imprintModal.length);
 
             // Function to update imprint link text based on current language
@@ -1277,12 +1312,19 @@
                 }, 100);
             });
 
-            // Open project modal
-            $(document).on('click', '[data-modal-trigger]', function(e) {
+            // Open project details modal when clicking on portfolio items
+            $(document).on('click', '.mil-portfolio-item-inline', function(e) {
                 e.preventDefault();
-                console.log('Project modal trigger clicked');
-                projectModal.addClass('mil-active');
-                $('body').css('overflow', 'hidden');
+                var projectId = $(this).data('project-id');
+                console.log('Portfolio item clicked, project ID:', projectId);
+
+                if (projectId) {
+                    QCodeContent.renderProjectDetails(projectId);
+                    projectDetailsModal.addClass('mil-active');
+                    $('body').css('overflow', 'hidden');
+                } else {
+                    console.error('No project ID found on clicked item');
+                }
             });
 
             // Open imprint modal - using both event delegation and direct binding

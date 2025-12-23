@@ -2301,7 +2301,7 @@ social icons
 
     & li {
         list-style-type: none;
-        margin-right: 15px;
+        margin-right: 20px;
 
         &:last-child {
             margin-right: 0;
@@ -2309,11 +2309,18 @@ social icons
 
         & a {
             color: $light;
-            font-size: 18px;
+            font-size: 24px;
+            padding: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 48px;
+            min-height: 48px;
             transition: $t-md;
 
             &:hover {
                 color: $accent;
+                transform: translateY(-2px);
             }
         }
     }

@@ -226,30 +226,130 @@ Loads and manages content from content.json
         },
 
         /**
-         * Render projects in modal
+         * Render single project details in modal
          */
-        renderProjectsModal: function (selector) {
-            const projects = this.getProjects();
-            const container = $(selector);
-            container.empty();
+        renderProjectDetails: function(projectId) {
+            const project = this.getProject(projectId);
+            if (!project) {
+                console.error('Project not found:', projectId);
+                return;
+            }
 
-            projects.forEach((project) => {
-                const html = `
-                    <div class="col-lg-4 mil-mb-60">
-                        <div>
-                            <div class="mil-image-frame mil-horizontal mil-mb-30">
-                                <img src="${project.images[0]}" alt="${project.title}">
-                            </div>
-                            <h4 class="mil-light mil-mb-15">${project.title}</h4>
-                            <p class="mil-light-soft mil-mb-15">${project.description}</p>
-                            <ul class="mil-service-list mil-light">
-                                ${project.highlights.map(h => `<li>${h}</li>`).join('')}
-                            </ul>
+            const container = $('#project-details-content');
+            if (!container.length) {
+                console.error('Project details container not found');
+                return;
+            }
+
+            // Build images gallery HTML
+            let imagesHTML = '';
+            if (project.images && project.images.length > 0) {
+                imagesHTML = `
+                    <div class="mil-mb-60">
+                        <div class="row">
+                            ${project.images.map((img, index) => `
+                                <div class="col-lg-${index === 0 ? '12' : '6'} mil-mb-30">
+                                    <div class="mil-image-frame mil-${index === 0 ? 'fw' : 'horizontal'}">
+                                        <a href="${img}" data-fancybox="project-gallery">
+                                            <img src="${img}" alt="${project.title} - Image ${index + 1}">
+                                        </a>
+                                    </div>
+                                </div>
+                            `).join('')}
                         </div>
                     </div>
                 `;
-                container.append(html);
-            });
+            }
+
+            // Build technologies HTML
+            let techHTML = '';
+            if (project.technologies && project.technologies.length > 0) {
+                techHTML = `
+                    <div class="mil-mb-30">
+                        <h5 class="mil-light mil-mb-20">Technologies</h5>
+                        <div class="mil-labels">
+                            ${project.technologies.map(tech => `
+                                <span class="mil-label mil-upper mil-accent">${tech}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Build highlights HTML
+            let highlightsHTML = '';
+            if (project.highlights && project.highlights.length > 0) {
+                highlightsHTML = `
+                    <div class="mil-mb-30">
+                        <h5 class="mil-light mil-mb-20">Key Features</h5>
+                        <ul class="mil-service-list mil-light">
+                            ${project.highlights.map(h => `<li>${h}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+
+            // Build project info HTML
+            let projectInfoHTML = '';
+            if (project.year || project.client || project.services) {
+                projectInfoHTML = `
+                    <div class="mil-mb-60">
+                        <div class="row">
+                            ${project.year ? `
+                                <div class="col-md-4 mil-mb-30">
+                                    <h6 class="mil-muted mil-mb-10">Year</h6>
+                                    <p class="mil-light-soft">${project.year}</p>
+                                </div>
+                            ` : ''}
+                            ${project.client ? `
+                                <div class="col-md-4 mil-mb-30">
+                                    <h6 class="mil-muted mil-mb-10">Client</h6>
+                                    <p class="mil-light-soft">${project.client}</p>
+                                </div>
+                            ` : ''}
+                            ${project.services && project.services.length > 0 ? `
+                                <div class="col-md-4 mil-mb-30">
+                                    <h6 class="mil-muted mil-mb-10">Services</h6>
+                                    <p class="mil-light-soft">${project.services.join(', ')}</p>
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Assemble the complete HTML
+            const html = `
+                <h2 class="mil-light mil-mb-30">${project.title}</h2>
+                <p class="mil-accent mil-upper mil-mb-15">${project.category}</p>
+                <p class="mil-light-soft mil-text-lg mil-mb-60">${project.shortDescription || project.description}</p>
+
+                ${imagesHTML}
+
+                ${project.longDescription ? `
+                    <div class="mil-mb-60">
+                        <h5 class="mil-light mil-mb-20">About This Project</h5>
+                        <p class="mil-light-soft" style="white-space: pre-line;">${project.longDescription}</p>
+                    </div>
+                ` : ''}
+
+                ${techHTML}
+                ${highlightsHTML}
+                ${projectInfoHTML}
+            `;
+
+            container.html(html);
+
+            // Reinitialize Fancybox for the gallery
+            if (typeof $.fancybox !== 'undefined') {
+                $('[data-fancybox="project-gallery"]').fancybox({
+                    buttons: ["slideShow", "zoom", "fullScreen", "close"],
+                    loop: false,
+                    protect: true
+                });
+            }
+
+            console.log('Project details rendered:', project.title);
         },
 
         /**
@@ -301,7 +401,14 @@ Loads and manages content from content.json
             const swiperWrapper = $('.mil-reviews-slider .swiper-wrapper');
             const pagination = $('.mil-revi-pagination');
 
+            if (!swiperWrapper.length) {
+                console.warn('Reviews slider container not found');
+                return;
+            }
+
             swiperWrapper.empty();
+
+            console.log('Rendering', testimonials.length, 'testimonials');
 
             testimonials.forEach((testimonial, index) => {
                 const slideHtml = `
@@ -316,9 +423,63 @@ Loads and manages content from content.json
                 swiperWrapper.append(slideHtml);
             });
 
-            // Update pagination with custom avatars
-            const customDots = testimonials.map((t, i) => `<div class="mil-custom-dot mil-slide-${i + 1}"></div>`);
-            pagination.attr('data-dots', JSON.stringify(customDots));
+            console.log('Testimonials rendered successfully');
+
+            // Reinitialize the Swiper slider after rendering
+            this.initReviewsSlider();
+        },
+
+        /**
+         * Initialize or reinitialize the reviews slider
+         */
+        initReviewsSlider: function() {
+            const testimonials = this.getTestimonials();
+            
+            // Destroy existing slider if it exists
+            if (window.reviewsSwiper) {
+                window.reviewsSwiper.destroy(true, true);
+            }
+
+            // Create pagination menu based on number of testimonials
+            const menu = testimonials.map((t, i) => `<div class="mil-custom-dot mil-slide-${i + 1}"></div>`);
+
+            // Initialize new Swiper instance
+            window.reviewsSwiper = new Swiper('.mil-reviews-slider', {
+                pagination: {
+                    el: '.mil-revi-pagination',
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '">' + (menu[index]) + '</span>';
+                    },
+                },
+                speed: 800,
+                effect: 'fade',
+                parallax: true,
+                navigation: {
+                    nextEl: '.mil-revi-next',
+                    prevEl: '.mil-revi-prev',
+                },
+            });
+
+            console.log('Reviews slider initialized with', testimonials.length, 'testimonials');
+        },
+
+        /**
+         * Update reviews section title
+         */
+        updateReviewsSection: function() {
+            const translation = this.getTranslation();
+            if (!translation || !translation.site || !translation.site.sections || !translation.site.sections.reviews) {
+                console.warn('Reviews section data not found');
+                return;
+            }
+
+            // Update reviews section title
+            const reviewsTitle = $('#reviews-title');
+            if (reviewsTitle.length && translation.site.sections.reviews.title) {
+                reviewsTitle.html(translation.site.sections.reviews.title);
+                console.log('Reviews section title updated');
+            }
         },
 
         /**
@@ -399,11 +560,13 @@ Loads and manages content from content.json
 
                 site.social.forEach(social => {
                     const html = `
-                        <li><a href="${social.url}" target="_blank" class="social-icon"><i class="${social.icon}"></i></a></li>
+                        <li><a href="${social.url}" target="_blank" rel="noopener noreferrer" data-no-swup class="social-icon"><i class="${social.icon}"></i></a></li>
                     `;
                     container.append(html);
                 });
             });
+
+            console.log('Social links updated');
         },
 
         /**
@@ -637,16 +800,17 @@ Loads and manages content from content.json
                 this.renderFeaturedProjects('.mil-portfolio-grid');
             }
 
-            // Render projects in modal
-            if ($('#projectModal .row').length) {
-                this.renderProjectsModal('#projectModal .row');
-            }
-
             // Render services
             if ($('#services .container .row').length) {
                 const servicesRow = $('#services .container .row').last();
                 // Always re-render services on language change
                 this.renderServices(servicesRow);
+            }
+
+            // Render testimonials/reviews
+            if ($('.mil-reviews-slider').length) {
+                this.updateReviewsSection();
+                this.renderTestimonials();
             }
 
             // Render partners

@@ -523,24 +523,8 @@ $(function () {
 
     ***************************/
 
-    var menu = ['<div class="mil-custom-dot mil-slide-1"></div>', '<div class="mil-custom-dot mil-slide-2"></div>', '<div class="mil-custom-dot mil-slide-3"></div>', '<div class="mil-custom-dot mil-slide-4"></div>', '<div class="mil-custom-dot mil-slide-5"></div>', '<div class="mil-custom-dot mil-slide-6"></div>', '<div class="mil-custom-dot mil-slide-7"></div>']
-    var mySwiper = new Swiper('.mil-reviews-slider', {
-        // If we need pagination
-        pagination: {
-            el: '.mil-revi-pagination',
-            clickable: true,
-            renderBullet: function (index, className) {
-                return '<span class="' + className + '">' + (menu[index]) + '</span>';
-            },
-        },
-        speed: 800,
-        effect: 'fade',
-        parallax: true,
-        navigation: {
-            nextEl: '.mil-revi-next',
-            prevEl: '.mil-revi-prev',
-        },
-    })
+    // Reviews slider will be initialized by content manager after loading testimonials
+    // This ensures proper language support and dynamic content
 
     /***************************
 
@@ -961,24 +945,8 @@ $(function () {
 
         ***************************/
 
-        var menu = ['<div class="mil-custom-dot mil-slide-1"></div>', '<div class="mil-custom-dot mil-slide-2"></div>', '<div class="mil-custom-dot mil-slide-3"></div>', '<div class="mil-custom-dot mil-slide-4"></div>', '<div class="mil-custom-dot mil-slide-5"></div>', '<div class="mil-custom-dot mil-slide-6"></div>', '<div class="mil-custom-dot mil-slide-7"></div>']
-        var mySwiper = new Swiper('.mil-reviews-slider', {
-            // If we need pagination
-            pagination: {
-                el: '.mil-revi-pagination',
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '">' + (menu[index]) + '</span>';
-                },
-            },
-            speed: 800,
-            effect: 'fade',
-            parallax: true,
-            navigation: {
-                nextEl: '.mil-revi-next',
-                prevEl: '.mil-revi-prev',
-            },
-        })
+        // Reviews slider will be reinitialized by content manager after loading testimonials
+        // This ensures proper language support and dynamic content
 
         /***************************
 

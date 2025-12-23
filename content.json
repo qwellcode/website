@@ -18,14 +18,15 @@
     "bega": {
       "images": ["img/works/1/1.jpg", "img/works/1/2.jpg", "img/works/1/3.jpg"],
       "thumbnail": "img/works/1.jpg",
-      "technologies": ["Java", "Spring Boot", "React", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
-      "year": 2019,
-      "status": "Active"
+      "technologies": ["Digitization", "Automation", "APIs", "Backends", "3rd Party Integrations", "Product Development"],
+      "year": 2016,
+      "status": "Active",
+      "url": "https://bega-gruppe.de/"
     },
     "tixu": {
       "images": ["img/works/2/1.jpg", "img/works/2/2.jpg", "img/works/2/3.jpg", "img/works/2/4.jpg", "img/works/2/5.jpg", "img/works/2/6.jpg", "img/works/2/7.jpg"],
       "thumbnail": "img/works/2.jpg",
-      "technologies": ["React Native", "Node.js", "Ethereum", "Solidity", "PostgreSQL", "Stripe"],
+      "technologies": ["Ticketing", "Marketplace", "Mandatory Systems", "Full Stack Development", "Product Design"],
       "year": 2023,
       "status": "Active",
       "url": "https://tixu.io"
@@ -33,40 +34,42 @@
     "zeroone": {
       "images": ["img/works/3/1.jpg", "img/works/3/2.jpg", "img/works/3/3.jpg", "img/works/3/4.jpg", "img/works/3/5.jpg", "img/works/3/6.jpg", "img/works/3/7.jpg"],
       "thumbnail": "img/works/3.jpg",
-      "technologies": ["Next.js", "PostgreSQL", "Ethereum", "Redis", "Web3", "AWS"],
-      "year": 2022,
+      "technologies": ["Web3", "Mobile Apps", "Load Balancing", "Backends", "Scalable Systems", "Community"],
+      "year": 2021,
       "status": "Active",
       "url": "https://zeroone.art"
     },
     "codex": {
       "images": ["img/works/4/1.jpg", "img/works/4/2.jpg", "img/works/4/3.jpg", "img/works/4/4.jpg", "img/works/4/5.jpg", "img/works/4/6.jpg", "img/works/4/7.jpg"],
       "thumbnail": "img/works/4.jpg",
-      "technologies": ["TypeScript", "Next.js", "PostgreSQL", "IPFS", "Elasticsearch"],
+      "technologies": ["Web3", "AI", "RAG", "Open Source", "IPFS", "Knowledge Graphs", "Decentralized Culture", "Community"],
       "year": 2023,
-      "status": "Active"
+      "status": "Active",
+      "url": "https://docs.decc0s.com"
     },
     "moca": {
       "images": ["img/works/5/1.jpg", "img/works/5/2.jpg", "img/works/5/3.jpg", "img/works/5/4.jpg", "img/works/5/5.jpg", "img/works/5/6.jpg", "img/works/5/7.jpg"],
       "thumbnail": "img/works/5.jpg",
-      "technologies": ["React", "Web3", "IPFS", "Ethereum", "3D.js", "Node.js", "TypeScript", "Next.js"],
-      "year": 2020,
+      "technologies": ["Digital Arts", "Web3", "Ethereum", "ThreeJS", "Vue.js", "Hyperfy", "Solidity", "Smart Contracts"],
+      "year": 2021,
       "status": "Active",
-      "url": "https://museumofcryptoart.com"
+      "url": "https://vibe.museumofcryptoart.com"
     },
     "gop": {
       "images": ["img/works/6/1.jpg", "img/works/6/2.jpg", "img/works/6/3.jpg", "img/works/6/4.jpg", "img/works/6/5.jpg", "img/works/6/6.jpg", "img/works/6/7.jpg"],
       "thumbnail": "img/works/6.jpg",
-      "technologies": ["PHP", "Laravel", "Vue.js", "MySQL", "Redis"],
-      "year": 2020,
+      "technologies": ["Ticketing", "Gastronomy", "Processes", "Automation", "Product Development"],
+      "year": 2015,
       "status": "Active",
       "url": "https://variete.de"
     },
     "amber-island": {
       "images": ["img/works/7/1.jpg", "img/works/7/2.jpg", "img/works/7/3.jpg", "img/works/7/4.jpg", "img/works/7/5.jpg", "img/works/7/6.jpg", "img/works/7/7.jpg","img/works/7/8.jpg", "img/works/7/9.jpg"],
       "thumbnail": "img/works/7.jpg",
-      "technologies": ["NFTs", "Blockchain", "Ethereum", "Tokenization", "Meta Anchor™"],
+      "technologies": ["RWAs", "Whisky", "Ethereum", "Tokenization", "Community"],
       "year": 2022,
-      "status": "Previous Work"
+      "status": "Previous Work",
+      "url": "https://amberisland.io"
     },
     "poap": {
       "images": ["img/works/8/1.jpg"],
@@ -74,13 +77,12 @@
       "technologies": ["Ethereum", "Solidity", "Smart Contracts", "NFT", "IPFS", "Web3.js"],
       "year": 2018,
       "status": "Previous Work",
-      "url": "https://poap.xyz",
-      "github": "https://github.com/poap-xyz"
+      "url": "https://poap.xyz"
     },
     "ai-language-models": {
       "images": ["img/works/9/1.jpg"],
       "thumbnail": "img/works/9.jpg",
-      "technologies": ["AI", "Machine Learning", "LeoLM 13B", "Llama-2", "h2ogpt", "NLP", "Python"],
+      "technologies": ["Agents","AI", "LLMs", "GenAI", "RAG", "Knowledge Graphs", "On-Premise", "Data Sovereignty"],
       "year": 2023,
       "status": "Active"
     }
@@ -341,7 +343,7 @@
         },
         {
           "id": "poap",
-          "title": "Proof of Attendance Protocol",
+          "title": "POAP",
           "slug": "poap-protocol",
           "category": "Unterstützt bei EthDenver 2019",
           "featured": true,
@@ -785,7 +787,7 @@
         },
         {
           "id": "poap",
-          "title": "Proof of Attendance Protocol",
+          "title": "POAP",
           "slug": "poap-protocol",
           "category": "Supported at EthDenver 2019",
           "featured": true,

@@ -91,7 +91,7 @@
         "social": [
           {
             "platform": "github",
-            "url": "https://github.com/qwellcode/",
+            "url": "https://github.com/mocaOS/",
             "icon": "fab fa-github"
           },
           {
@@ -396,122 +396,6 @@
           "status": "Active"
         }
       ],
-      "team": [
-        {
-          "id": "john-doe",
-          "name": "John Doe",
-          "role": "Founder & CEO",
-          "bio": "Visionary leader with 15+ years in software architecture and blockchain technology.",
-          "longBio": "John has been at the forefront of decentralized technology since 2015. With a background in distributed systems and enterprise architecture, he leads Qwellcode's vision of building permanent platforms for permanent success. Before founding Qwellcode, John led engineering teams at Fortune 500 companies and pioneered early Ethereum development.",
-          "image": "img/faces/1.jpg",
-          "social": {
-            "linkedin": "https://linkedin.com/in/johndoe",
-            "twitter": "https://twitter.com/johndoe",
-            "github": "https://github.com/johndoe"
-          },
-          "skills": ["System Architecture", "Blockchain", "Leadership", "Product Strategy"],
-          "featured": true
-        },
-        {
-          "id": "jane-smith",
-          "name": "Jane Smith",
-          "role": "CTO",
-          "bio": "Full-stack architect specializing in scalable Web3 infrastructure.",
-          "longBio": "Jane brings deep expertise in building systems that scale. With a PhD in Computer Science and years of experience in distributed systems, she architects the technical foundation that powers millions of users. Jane has published numerous papers on blockchain scalability and consensus mechanisms.",
-          "image": "img/faces/2.jpg",
-          "social": {
-            "linkedin": "https://linkedin.com/in/janesmith",
-            "twitter": "https://twitter.com/janesmith",
-            "github": "https://github.com/janesmith"
-          },
-          "skills": ["Distributed Systems", "Smart Contracts", "DevOps", "Security"],
-          "featured": true
-        },
-        {
-          "id": "mike-johnson",
-          "name": "Mike Johnson",
-          "role": "Head of Product",
-          "bio": "Product strategist transforming complex technology into delightful user experiences.",
-          "longBio": "Mike has a unique ability to bridge the gap between bleeding-edge technology and user needs. With a background in design thinking and behavioral psychology, he ensures our platforms are not just powerful, but also intuitive. Mike has led product at successful startups and understands what it takes to build products people love.",
-          "image": "img/faces/3.jpg",
-          "social": {
-            "linkedin": "https://linkedin.com/in/mikejohnson",
-            "twitter": "https://twitter.com/mikejohnson"
-          },
-          "skills": ["Product Strategy", "UX Design", "User Research", "Agile"],
-          "featured": true
-        },
-        {
-          "id": "sarah-williams",
-          "name": "Sarah Williams",
-          "role": "Lead Smart Contract Engineer",
-          "bio": "Ethereum expert securing millions in digital assets through battle-tested contracts.",
-          "longBio": "Sarah is one of the industry's leading smart contract engineers. She has audited hundreds of contracts and written secure code managing billions in digital assets. Her expertise in Solidity, gas optimization, and security patterns ensures our blockchain infrastructure is bulletproof.",
-          "image": "img/faces/4.jpg",
-          "social": {
-            "linkedin": "https://linkedin.com/in/sarahwilliams",
-            "github": "https://github.com/sarahwilliams"
-          },
-          "skills": ["Solidity", "Smart Contracts", "Security Audits", "DeFi"],
-          "featured": true
-        },
-        {
-          "id": "david-chen",
-          "name": "David Chen",
-          "role": "Senior Full-Stack Developer",
-          "bio": "Polyglot engineer building performant applications across the entire stack.",
-          "longBio": "David is a versatile engineer comfortable with any technology stack. From React frontends to Node.js backends to DevOps infrastructure, he delivers high-quality code quickly. David has contributed to numerous open-source projects and is passionate about clean architecture.",
-          "image": "img/faces/5.jpg",
-          "social": {
-            "linkedin": "https://linkedin.com/in/davidchen",
-            "github": "https://github.com/davidchen"
-          },
-          "skills": ["React", "Node.js", "TypeScript", "AWS"],
-          "featured": false
-        },
-        {
-          "id": "emily-taylor",
-          "name": "Emily Taylor",
-          "role": "UI/UX Designer",
-          "bio": "Design wizard crafting beautiful, accessible interfaces that users love.",
-          "longBio": "Emily combines aesthetic sensibility with deep understanding of user behavior. Her designs are not just beautiful—they're functional, accessible, and conversion-optimized. Emily has won multiple design awards and her work has been featured in leading design publications.",
-          "image": "img/faces/6.jpg",
-          "social": {
-            "linkedin": "https://linkedin.com/in/emilytaylor",
-            "dribbble": "https://dribbble.com/emilytaylor"
-          },
-          "skills": ["UI Design", "UX Research", "Figma", "Design Systems"],
-          "featured": false
-        },
-        {
-          "id": "alex-rodriguez",
-          "name": "Alex Rodriguez",
-          "role": "DevOps Engineer",
-          "bio": "Infrastructure expert ensuring 99.99% uptime for mission-critical systems.",
-          "longBio": "Alex keeps our systems running smoothly at scale. With expertise in Kubernetes, AWS, and CI/CD pipelines, he builds infrastructure that's reliable, scalable, and cost-effective. Alex previously worked at major cloud providers and understands infrastructure at internet scale.",
-          "image": "img/faces/7.jpg",
-          "social": {
-            "linkedin": "https://linkedin.com/in/alexrodriguez",
-            "github": "https://github.com/alexrodriguez"
-          },
-          "skills": ["Kubernetes", "AWS", "CI/CD", "Monitoring"],
-          "featured": false
-        },
-        {
-          "id": "lisa-anderson",
-          "name": "Lisa Anderson",
-          "role": "Head of Research",
-          "bio": "Research lead exploring the frontiers of decentralized systems.",
-          "longBio": "Lisa leads Qwellcode Labs, our research division. With a PhD in Cryptography, she investigates cutting-edge concepts in decentralized systems, zero-knowledge proofs, and consensus mechanisms. Her research directly informs our production systems, ensuring we stay at the technological forefront.",
-          "image": "img/faces/8.jpg",
-          "social": {
-            "linkedin": "https://linkedin.com/in/lisaanderson",
-            "twitter": "https://twitter.com/lisaanderson"
-          },
-          "skills": ["Cryptography", "Research", "ZK Proofs", "Protocol Design"],
-          "featured": true
-        }
-      ],
       "services": [
         {
           "id": "enterprise",
@@ -572,27 +456,27 @@
           "rating": 5
         },
         {
-          "id": "moca",
-          "author": "Museum of Crypto Art",
-          "role": "Web3 Cultural Institution",
+          "id": "tixu",
+          "author": "TIXU",
+          "role": "AI Ticketing Platform",
           "avatar": "img/faces/customers/tixu.jpg",
-          "text": "Seven years building on Ethereum, from POAP to mocaOS. Qwellcode is pioneering the decentralized foundation for digital culture. Their technical depth in Web3 combined with real-world scale makes them the go-to team for serious decentralized systems.",
+          "text": "Tixu reimagines event ticketing for the ownership economy. Qwellcode gave us complete control over ticketing, revenue, and fan relationships. Their smart contract expertise and platform architecture eliminated traditional intermediaries and empowered creators.",
           "rating": 5
         },
         {
           "id": "zeroone",
-          "author": "Zeroone",
-          "role": "180K+ Creator Community",
+          "author": "zeroone",
+          "role": "Web3 Creator Community",
           "avatar": "img/faces/customers/zeroone.jpg",
           "text": "The ownership economy is here, and Qwellcode made it real. With 4.5M+ digital assets created, they've built a platform that transforms our audiences into collectors and turns our digital footprints into tangible value. Revolutionary work.",
           "rating": 5
         },
         {
-          "id": "tixu",
-          "author": "Tixu",
-          "role": "Next-Gen Ticketing Platform",
+          "id": "moca",
+          "author": "Museum of Crypto Art",
+          "role": "Digital Art Institution",
           "avatar": "img/faces/customers/moca.jpg",
-          "text": "Tixu reimagines event ticketing for the ownership economy. Qwellcode gave us complete control over ticketing, revenue, and fan relationships. Their smart contract expertise and platform architecture eliminated traditional intermediaries and empowered creators.",
+          "text": "Seven years building on Ethereum, from POAP to mocaOS. Qwellcode is pioneering the decentralized foundation for digital culture. Their technical depth in Web3 combined with real-world scale makes them the go-to team for serious decentralized systems.",
           "rating": 5
         }
       ],
@@ -742,7 +626,7 @@
         "social": [
           {
             "platform": "github",
-            "url": "https://github.com/qwellcode/",
+            "url": "https://github.com/mocaOS/",
             "icon": "fab fa-github"
           },
           {
@@ -793,7 +677,7 @@
           ],
           "shortDescription": "Digitales Fundament für Deutschlands größte Möbelgruppe.",
           "description": "Digitales Fundament für Deutschlands größte Möbelgruppe, das unwankende Qualität für 5.000 Partner gewährleistet.",
-          "longDescription": "Für BEGA, Deutschlands größte Möbelgruppe, haben wir ein umfassendes digitales Fundament gebaut, das als Rückgrat ihres gesamten Betriebs dient. Die Plattform verbindet 5.000+ Partner, verarbeitet komplexe B2B-Transaktionen, verwaltet Lagerbestände in mehreren Lagerhäusern und bietet Echtzeit-Analysen.\n\nUnsere Enterprise-Architektur gewährleistet 99,99% Verfügbarkeit, bewältigt Spitzenlasten während Aktionszeiträumen und integriert sich in Legacy-ERP-Systeme. Die Plattform umfasst Partnerportale, Auftragsverwaltung, Logistik-Tracking und Business-Intelligence-Dashboards, die strategische Entscheidungen vorantreiben.",
+          "longDescription": "Für BEGA, Deutschlands größte Möbelgruppe, haben wir ein umfassendes digitales Fundament gebaut, das als Rückgrat ihres gesamten Betriebs dient. Die Plattform verbindet 5.000+ Partner, verarbeitet komplexe B2B-Transaktionen, verwaltet Lagerbestände in mehreren Lagerhäusern und bietet Echtzeit-Analysen.\n\nUnsere Architektur gewährleistet 99,99% Verfügbarkeit, bewältigt Spitzenlasten während Aktionszeiträumen und integriert sich in Legacy-ERP-Systeme. Die Plattform umfasst Partnerportale, Auftragsverwaltung, Logistik-Tracking und Business-Intelligence-Dashboards, die strategische Entscheidungen vorantreiben.",
           "technologies": ["Java", "Spring Boot", "React", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
           "highlights": [
             "Enterprise Architecture",
@@ -1223,27 +1107,27 @@
           "rating": 5
         },
         {
-          "id": "moca",
-          "author": "Museum of Crypto Art",
-          "role": "Web3 Kulturinstitution",
+          "id": "tixu",
+          "author": "TIXU",
+          "role": "AI Ticketing Plattform",
           "avatar": "img/faces/customers/tixu.jpg",
-          "text": "Sieben Jahre Aufbau auf Ethereum, von POAP bis mocaOS. Qwellcode ist Pionier der dezentralen Grundlage für digitale Kultur. Ihre technische Tiefe in Web3 kombiniert mit realer Skalierung macht sie zum Go-to-Team für ernsthafte dezentrale Systeme.",
+          "text": "Tixu denkt Event-Ticketing für die Ownership Economy neu. Qwellcode gab uns vollständige Kontrolle über Ticketing, Einnahmen und Fan-Beziehungen. Ihre Smart-Contract-Expertise und Plattform-Architektur eliminierten traditionelle Zwischenhändler und befähigten Kreative.",
           "rating": 5
         },
         {
           "id": "zeroone",
-          "author": "Zeroone",
-          "role": "180K+ Creator-Community",
+          "author": "zeroone",
+          "role": "Web3 Creator Community",
           "avatar": "img/faces/customers/zeroone.jpg",
           "text": "Die Ownership Economy ist hier, und Qwellcode hat sie real gemacht. Mit 4,5M+ erstellten digitalen Assets haben sie eine Plattform gebaut, die unsere Zielgruppen in Sammler verwandelt und unsere digitalen Fußabdrücke in greifbaren Wert verwandelt. Revolutionäre Arbeit.",
           "rating": 5
         },
         {
-          "id": "tixu",
-          "author": "Tixu",
-          "role": "Next-Gen Ticketing-Plattform",
+          "id": "moca",
+          "author": "Museum of Crypto Art",
+          "role": "Digitale Kultur Institution",
           "avatar": "img/faces/customers/moca.jpg",
-          "text": "Tixu denkt Event-Ticketing für die Ownership Economy neu. Qwellcode gab uns vollständige Kontrolle über Ticketing, Einnahmen und Fan-Beziehungen. Ihre Smart-Contract-Expertise und Plattform-Architektur eliminierten traditionelle Zwischenhändler und befähigten Kreative.",
+          "text": "Sieben Jahre Aufbau auf Ethereum, von POAP bis mocaOS. Qwellcode ist Pionier der dezentralen Grundlage für digitale Kultur. Ihre technische Tiefe in Web3 kombiniert mit realer Skalierung macht sie zum Go-to-Team für ernsthafte dezentrale Systeme.",
           "rating": 5
         }
       ],

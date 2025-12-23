@@ -94,321 +94,8 @@
     <link rel="stylesheet" href="css/plugins/fancybox.min.css">
     <!-- qwellcode scss -->
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-        /* Language Switcher Styles */
-        .mil-frame-top {
-            position: relative;
-        }
-
-        .mil-language-switcher {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            margin-left: auto;
-            margin-right: 20px;
-            pointer-events: all;
-        }
-
-        .mil-lang-btn {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            padding: 8px 12px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 14px;
-            border-radius: 4px;
-        }
-
-        .mil-lang-btn:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.4);
-            color: rgba(255, 255, 255, 1);
-            transform: translateY(-1px);
-        }
-
-        .mil-lang-btn:active {
-            transform: translateY(0);
-        }
-
-        .mil-lang-btn.active {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .mil-flag {
-            font-size: 18px;
-        }
-
-        .mil-lang-name {
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        @media screen and (max-width: 1200px) {
-            .mil-language-switcher {
-                margin-right: 15px;
-            }
-
-            .mil-lang-name {
-                display: none;
-            }
-
-            .mil-lang-btn {
-                padding: 6px 10px;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .mil-language-switcher {
-                gap: 5px;
-                margin-right: 10px;
-            }
-
-            .mil-lang-btn {
-                padding: 5px 8px;
-                font-size: 12px;
-            }
-
-            .mil-flag {
-                font-size: 16px;
-            }
-        }
-
-        /* Modal Styles */
-        .mil-modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.95);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .mil-modal.mil-active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 1;
-        }
-
-        .mil-modal-content {
-            background: #000;
-            padding: 60px;
-            max-width: 1200px;
-            width: 90%;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
-        }
-
-        .mil-modal.mil-active .mil-modal-content {
-            transform: scale(1);
-        }
-
-        .mil-modal-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 40px;
-            color: #fff;
-            cursor: pointer;
-            z-index: 10000;
-            line-height: 1;
-            transition: color 0.2s;
-        }
-
-        .mil-modal-close:hover {
-            color: rgba(135, 216, 50, 1);
-        }
-
-        /* Project Details Modal Specific Styles */
-        #project-details-content .mil-labels {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        #project-details-content .mil-label {
-            padding: 8px 15px;
-            background: rgba(135, 216, 50, 0.1);
-            border: 1px solid rgba(135, 216, 50, 0.3);
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
-
-        #project-details-content .mil-service-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        #project-details-content .mil-service-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        #project-details-content .mil-service-list li:before {
-            content: "→";
-            margin-right: 10px;
-            color: rgba(135, 216, 50, 1);
-        }
-
-        #project-details-content .mil-image-frame {
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        #project-details-content .mil-image-frame:hover {
-            border-color: rgba(135, 216, 50, 1);
-            transform: translateY(-2px);
-        }
-
-        #project-details-content .mil-image-frame img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        #project-details-content .mil-image-frame:hover img {
-            transform: scale(1.05);
-        }
-
-        #project-details-content .mil-image-frame.mil-fw {
-            padding-bottom: 50%;
-        }
-
-        #project-details-content .mil-image-frame.mil-horizontal {
-            padding-bottom: 65%;
-        }
-
-        #project-details-content .mil-image-frame.mil-fw img,
-        #project-details-content .mil-image-frame.mil-horizontal img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .mil-portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .mil-portfolio-item-inline {
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            background: #000;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s cubic-bezier(0, 0, 0.3642, 1);
-        }
-
-        .mil-portfolio-item-inline:hover {
-            border-color: rgba(135, 216, 50, 1);
-            transform: translateY(-5px);
-        }
-
-        .mil-portfolio-item-inline .mil-cover-frame {
-            position: relative;
-            padding-bottom: 100%;
-            overflow: hidden;
-        }
-
-        .mil-portfolio-item-inline .mil-cover-frame img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            transition: transform 0.6s cubic-bezier(0, 0, 0.3642, 1);
-        }
-
-        .mil-portfolio-item-inline:hover .mil-cover-frame img {
-            transform: scale(1.1);
-        }
-
-        .mil-portfolio-item-inline .mil-descr {
-            padding: 30px;
-        }
-
-        .mil-portfolio-item-inline .mil-text-sm {
-            font-size: 20px;
-        }
-
-        @media screen and (max-width: 768px) {
-            .mil-modal-content {
-                padding: 30px;
-            }
-
-            .mil-portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Service Cards Alignment Fix */
-        .mil-service-card-lg {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .mil-service-card-lg h4 {
-            min-height: 40px;
-        }
-
-        .mil-service-card-lg .mil-descr {
-            flex: 0 0 auto;
-            min-height: 333px;
-        }
-
-        .mil-service-card-lg .mil-service-list {
-            flex: 1 1 auto;
-            margin-top: auto;
-        }
-
-        .mil-service-card-lg > .mil-link {
-            margin-top: auto;
-        }
-
-        #services .col-lg-4 {
-            display: flex;
-        }
-
-        /* Responsive adjustments for service descriptions */
-        @media screen and (max-width: 992px) {
-            .mil-service-card-lg h4 {
-                min-height: auto;
-            }
-
-            .mil-service-card-lg .mil-descr {
-                min-height: auto;
-            }
-        }
-    </style>
+    <!-- qcode custom css -->
+    <link rel="stylesheet" href="css/qcode.css">
 
 </head>
 
@@ -471,13 +158,13 @@
                             <nav class="mil-main-menu" id="swupMenu">
                                 <ul>
                                     <li>
-                                        <a href="#about">About</a>
+                                        <a href="#about" id="nav-about">About</a>
                                     </li>
                                     <li>
-                                        <a href="#services">What We Build</a>
+                                        <a href="#services" id="nav-services">What We Build</a>
                                     </li>
                                     <li>
-                                        <a href="#portfolio">Portfolio</a>
+                                        <a href="#portfolio" id="nav-portfolio">Portfolio</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -494,7 +181,7 @@
                                 <div class="mil-menu-right">
                                     <div class="row justify-content-between">
                                         <div class="col-lg-8 mil-mb-60">
-                                            <h6 class="mil-muted mil-mb-30">Contact</h6>
+                                            <h6 class="mil-muted mil-mb-30" id="menu-contact">Contact</h6>
                                             <p class="mil-light-soft mil-up">Qwellcode Solutions GmbH & Co. KG<br>
                                             Geseker Straße 53a<br>
                                             33154 Salzkotten<br>
@@ -502,7 +189,7 @@
                                             HRA 7979 | USt-IdNr.: DE 338 758 148</p>
                                         </div>
                                         <div class="col-lg-4 mil-mb-60">
-                                            <h6 class="mil-muted mil-mb-30">Follow</h6>
+                                            <h6 class="mil-muted mil-mb-30" id="menu-follow">Follow</h6>
                                             <ul class="mil-social-icons">
                                                 <!-- Social links populated dynamically from content.json -->
                                             </ul>
@@ -535,7 +222,7 @@
                 <div class="mil-current-page"></div>
                 <div class="mil-back-to-top">
                     <a href="#top" class="mil-link mil-dark mil-arrow-place">
-                        <span>Back to top</span>
+                        <span id="back-to-top-text">Back to top</span>
                     </a>
                 </div>
             </div>
@@ -587,7 +274,7 @@
                                             <use xlink:href="#circlePath" fill="none" />
                                             <text style="letter-spacing: 6.5px">
                                                 <!-- circle text -->
-                                                <textPath xlink:href="#circlePath">Scroll down - Scroll down - </textPath>
+                                                <textPath xlink:href="#circlePath" id="scroll-down-text">Scroll down - Scroll down - </textPath>
                                             </text>
                                         </g>
                                     </svg>
@@ -648,13 +335,13 @@
                             <div class="row">
                                 <div class="col-lg-10">
 
-                                    <span class="mil-suptitle mil-light-soft mil-suptitle-right mil-up">From decentralized culture to enterprise foundations,<br> we build systems that millions depend on.</span>
+                                    <span class="mil-suptitle mil-light-soft mil-suptitle-right mil-up" id="services-suptitle">From decentralized culture to enterprise foundations,<br> we build systems that millions depend on.</span>
 
                                 </div>
                             </div>
 
                             <div class="mil-mb-90">
-                                <h2 class="mil-center mil-up mil-mb-60 mil-muted">What We <span class="mil-thin">Build</span></h2>
+                                <h2 class="mil-center mil-up mil-mb-60 mil-muted" id="services-title">What We <span class="mil-thin">Build</span></h2>
                             </div>
 
                             <!-- Services will be populated dynamically from content.json -->
@@ -671,7 +358,7 @@
                     <div class="container mil-p-120-60">
                         <div class="row align-items-center mil-mb-60">
                             <div class="col-lg-6 mil-mb-30">
-                                <h2 class="mil-up">Featured <span class="mil-thin">Projects</span></h2>
+                                <h2 class="mil-up" id="portfolio-title">Featured <span class="mil-thin">Projects</span></h2>
                             </div>
                         </div>
 
@@ -681,7 +368,7 @@
                         </div>
 
                         <div class="mil-center mil-mt-suptitle-offset">
-                            <p class="mil-u mil-light-soft mil-mb-30">This is just the beginning. We're building permanent platforms for a permanent future.</p>
+                            <p class="mil-u mil-light-soft mil-mb-30" id="portfolio-footer-text">This is just the beginning. We're building permanent platforms for a permanent future.</p>
                         </div>
                     </div>
                 </section>
@@ -731,20 +418,20 @@
 
                                     <div class="mil-muted mil-logo mil-up mil-mb-30">[q]wellcode</div>
 
-                                    <p class="mil-light-soft mil-up">We don't chase trends—we build <span class="mil-accent">permanent platforms</span> for permanent success. From decentralized culture to enterprise foundations, our systems power millions of users worldwide.</p>
+                                    <p class="mil-light-soft mil-up" id="footer-tagline">We don't chase trends—we build <span class="mil-accent">permanent platforms</span> for permanent success. From decentralized culture to enterprise foundations, our systems power millions of users worldwide.</p>
 
                                 </div>
                                 <div class="col-md-7 col-lg-6">
                                     <div class="row justify-content-between">
                                         <div class="col-md-6 mil-mb-60">
-                                            <h6 class="mil-muted mil-up mil-mb-30">Contact</h6>
+                                            <h6 class="mil-muted mil-up mil-mb-30" id="footer-contact">Contact</h6>
                                             <p class="mil-light-soft mil-up">Qwellcode Solutions GmbH & Co. KG<br>
                                             Geseker Straße 53a<br>
                                             33154 Salzkotten<br>
                                             Deutschland</p>
                                         </div>
                                         <div class="col-md-6 mil-mb-60">
-                                            <h6 class="mil-muted mil-up mil-mb-30">Legal</h6>
+                                            <h6 class="mil-muted mil-up mil-mb-30" id="footer-legal">Legal</h6>
                                             <p class="mil-light-soft mil-up">HRA 7979<br>
                                             USt-IdNr.: DE 338 758 148<br>
                                             <a href="#" class="mil-light" data-imprint-trigger>Imprint / Impressum</a></p>
@@ -762,7 +449,7 @@
                                                 <!-- Social links populated dynamically from content.json -->
                                             </ul>
                                         </div>
-                                        <p class="mil-light mil-up mil-center footer-dark">© qwellcode 2026. All Rights Reserved.</p>
+                                        <p class="mil-light mil-up mil-center footer-dark" id="footer-copyright">© qwellcode 2026. All Rights Reserved.</p>
                                     </div>
 
                                 </div>

@@ -643,6 +643,102 @@ Loads and manages content from content.json
         },
 
         /**
+         * Update navigation labels
+         */
+        updateNavigation: function() {
+            const site = this.getSiteInfo();
+            if (!site || !site.navigation) {
+                console.warn('Navigation data not found');
+                return;
+            }
+
+            const nav = site.navigation;
+
+            // Update main menu items
+            if (nav.about) $('#nav-about').text(nav.about);
+            if (nav.services) $('#nav-services').text(nav.services);
+            if (nav.portfolio) $('#nav-portfolio').text(nav.portfolio);
+
+            // Update menu frame labels
+            if (nav.contact) $('#menu-contact, #footer-contact').text(nav.contact);
+            if (nav.follow) $('#menu-follow').text(nav.follow);
+            if (nav.legal) $('#footer-legal').text(nav.legal);
+
+            // Update back to top text
+            if (nav.backToTop) $('#back-to-top-text').text(nav.backToTop);
+
+            // Update scroll down text
+            if (nav.scrollDown) {
+                const scrollText = nav.scrollDown + ' - ' + nav.scrollDown + ' - ';
+                $('#scroll-down-text').text(scrollText);
+            }
+
+            console.log('Navigation updated for language:', this.currentLanguage);
+        },
+
+        /**
+         * Update section titles and texts
+         */
+        updateSectionTexts: function() {
+            const site = this.getSiteInfo();
+            if (!site || !site.sections) {
+                console.warn('Sections data not found');
+                return;
+            }
+
+            // Update services section
+            if (site.sections.services) {
+                if (site.sections.services.suptitle) {
+                    $('#services-suptitle').html(site.sections.services.suptitle);
+                }
+                if (site.sections.services.title) {
+                    $('#services-title').html(site.sections.services.title);
+                }
+            }
+
+            // Update portfolio section
+            if (site.sections.portfolio) {
+                if (site.sections.portfolio.title) {
+                    $('#portfolio-title').html(site.sections.portfolio.title);
+                }
+                if (site.sections.portfolio.footer && site.sections.portfolio.footer.text) {
+                    $('#portfolio-footer-text').html(site.sections.portfolio.footer.text);
+                }
+            }
+
+            console.log('Section texts updated for language:', this.currentLanguage);
+        },
+
+        /**
+         * Update footer section
+         */
+        updateFooter: function() {
+            const site = this.getSiteInfo();
+            if (!site || !site.footer) {
+                console.warn('Footer data not found');
+                return;
+            }
+
+            // Update footer tagline
+            if (site.footer.tagline) {
+                const footerTagline = $('#footer-tagline');
+                if (footerTagline.length) {
+                    footerTagline.html(site.footer.tagline);
+                }
+            }
+
+            // Update footer copyright
+            if (site.footer.copyright) {
+                const footerCopyright = $('#footer-copyright');
+                if (footerCopyright.length) {
+                    footerCopyright.html(site.footer.copyright);
+                }
+            }
+
+            console.log('Footer updated for language:', this.currentLanguage);
+        },
+
+        /**
          * Update contact information
          */
         updateContactInfo: function () {
@@ -784,11 +880,20 @@ Loads and manages content from content.json
 
             console.log('Initializing all content for language:', this.currentLanguage);
 
+            // Update navigation labels
+            this.updateNavigation();
+
+            // Update section texts
+            this.updateSectionTexts();
+
             // Update hero section
             this.updateHeroSection();
 
             // Update about section
             this.updateAboutSection();
+
+            // Update footer
+            this.updateFooter();
 
             // Render language switcher
             if ($('.mil-language-switcher').length) {

@@ -33,12 +33,13 @@ This is a **static multi-page creative agency website template** (Ashley/QCode) 
 │   └── contact.html
 ├── css/
 │   ├── style.css             # Compiled CSS (DO NOT EDIT - edit SCSS instead)
+│   ├── qcode.css             # ⭐ Custom QCode CSS (modals, portfolio, language switcher)
 │   └── plugins/              # Third-party CSS (bootstrap-grid, swiper, fancybox, font-awesome)
 ├── scss/
 │   ├── style.scss            # Main SCSS entry point
 │   ├── _variables.scss       # Colors, fonts, sizes, transitions
 │   ├── _common.scss          # Base styles, typography, utilities, forms, backgrounds
-│   └── _components.scss      # UI components (preloader, cursor, menu, cards, etc.)
+│   └── _components.scss      # UI components (preloader, cursor, menu, cards, 3D shapes)
 ├── js/
 │   ├── content-manager.js    # ⭐ Content loading and rendering system
 │   ├── main.js               # All custom JavaScript
@@ -140,6 +141,26 @@ Each project in `content.json` has the following structure:
 
 ## CSS/SCSS Conventions
 
+### CSS File Structure
+
+**SCSS Files** (compiled to `css/style.css`):
+- `scss/_variables.scss` - Colors, fonts, sizes, transitions
+- `scss/_common.scss` - Base styles, typography, utilities, forms
+- `scss/_components.scss` - UI components, 3D shapes, core layout
+- `scss/style.scss` - Main entry point (imports all SCSS files)
+
+**Custom QCode CSS** (`css/qcode.css`):
+- Language switcher styles (`.mil-language-switcher`, `.mil-lang-btn`)
+- Portfolio grid system (`.mil-portfolio-grid`, `.mil-portfolio-item-inline`)
+- Modal dialogs (`.mil-modal`, `.mil-modal-content`, `#projectDetailsModal`, `#imprintModal`)
+- Service card alignment fixes
+- Project detail modal styles (`#project-details-content`)
+
+**When to use which:**
+- **Edit SCSS files** for core styles (colors, typography, layout, components)
+- **Edit qcode.css** for QCode-specific features (modals, portfolio, language switcher)
+- **Never edit style.css** directly (it's auto-generated from SCSS)
+
 ### Naming Convention
 All custom classes use the `mil-` prefix (BEM-like):
 - **Block**: `mil-button`, `mil-card`, `mil-banner`
@@ -179,6 +200,60 @@ $t-lg: .6s cubic-bezier(0, 0, 0.3642, 1);
 @media screen and (max-width: 768px) { }   // Mobile landscape
 @media screen and (max-width: 576px) { }   // Mobile portrait
 ```
+
+## Custom QCode CSS (`css/qcode.css`)
+
+This file contains custom styles specific to QCode features that don't require SCSS compilation. It was created to separate custom QCode-specific styles from the compiled SCSS.
+
+### What's in qcode.css:
+
+**Language Switcher**
+```css
+.mil-language-switcher    // Container for language toggle
+.mil-lang-btn              // Individual language button
+.mil-flag                  // Flag emoji
+.mil-lang-name             // Language name text
+```
+
+**Modal System**
+```css
+.mil-modal                 // Modal overlay (z-index: 9999)
+.mil-modal-content         // Modal content wrapper
+.mil-modal-close           // Close button (×)
+.mil-modal.mil-active      // Active/visible state
+```
+
+**Portfolio Grid**
+```css
+.mil-portfolio-grid                    // Grid layout (auto-fit, minmax(300px, 1fr))
+.mil-portfolio-item-inline             // Individual portfolio card
+.mil-portfolio-item-inline .mil-cover-frame    // Image container with aspect ratio
+```
+
+**Project Details Modal**
+```css
+#project-details-content .mil-labels         // Technology labels
+#project-details-content .mil-service-list   // Services list
+#project-details-content .mil-image-frame    // Image containers
+```
+
+**Service Cards**
+```css
+.mil-service-card-lg       // Service card alignment fixes
+#services .col-lg-4        // Flexbox layout for equal heights
+```
+
+### When to add to qcode.css:
+- QCode-specific features (modals, custom grids)
+- Styles that don't need SCSS variables or mixins
+- Quick fixes and adjustments
+- Responsive overrides for custom components
+
+### When NOT to use qcode.css:
+- Core component styles (use `_components.scss`)
+- Variables, colors, fonts (use `_variables.scss`)
+- Base utilities (use `_common.scss`)
+- Anything that needs SCSS features (variables, nesting, mixins)
 
 ## JavaScript Patterns
 
@@ -347,7 +422,8 @@ Add `mil-up` class to any element for fade-in-up animation on scroll:
 ## Important Guidelines
 
 ### DO:
-- Edit SCSS files, not compiled CSS (except for page-specific inline styles in `index.html`)
+- Edit SCSS files for core styles (colors, typography, components, layouts)
+- Edit `css/qcode.css` for QCode-specific custom features (modals, portfolio, language switcher)
 - Use `mil-` prefix for all new classes
 - Add `mil-up` class for scroll animations
 - Reinitialize functionality in `swup:contentReplaced` event when adding new interactive features
@@ -355,12 +431,13 @@ Add `mil-up` class to any element for fade-in-up animation on scroll:
 - Keep color values in sync between `_variables.scss` and `main.js`
 - Use relative paths for assets (e.g., `img/photo/1.jpg`)
 - When using padding-bottom technique for aspect ratios, always position images absolutely with object-fit: cover
+- Run `npm run build:css` after editing SCSS files
 
 ### DON'T:
 - Edit `css/style.css` directly (it's compiled from SCSS)
+- Add inline styles to HTML when CSS classes exist (use qcode.css for custom styles)
 - Edit files in `js/plugins/` or `css/plugins/` (third-party libraries)
 - Remove `#swupMain` or `#swupMenu` IDs (breaks page transitions)
-- Add inline styles when SCSS classes exist
 - Use `!important` unless absolutely necessary
 - Forget to reinitialize sliders/animations after Swup transitions
 
@@ -1027,13 +1104,16 @@ When content is dynamically loaded, ensure:
 - **Main styles**: `scss/style.scss` (imports others)
 - **Variables**: `scss/_variables.scss`
 - **Components**: `scss/_components.scss`
+- **Common styles**: `scss/_common.scss`
+- **Custom QCode CSS**: `css/qcode.css` (modals, portfolio, language switcher)
+- **Compiled CSS**: `css/style.css` (DO NOT EDIT - compiled from SCSS)
 - **JavaScript**: `js/main.js`
 - **Content Manager**: `js/content-manager.js`
 - **Content Database**: `content.json`
 - **Homepage**: `index.html`
+- **Admin Panel**: `admin.html`
 - **Documentation**: `README.md` (start here)
 - **Portfolio Images**: `img/works/` (thumbnails and detail images)
-- **Image Update Log**: `PORTFOLIO-IMAGES-UPDATE.md`
 
 ## Quick Reference: Portfolio Implementation
 

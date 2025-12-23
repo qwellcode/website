@@ -127,12 +127,16 @@ qcode-website/
 │   ├── content-manager.js  # Content loading & rendering
 │   └── main.js             # Animations & interactions
 │
-├── scss/                   # Source styles
+├── scss/                   # Source styles (compiled to CSS)
 │   ├── _variables.scss     # Colors, fonts, sizes
-│   ├── _components.scss    # UI components
+│   ├── _components.scss    # UI components & 3D shapes
+│   ├── _common.scss        # Base styles & utilities
 │   └── style.scss          # Main entry
 │
-├── css/style.css           # Compiled CSS (don't edit)
+├── css/
+│   ├── style.css           # Compiled SCSS (DO NOT EDIT)
+│   ├── qcode.css           # ⭐ Custom QCode CSS (modals, portfolio, language switcher)
+│   └── plugins/            # Third-party CSS (bootstrap, swiper, fancybox)
 │
 └── img/
     ├── works/              # Portfolio images
@@ -227,6 +231,35 @@ $accent: rgba(255, 152, 0, 1);  // Orange
 $dark: rgba(0, 0, 0, 1);
 $light: rgba(255, 255, 255, 1);
 ```
+
+### Modify Custom Styles
+
+**SCSS Files** (compiled to `style.css`):
+```scss
+// In scss/_variables.scss - Change colors, fonts, sizes
+$accent: rgba(135, 216, 50, 1);  // Lime green accent
+$dark: rgba(0, 0, 0, 1);
+$light: rgba(255, 255, 255, 1);
+
+// In scss/_components.scss - Modify UI components & shapes
+// In scss/_common.scss - Base styles & utilities
+```
+
+**Custom CSS** (direct editing):
+```css
+// In css/qcode.css - Custom QCode styles that don't need SCSS:
+// ✅ Language switcher (.mil-lang-btn, .mil-language-switcher)
+// ✅ Portfolio grid (.mil-portfolio-grid, .mil-portfolio-item-inline)
+// ✅ Modal system (.mil-modal, .mil-modal-content, .mil-modal-close)
+// ✅ Service card alignment fixes
+// ✅ Project detail modal styles (#project-details-content)
+```
+
+**Important CSS Rules:**
+1. **Edit SCSS files** for core styles (colors, typography, components)
+2. **Edit qcode.css** for custom QCode-specific features
+3. **Never edit style.css** directly (it's compiled from SCSS)
+4. After SCSS changes, run `npm run build:css`
 
 ---
 

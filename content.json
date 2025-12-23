@@ -20,6 +20,22 @@
         "name": "Qwellcode",
         "tagline": "Refreshing Software Solutions",
         "description": "We're a top-notch dev shop building permanent platforms for permanent success.",
+        "navigation": {
+          "about": "About",
+          "services": "What We Build",
+          "portfolio": "Portfolio",
+          "contact": "Contact",
+          "follow": "Follow",
+          "legal": "Legal",
+          "backToTop": "Back to top",
+          "scrollDown": "Scroll down",
+          "viewPortfolio": "View Portfolio",
+          "imprintLink": "Imprint"
+        },
+        "footer": {
+          "tagline": "We don't chase trends—we build <span class=\"mil-accent\">permanent platforms</span> for permanent success. From decentralized culture to enterprise foundations, our systems power millions of users worldwide.",
+          "copyright": "© qwellcode 2026. All Rights Reserved."
+        },
         "hero": {
           "headline": "Building <span class=\"mil-thin\">the Future,</span><br> One Robust <span class=\"mil-thin\">System at a Time</span>",
           "description": "We're a top-notch dev shop building permanent platforms for permanent success. From decentralized cultural systems to enterprise foundations, we transform bold ideas into technology used by millions.",
@@ -39,12 +55,15 @@
             "This powerful mix of research and scalable software—used by vast amounts of users—allows us to build scalable software for the future, one robust platform at a time. We don't chase trends; we build permanent platforms for permanent success."
           ],
           "quote": {
-            "text": "<span class=\"mil-thin\">We are tinkerers and builders who build projects that scale over decades.</span>",
+            "text": "<span class=\"mil-thin\">We are tinkerers and builders who create projects that scale over decades.</span>",
             "avatar": "img/faces/customers/flask.jpg"
           },
           "image": "img/photo/billboard.jpg"
         },
         "sections": {
+          "about": {
+            "permanentPlatforms": "We don't chase trends; we build permanent platforms for permanent success."
+          },
           "services": {
             "suptitle": "From decentralized culture to enterprise foundations,<br> we build systems that millions depend on.",
             "title": "What We <span class=\"mil-thin\">Build</span>"
@@ -555,6 +574,22 @@
         "name": "Qwellcode",
         "tagline": "Erfrischende Softwarelösungen",
         "description": "Wir sind ein erstklassiger Entwicklungsshop, der permanente Plattformen für dauerhaften Erfolg baut.",
+        "navigation": {
+          "about": "Über uns",
+          "services": "Was wir entwickeln",
+          "portfolio": "Portfolio",
+          "contact": "Kontakt",
+          "follow": "Folgen",
+          "legal": "Rechtliches",
+          "backToTop": "Zurück nach oben",
+          "scrollDown": "Nach unten scrollen",
+          "viewPortfolio": "Portfolio ansehen",
+          "imprintLink": "Impressum"
+        },
+        "footer": {
+          "tagline": "Wir jagen keine Trends – wir bauen <span class=\"mil-accent\">dauerhafte Plattformen</span> für dauerhaften Erfolg. Von dezentraler Kultur bis zu Enterprise-Fundamenten unterstützen unsere Systeme Millionen Nutzer weltweit.",
+          "copyright": "© qwellcode 2026. Alle Rechte vorbehalten."
+        },
         "hero": {
           "headline": "Die Zukunft <span class=\"mil-thin\">gestalten,</span><br> Ein robustes <span class=\"mil-thin\">System nach dem anderen</span>",
           "description": "Wir sind ein erstklassiger Entwicklungsshop, der permanente Plattformen für dauerhaften Erfolg baut. Von dezentralen Kultursystemen bis hin zu Enterprise-Fundamenten verwandeln wir kühne Ideen in Technologie, die von Millionen genutzt wird.",
@@ -574,12 +609,15 @@
             "Diese kraftvolle Mischung aus Forschung und skalierbarer Software—genutzt von einer Vielzahl von Nutzern—ermöglicht es uns, skalierbare Software für die Zukunft zu entwickeln, eine robuste Plattform nach der anderen. Wir jagen keine Trends; wir bauen dauerhafte Plattformen für dauerhaften Erfolg."
           ],
           "quote": {
-            "text": "<span class=\"mil-thin\">Wir sind Tüftler und Entwickler die zusammen skalierbare Systeme bauen.</span>",
+            "text": "<span class=\"mil-thin\">Wir vereinen Tüftler und Entwickler um skalierbare Systeme zu erschaffen.</span>",
             "avatar": "img/faces/customers/flask.jpg"
           },
           "image": "img/photo/billboard.jpg"
         },
         "sections": {
+          "about": {
+            "permanentPlatforms": "Wir jagen keine Trends; wir bauen dauerhafte Plattformen für dauerhaften Erfolg."
+          },
           "services": {
             "suptitle": "Von dezentraler Kultur bis zu Enterprise-Fundamenten,<br> wir bauen Systeme, auf die Millionen vertrauen.",
             "title": "Was wir <span class=\"mil-thin\">entwickeln</span>"

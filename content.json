@@ -14,6 +14,77 @@
     ],
     "defaultLanguage": "en"
   },
+  "projectAssets": {
+    "bega": {
+      "images": ["img/works/1/1.jpg", "img/works/1/2.jpg", "img/works/1/3.jpg"],
+      "thumbnail": "img/works/1.jpg",
+      "technologies": ["Java", "Spring Boot", "React", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
+      "year": 2019,
+      "status": "Active"
+    },
+    "tixu": {
+      "images": ["img/works/2/1.jpg", "img/works/2/2.jpg", "img/works/2/3.jpg", "img/works/2/4.jpg", "img/works/2/5.jpg", "img/works/2/6.jpg", "img/works/2/7.jpg"],
+      "thumbnail": "img/works/2.jpg",
+      "technologies": ["React Native", "Node.js", "Ethereum", "Solidity", "PostgreSQL", "Stripe"],
+      "year": 2023,
+      "status": "Active",
+      "url": "https://tixu.io"
+    },
+    "zeroone": {
+      "images": ["img/works/3/1.jpg", "img/works/3/2.jpg", "img/works/3/3.jpg", "img/works/3/4.jpg", "img/works/3/5.jpg", "img/works/3/6.jpg", "img/works/3/7.jpg"],
+      "thumbnail": "img/works/3.jpg",
+      "technologies": ["Next.js", "PostgreSQL", "Ethereum", "Redis", "Web3", "AWS"],
+      "year": 2022,
+      "status": "Active",
+      "url": "https://zeroone.art"
+    },
+    "codex": {
+      "images": ["img/works/4/1.jpg", "img/works/4/2.jpg", "img/works/4/3.jpg", "img/works/4/4.jpg", "img/works/4/5.jpg", "img/works/4/6.jpg", "img/works/4/7.jpg"],
+      "thumbnail": "img/works/4.jpg",
+      "technologies": ["TypeScript", "Next.js", "PostgreSQL", "IPFS", "Elasticsearch"],
+      "year": 2023,
+      "status": "Active"
+    },
+    "moca": {
+      "images": ["img/works/5/1.jpg", "img/works/5/2.jpg", "img/works/5/3.jpg", "img/works/5/4.jpg", "img/works/5/5.jpg", "img/works/5/6.jpg", "img/works/5/7.jpg"],
+      "thumbnail": "img/works/5.jpg",
+      "technologies": ["React", "Web3", "IPFS", "Ethereum", "3D.js", "Node.js", "TypeScript", "Next.js"],
+      "year": 2020,
+      "status": "Active",
+      "url": "https://museumofcryptoart.com"
+    },
+    "gop": {
+      "images": ["img/works/6/1.jpg", "img/works/6/2.jpg", "img/works/6/3.jpg", "img/works/6/4.jpg", "img/works/6/5.jpg", "img/works/6/6.jpg", "img/works/6/7.jpg"],
+      "thumbnail": "img/works/6.jpg",
+      "technologies": ["PHP", "Laravel", "Vue.js", "MySQL", "Redis"],
+      "year": 2020,
+      "status": "Active",
+      "url": "https://variete.de"
+    },
+    "amber-island": {
+      "images": ["img/works/7/1.jpg", "img/works/7/2.jpg", "img/works/7/3.jpg", "img/works/7/4.jpg", "img/works/7/5.jpg", "img/works/7/6.jpg", "img/works/7/7.jpg","img/works/7/8.jpg", "img/works/7/9.jpg"],
+      "thumbnail": "img/works/7.jpg",
+      "technologies": ["NFTs", "Blockchain", "Ethereum", "Tokenization", "Meta Anchor™"],
+      "year": 2022,
+      "status": "Previous Work"
+    },
+    "poap": {
+      "images": ["img/works/8/1.jpg"],
+      "thumbnail": "img/works/8.jpg",
+      "technologies": ["Ethereum", "Solidity", "Smart Contracts", "NFT", "IPFS", "Web3.js"],
+      "year": 2018,
+      "status": "Previous Work",
+      "url": "https://poap.xyz",
+      "github": "https://github.com/poap-xyz"
+    },
+    "ai-language-models": {
+      "images": ["img/works/9/1.jpg"],
+      "thumbnail": "img/works/9.jpg",
+      "technologies": ["AI", "Machine Learning", "LeoLM 13B", "Llama-2", "h2ogpt", "NLP", "Python"],
+      "year": 2023,
+      "status": "Active"
+    }
+  },
   "translations": {
     "en": {
       "site": {
@@ -148,28 +219,15 @@
           "slug": "bega-digital",
           "category": "Enterprise and Commerce",
           "featured": true,
-          "status": "Active",
-          "thumbnail": "img/works/1.jpg",
-          "images": [
-            "img/works/1/1.jpg",
-            "img/works/1/2.jpg",
-            "img/works/1/3.jpg",
-            "img/works/1/4.jpg",
-            "img/works/1/5.jpg",
-            "img/works/1/6.jpg",
-            "img/works/1/7.jpg"
-          ],
           "shortDescription": "Digital foundation powering Germany's largest furniture group.",
           "description": "Digital foundation powering Germany's largest furniture group, ensuring unwavering quality for 5,000 partners.",
           "longDescription": "For BEGA, Germany's largest furniture group, we built a comprehensive digital foundation that serves as the backbone of their entire operation. The platform connects 5,000+ partners, handles complex B2B transactions, manages inventory across multiple warehouses, and provides real-time analytics.\n\nOur enterprise architecture ensures 99.99% uptime, handles peak loads during promotional periods, and integrates with legacy ERP systems. The platform includes partner portals, order management, logistics tracking, and business intelligence dashboards that drive strategic decisions.",
-          "technologies": ["Java", "Spring Boot", "React", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
           "highlights": [
             "Enterprise Architecture",
             "5,000+ Partner Network",
             "Scalable Infrastructure",
             "99.99% Uptime"
           ],
-          "year": 2019,
           "client": "BEGA Furniture Group",
           "services": ["Enterprise Development", "System Integration", "Infrastructure Design"]
         },
@@ -179,32 +237,17 @@
           "slug": "tixu-ticketing",
           "category": "Ticketing Platform",
           "featured": true,
-          "thumbnail": "img/works/2.jpg",
-          "images": [
-            "img/works/2/1.gif",
-            "img/works/2/2.gif",
-            "img/works/2/3.jpg",
-            "img/works/2/4.gif",
-            "img/works/2/5.jpg",
-            "img/works/2/6.jpg",
-            "img/works/2/7.jpg",
-            "img/works/2/8.jpg"
-          ],
           "shortDescription": "Bringing ownership to live experiences.",
           "description": "Bringing ownership to live experiences. Creators get total control over their ticketing and revenue in the new ownership economy.",
           "longDescription": "Tixu reimagines event ticketing for the ownership economy. We built a platform that gives creators complete control over their ticketing, revenue, and fan relationships, eliminating traditional intermediaries.\n\nThe system includes smart contract-based ticketing, secondary market control, fan verification, and comprehensive analytics. Creators can implement dynamic pricing, create exclusive experiences, and maintain direct connections with their audience.",
-          "technologies": ["React Native", "Node.js", "Ethereum", "Solidity", "PostgreSQL", "Stripe"],
           "highlights": [
             "Creator Control",
             "Smart Ticketing",
             "Revenue Management",
             "Secondary Market Control"
           ],
-          "url": "https://tixu.io",
-          "year": 2023,
           "client": "Tixu",
-          "services": ["Mobile App Development", "Smart Contracts", "Payment Integration"],
-          "status": "Active"
+          "services": ["Mobile App Development", "Smart Contracts", "Payment Integration"]
         },
         {
           "id": "zeroone",
@@ -212,31 +255,17 @@
           "slug": "zeroone",
           "category": "Social Creator Tools",
           "featured": true,
-          "thumbnail": "img/works/3.jpg",
-          "images": [
-            "img/works/3/1.jpg",
-            "img/works/3/2.jpg",
-            "img/works/3/3.gif",
-            "img/works/3/4.jpg",
-            "img/works/3/5.gif",
-            "img/works/3/6.jpg",
-            "img/works/3/7.gif"
-          ],
           "shortDescription": "Transforming audiences into collectors and digital footprints into fortunes.",
           "description": "Turns every post into a unique digital asset. 180K+ creators and 4.5M+ assets transforming audiences into collectors and footprints into fortunes.",
           "longDescription": "Zeroone is revolutionizing the creator economy by turning every social media post into a unique, ownable digital asset. With 180K+ creators and 4.5M+ digital assets created, we've built the social layer for the ownership economy.\n\nOur platform seamlessly converts traditional social content into blockchain-backed collectibles, enabling creators to monetize their influence directly. Advanced algorithms handle asset generation, rarity determination, and marketplace dynamics, while our UX makes blockchain invisible to end users.",
-          "technologies": ["Next.js", "PostgreSQL", "Ethereum", "Redis", "Web3", "AWS"],
           "highlights": [
             "180K+ Creators",
             "4.5M+ Digital Assets",
             "Ownership Economy",
             "Seamless Web3 UX"
           ],
-          "url": "https://zeroone.art",
-          "year": 2022,
           "client": "Zeroone",
-          "services": ["Platform Development", "Blockchain Integration", "Creator Tools"],
-          "status": "Active"
+          "services": ["Platform Development", "Blockchain Integration", "Creator Tools"]
         },
         {
           "id": "codex",
@@ -244,27 +273,17 @@
           "slug": "codex",
           "category": "Web3 Ecosystem",
           "featured": true,
-          "thumbnail": "img/works/4.jpg",
-          "images": [
-            "img/works/4/1.jpg",
-            "img/works/4/2.jpg",
-            "img/works/4/3.jpg",
-            "img/works/4/4.jpg"
-          ],
           "shortDescription": "The living archive of 10,000 Art DeCC0s.",
           "description": "The living archive of 10,000 Art DeCC0s. Preserving and cataloging the decentralized creative commons for future generations.",
           "longDescription": "Codex is a comprehensive archive and catalog system for Art DeCC0s (Art Decentralized Creative Commons). We built a sophisticated platform that preserves 10,000 artworks with complete provenance, metadata, and cultural context.\n\nThe system implements advanced search, filtering, and discovery features, making the decentralized creative commons accessible to researchers, artists, and the public. Part of the mocaOS ecosystem, Codex represents our commitment to preserving digital culture for future generations.",
-          "technologies": ["TypeScript", "Next.js", "PostgreSQL", "IPFS", "Elasticsearch"],
           "highlights": [
             "10,000 Art DeCC0s",
             "Living Archive",
             "Cultural Preservation",
             "Advanced Search"
           ],
-          "year": 2023,
           "client": "Museum of Crypto Art",
-          "services": ["Archive Development", "Data Architecture", "Search Implementation"],
-          "status": "Active"
+          "services": ["Archive Development", "Data Architecture", "Search Implementation"]
         },
         {
           "id": "moca",
@@ -272,28 +291,17 @@
           "slug": "museum-of-crypto-art",
           "category": "Digital Arts and Culture",
           "featured": true,
-          "thumbnail": "img/works/5.jpg",
-          "images": [
-            "img/works/5/1.jpg",
-            "img/works/5/2.jpg",
-            "img/works/5/3.jpg",
-            "img/works/5/4.jpg"
-          ],
           "shortDescription": "A decentralized museum preserving and showcasing the evolution of crypto art.",
           "description": "A decentralized museum preserving and showcasing the evolution of crypto art. Building the cultural archive of Web3 with mocaOS, Codex, and Vibe Studio.",
           "longDescription": "The Museum of Crypto Art (M○C▲) is the world's first decentralized museum dedicated to preserving and celebrating crypto art. We built a comprehensive platform that archives the history of digital art on the blockchain, creating a permanent cultural record.\n\nOur architecture integrates Web3 wallets, IPFS storage, and sophisticated curation tools that enable the community to actively participate in preserving digital culture. The platform features virtual exhibition spaces, artist profiles, and an extensive archive of historical crypto art movements. Through mocaOS, Codex, and Vibe Studio, we've created an open-source ecosystem for decentralized cultural memetics.",
-          "technologies": ["React", "Web3", "IPFS", "Ethereum", "3D.js", "Node.js", "TypeScript", "Next.js"],
           "highlights": [
             "Web3 Integration",
             "Digital Curation",
             "mocaOS Ecosystem",
             "Virtual Exhibitions"
           ],
-          "url": "https://museumofcryptoart.com",
-          "year": 2020,
           "client": "Museum of Crypto Art",
-          "services": ["Web3 Development", "Platform Architecture", "Digital Curation Tools"],
-          "status": "Active"
+          "services": ["Web3 Development", "Platform Architecture", "Digital Curation Tools"]
         },
         {
           "id": "gop",
@@ -301,28 +309,17 @@
           "slug": "gop-variete",
           "category": "GOP Entertainment Group",
           "featured": true,
-          "thumbnail": "img/works/6.jpg",
-          "images": [
-            "img/works/6/1.jpg",
-            "img/works/6/2.jpg",
-            "img/works/6/3.jpg",
-            "img/works/6/4.jpg"
-          ],
           "shortDescription": "The engine behind high-stakes entertainment.",
           "description": "The engine behind high-stakes entertainment, orchestrating shows for over a million visitors annually with precision and reliability.",
           "longDescription": "For GOP Varieté (variete.de), one of Europe's premier entertainment venues, we built a comprehensive platform managing ticketing, reservations, show scheduling, and customer experience for over a million annual visitors.\n\nThe system handles complex seating arrangements, dynamic pricing, VIP packages, and integrates with venue management systems across multiple locations.",
-          "technologies": ["PHP", "Laravel", "Vue.js", "MySQL", "Redis"],
           "highlights": [
             "Event Management",
             "1M+ Annual Users",
             "Real-time Systems",
             "Multi-venue Support"
           ],
-          "url": "https://variete.de",
-          "year": 2020,
           "client": "GOP Varieté",
-          "services": ["Platform Development", "Ticketing System", "Venue Management"],
-          "status": "Active"
+          "services": ["Platform Development", "Ticketing System", "Venue Management"]
         },
         {
           "id": "amber-island",
@@ -330,28 +327,17 @@
           "slug": "amber-island",
           "category": "RWAs with Gebr. Heinemann",
           "featured": true,
-          "thumbnail": "img/works/7.jpg",
-          "images": [
-            "img/works/7/1.jpg",
-            "img/works/7/2.jpg",
-            "img/works/7/3.jpg",
-            "img/works/7/4.jpg"
-          ],
           "shortDescription": "Web3-based whisky membership community bridging physical luxury and digital ownership.",
           "description": "Innovative Web3 whisky membership platform where users mint NFT keys to access tokenized premium whisky bottles and exclusive community perks.",
           "longDescription": "Amber Island represents a pioneering experiment in merging physical luxury goods with Web3 technology. Developed for GHARAGE/Heinemann in 2022, the platform allows members to mint 'Amber Island Key' NFTs (0.15 ETH) to join an exclusive whisky community.\n\nMembers gain access to tokenized premium whisky bottles (including Glenturret 30YO and limited CryptoPunk Whisky), exclusive events, and unique community experiences. The technology integrates Meta Anchor™ for authenticity verification and features 3D-printed bottles for special events.\n\nCurrently on strategic pause due to challenging market conditions in the spirits and blockchain sectors, but existing memberships remain valid and members can still access their benefits. The project demonstrates the potential for blockchain technology in luxury goods authentication and community building.",
-          "technologies": ["NFTs", "Blockchain", "Ethereum", "Tokenization", "Meta Anchor™"],
           "highlights": [
             "NFT Membership Keys",
             "Tokenized Whisky Bottles",
             "Physical-Digital Integration",
             "Luxury Authentication"
           ],
-          "url": "#",
-          "year": 2022,
           "client": "GHARAGE/Heinemann",
-          "services": ["Web3 Development", "NFT Implementation", "Tokenization", "Authentication Systems"],
-          "status": "Paused"
+          "services": ["Web3 Development", "NFT Implementation", "Tokenization", "Authentication Systems"]
         },
         {
           "id": "poap",
@@ -359,32 +345,17 @@
           "slug": "poap-protocol",
           "category": "Unterstützt bei EthDenver 2019",
           "featured": true,
-          "thumbnail": "img/works/8.jpg",
-          "images": [
-            "img/works/8/1.jpg",
-            "img/works/8/2.jpg",
-            "img/works/8/3.jpg",
-            "img/works/8/4.jpg",
-            "img/works/8/5.jpg",
-            "img/works/8/6.jpg",
-            "img/works/8/7.jpg"
-          ],
           "shortDescription": "The foundational protocol for proof of attendance on Ethereum.",
           "description": "The foundational protocol for proof of attendance on Ethereum. Seven years of building the decentralized foundation for digital culture.",
           "longDescription": "POAP (Proof of Attendance Protocol) is a pioneering Ethereum-based protocol that transforms event participation into blockchain-verified digital memories. Over seven years, we've built a robust infrastructure that has issued millions of POAPs worldwide, creating a decentralized record of human experiences.\n\nOur work includes smart contract architecture, NFT infrastructure, and global scaling solutions that handle massive concurrent loads during major events. The protocol serves as the foundation for digital culture, enabling communities to build lasting connections through blockchain-verified participation.",
-          "technologies": ["Ethereum", "Solidity", "Smart Contracts", "NFT", "IPFS", "Web3.js"],
           "highlights": [
             "Ethereum Smart Contracts",
             "NFT Infrastructure",
             "Global Scale",
             "Millions of POAPs issued"
           ],
-          "url": "https://poap.xyz",
-          "github": "https://github.com/poap-xyz",
-          "year": 2018,
           "client": "POAP Foundation",
-          "services": ["Smart Contract Development", "Protocol Design", "Infrastructure"],
-          "status": "Previous Work"
+          "services": ["Smart Contract Development", "Protocol Design", "Infrastructure"]
         },
         {
           "id": "ai-language-models",
@@ -392,27 +363,17 @@
           "slug": "ai-language-models",
           "category": "AI Research",
           "featured": true,
-          "thumbnail": "img/works/9.jpg",
-          "images": [
-            "img/works/9/1.jpg",
-            "img/works/9/2.jpg",
-            "img/works/9/3.jpg",
-            "img/works/9/4.jpg"
-          ],
           "shortDescription": "On-premise AI assistants and German language models for enterprise applications.",
           "description": "Research and development of on-premise AI assistants, including German-speaking models and document chatbots for secure enterprise deployment.",
           "longDescription": "Our AI research focuses on creating on-premise AI solutions that give organizations complete control over their data and AI capabilities. We've developed German language models using LeoLM 13B (built on Llama-2 architecture) specifically optimized for German-language understanding and generation.\n\nAdditionally, we've implemented German document chatbots using h2ogpt technology, enabling organizations to query their document repositories using natural language. These on-premise solutions are crucial for enterprises requiring data sovereignty, especially in regulated industries and government applications.\n\nOur work ensures that powerful AI capabilities can be deployed without sending sensitive data to external cloud services, maintaining complete privacy and compliance with European data protection regulations.",
-          "technologies": ["AI", "Machine Learning", "LeoLM 13B", "Llama-2", "h2ogpt", "NLP", "Python"],
           "highlights": [
             "On-Premise AI",
             "German Language Models",
             "Document Chatbots",
             "Data Sovereignty"
           ],
-          "year": 2023,
           "client": "Qwellcode Labs",
-          "services": ["AI Research", "Model Training", "NLP Development", "Enterprise AI Solutions"],
-          "status": "Active"
+          "services": ["AI Research", "Model Training", "NLP Development", "Enterprise AI Solutions"]
         }
       ],
       "services": [
@@ -702,28 +663,15 @@
           "slug": "bega-digital",
           "category": "Industrie und Handel",
           "featured": true,
-          "status": "Active",
-          "thumbnail": "img/works/1.jpg",
-          "images": [
-            "img/works/1/1.jpg",
-            "img/works/1/2.jpg",
-            "img/works/1/3.jpg",
-            "img/works/1/4.jpg",
-            "img/works/1/5.jpg",
-            "img/works/1/6.jpg",
-            "img/works/1/7.jpg"
-          ],
           "shortDescription": "Digitales Fundament für Deutschlands größte Möbelgruppe.",
           "description": "Digitales Fundament für Deutschlands größte Möbelgruppe, das unwankende Qualität für 5.000 Partner gewährleistet.",
           "longDescription": "Für BEGA, Deutschlands größte Möbelgruppe, haben wir ein umfassendes digitales Fundament gebaut, das als Rückgrat ihres gesamten Betriebs dient. Die Plattform verbindet 5.000+ Partner, verarbeitet komplexe B2B-Transaktionen, verwaltet Lagerbestände in mehreren Lagerhäusern und bietet Echtzeit-Analysen.\n\nUnsere Architektur gewährleistet 99,99% Verfügbarkeit, bewältigt Spitzenlasten während Aktionszeiträumen und integriert sich in Legacy-ERP-Systeme. Die Plattform umfasst Partnerportale, Auftragsverwaltung, Logistik-Tracking und Business-Intelligence-Dashboards, die strategische Entscheidungen vorantreiben.",
-          "technologies": ["Java", "Spring Boot", "React", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
           "highlights": [
             "Enterprise Architecture",
             "GOP Varieté Platform",
             "BEGA Group Tech Stack",
             "Onpremises AI"
           ],
-          "year": 2019,
           "client": "BEGA Möbelgruppe",
           "services": ["Enterprise-Entwicklung", "Systemintegration", "Infrastruktur-Design"]
         },
@@ -733,30 +681,15 @@
           "slug": "tixu-ticketing",
           "category": "Ticketing Plattform",
           "featured": true,
-          "status": "Active",
-          "thumbnail": "img/works/2.jpg",
-          "images": [
-            "img/works/2/1.gif",
-            "img/works/2/2.gif",
-            "img/works/2/3.jpg",
-            "img/works/2/4.gif",
-            "img/works/2/5.jpg",
-            "img/works/2/6.jpg",
-            "img/works/2/7.jpg",
-            "img/works/2/8.jpg"
-          ],
           "shortDescription": "Ownership für Live-Erlebnisse.",
           "description": "Bringt Ownership zu Live-Erlebnissen. Kreative erhalten vollständige Kontrolle über ihr Ticketing und ihre Einnahmen in der neuen Ownership Economy.",
           "longDescription": "Tixu denkt Event-Ticketing für die Ownership Economy neu. Wir haben eine Plattform gebaut, die Kreativen vollständige Kontrolle über ihr Ticketing, ihre Einnahmen und Fanbeziehungen gibt und traditionelle Zwischenhändler eliminiert.\n\nDas System umfasst Smart-Contract-basiertes Ticketing, Kontrolle des Sekundärmarktes, Fan-Verifizierung und umfassende Analysen. Kreative können dynamische Preisgestaltung implementieren, exklusive Erlebnisse schaffen und direkte Verbindungen zu ihrem Publikum aufrechterhalten.",
-          "technologies": ["React Native", "Node.js", "Ethereum", "Solidity", "PostgreSQL", "Stripe"],
           "highlights": [
             "Creator-Kontrolle",
             "Smart Ticketing",
             "Einnahmenverwaltung",
             "Sekundärmarkt-Kontrolle"
           ],
-          "url": "https://tixu.io",
-          "year": 2023,
           "client": "Tixu",
           "services": ["Mobile App Entwicklung", "Smart Contracts", "Zahlungsintegration"]
         },
@@ -766,29 +699,15 @@
           "slug": "zeroone",
           "category": "Social Creator Tools",
           "featured": true,
-          "status": "Active",
-          "thumbnail": "img/works/3.jpg",
-          "images": [
-            "img/works/3/1.jpg",
-            "img/works/3/2.jpg",
-            "img/works/3/3.gif",
-            "img/works/3/4.jpg",
-            "img/works/3/5.gif",
-            "img/works/3/6.jpg",
-            "img/works/3/7.gif"
-          ],
           "shortDescription": "Verwandlung von Zielgruppen in Sammler und digitalen Fußabdrücken in Vermögen.",
           "description": "Verwandelt jeden Post in ein einzigartiges digitales Asset. 180K+ Kreative und 4,5M+ Assets verwandeln Zielgruppen in Sammler und Fußabdrücke in Vermögen.",
           "longDescription": "Zeroone revolutioniert die Creator-Economy, indem es jeden Social-Media-Post in ein einzigartiges, besitzbares digitales Asset verwandelt. Mit 180K+ Kreativen und 4,5M+ erstellten digitalen Assets haben wir die soziale Schicht für die Ownership Economy gebaut.\n\nUnsere Plattform konvertiert nahtlos traditionelle soziale Inhalte in blockchain-gestützte Sammlerstücke und ermöglicht es Kreativen, ihren Einfluss direkt zu monetarisieren. Fortgeschrittene Algorithmen handhaben Asset-Generierung, Seltenheitsbestimmung und Marktplatz-Dynamiken, während unsere UX die Blockchain für Endnutzer unsichtbar macht.",
-          "technologies": ["Next.js", "PostgreSQL", "Ethereum", "Redis", "Web3", "AWS"],
           "highlights": [
             "180K+ Kreative",
             "4,5M+ digitale Assets",
             "Ownership Economy",
             "Nahtlose Web3 UX"
           ],
-          "url": "https://zeroone.art",
-          "year": 2022,
           "client": "Zeroone",
           "services": ["Plattform-Entwicklung", "Blockchain-Integration", "Creator-Tools"]
         },
@@ -798,25 +717,15 @@
           "slug": "codex",
           "category": "Web3 Ökosystem",
           "featured": true,
-          "status": "Active",
-          "thumbnail": "img/works/4.jpg",
-          "images": [
-            "img/works/4/1.jpg",
-            "img/works/4/2.jpg",
-            "img/works/4/3.jpg",
-            "img/works/4/4.jpg"
-          ],
           "shortDescription": "Das lebendige Archiv von 10.000 Art DeCC0s.",
           "description": "Das lebendige Archiv von 10.000 Art DeCC0s. Bewahrung und Katalogisierung der dezentralen Creative Commons für zukünftige Generationen.",
           "longDescription": "Codex ist ein umfassendes Archiv- und Katalogsystem für Art DeCC0s (Art Decentralized Creative Commons). Wir haben eine ausgeklügelte Plattform gebaut, die 10.000 Kunstwerke mit vollständiger Provenienz, Metadaten und kulturellem Kontext bewahrt.\n\nDas System implementiert erweiterte Such-, Filter- und Entdeckungsfunktionen und macht die dezentralen Creative Commons für Forscher, Künstler und die Öffentlichkeit zugänglich. Als Teil des mocaOS-Ökosystems repräsentiert Codex unser Engagement für die Bewahrung digitaler Kultur für zükünftige Generationen.",
-          "technologies": ["TypeScript", "Next.js", "PostgreSQL", "IPFS", "Elasticsearch"],
           "highlights": [
             "10.000 Art DeCC0s",
             "Lebendiges Archiv",
             "Kulturelle Bewahrung",
             "Erweiterte Suche"
           ],
-          "year": 2023,
           "client": "Museum of Crypto Art",
           "services": ["Archiv-Entwicklung", "Datenarchitektur", "Such-Implementierung"]
         },
@@ -826,26 +735,15 @@
           "slug": "museum-of-crypto-art",
           "category": "Digitale Kunst und Kultur",
           "featured": true,
-          "status": "Active",
-          "thumbnail": "img/works/5.jpg",
-          "images": [
-            "img/works/5/1.jpg",
-            "img/works/5/2.jpg",
-            "img/works/5/3.jpg",
-            "img/works/5/4.jpg"
-          ],
           "shortDescription": "Ein dezentrales Museum, das die Evolution der Kryptokunst bewahrt und präsentiert.",
           "description": "Ein dezentrales Museum, das die Evolution der Kryptokunst bewahrt und präsentiert. Aufbau des kulturellen Archivs von Web3 mit mocaOS, Codex und Vibe Studio.",
           "longDescription": "Das Museum of Crypto Art (M○C▲) ist das weltweit erste dezentrale Museum zur Bewahrung und Feier von Kryptokunst. Wir haben eine umfassende Plattform gebaut, die die Geschichte digitaler Kunst auf der Blockchain archiviert und eine permanente Kulturaufzeichnung schafft.\n\nUnsere Architektur integriert Web3-Wallets, IPFS-Speicher und ausgeklügelte Kurations-Tools, die der Gemeinschaft ermöglichen, aktiv an der Bewahrung digitaler Kultur teilzunehmen. Die Plattform bietet virtuelle Ausstellungsräume, Künstlerprofile und ein umfangreiches Archiv historischer Kryptokunstbewegungen. Durch mocaOS, Codex und Vibe Studio haben wir ein Open-Source-Ökosystem für dezentrale kulturelle Memetik geschaffen.",
-          "technologies": ["React", "Web3", "IPFS", "Ethereum", "3D.js", "Node.js", "TypeScript", "Next.js"],
           "highlights": [
             "Web3-Integration",
             "Digitale Kuration",
             "mocaOS-Ökosystem",
             "Virtuelle Ausstellungen"
           ],
-          "url": "https://museumofcryptoart.com",
-          "year": 2020,
           "client": "Museum of Crypto Art",
           "services": ["Web3-Entwicklung", "Plattform-Architektur", "Digitale Kurations-Tools"]
         },
@@ -855,26 +753,15 @@
           "slug": "gop-variete",
           "category": "GOP Entertainment Group",
           "featured": true,
-          "status": "Active",
-          "thumbnail": "img/works/6.jpg",
-          "images": [
-            "img/works/6/1.jpg",
-            "img/works/6/2.jpg",
-            "img/works/6/3.jpg",
-            "img/works/6/4.jpg"
-          ],
           "shortDescription": "Die Engine hinter High-Stakes-Entertainment.",
           "description": "Die Engine hinter High-Stakes-Entertainment, orchestriert Shows für über eine Million Besucher jährlich mit Präzision und Zuverlässigkeit.",
           "longDescription": "Für GOP Varieté (variete.de), eine der führenden Entertainment-Locations Europas, haben wir eine umfassende Plattform gebaut, die Ticketing, Reservierungen, Show-Planung und Kundenerlebnis für über eine Million jährliche Besucher verwaltet.\n\nDas System verarbeitet komplexe Sitzplatzanordnungen, dynamische Preisgestaltung, VIP-Pakete und integriert sich in Venue-Management-Systeme an mehreren Standorten.",
-          "technologies": ["PHP", "Laravel", "Vue.js", "MySQL", "Redis"],
           "highlights": [
             "Event-Management",
             "1M+ jährliche Nutzer",
             "Echtzeit-Systeme",
             "Multi-Venue-Support"
           ],
-          "url": "https://variete.de",
-          "year": 2020,
           "client": "GOP Varieté",
           "services": ["Plattform-Entwicklung", "Ticketing-System", "Venue-Management"]
         },
@@ -884,26 +771,15 @@
           "slug": "amber-island",
           "category": "RWAs with Gebr. Heinemann",
           "featured": true,
-          "status": "Paused",
-          "thumbnail": "img/works/7.jpg",
-          "images": [
-            "img/works/7/1.jpg",
-            "img/works/7/2.jpg",
-            "img/works/7/3.jpg",
-            "img/works/7/4.jpg"
-          ],
           "shortDescription": "Web3-basierte Whisky-Mitgliedschafts-Community, die physischen Luxus mit digitalem Eigentum verbindet.",
           "description": "Innovative Web3-Whisky-Mitgliedschaftsplattform, auf der Nutzer NFT-Schlüssel prägen, um Zugang zu tokenisierten Premium-Whiskyflaschen und exklusiven Community-Vorteilen zu erhalten.",
           "longDescription": "Amber Island stellt ein wegweisendes Experiment dar, das physische Luxusgüter mit Web3-Technologie verbindet. Entwickelt für GHARAGE/Heinemann im Jahr 2022, ermöglicht die Plattform Mitgliedern, 'Amber Island Key' NFTs (0,15 ETH) zu prägen, um einer exklusiven Whisky-Community beizutreten.\n\nMitglieder erhalten Zugang zu tokenisierten Premium-Whiskyflaschen (einschließlich Glenturret 30YO und limitiertem CryptoPunk Whisky), exklusiven Events und einzigartigen Community-Erlebnissen. Die Technologie integriert Meta Anchor™ zur Authentizitätsüberprüfung und verfügt über 3D-gedruckte Flaschen für besondere Veranstaltungen.\n\nDerzeit in strategischer Pause aufgrund herausfordernder Marktbedingungen in den Spirituosen- und Blockchain-Sektoren, aber bestehende Mitgliedschaften bleiben gültig und Mitglieder können weiterhin auf ihre Vorteile zugreifen. Das Projekt demonstriert das Potenzial der Blockchain-Technologie für die Authentifizierung von Luxusgütern und den Aufbau von Communities.",
-          "technologies": ["NFTs", "Blockchain", "Ethereum", "Tokenisierung", "Meta Anchor™"],
           "highlights": [
             "NFT-Mitgliedschaftsschlüssel",
             "Tokenisierte Whiskyflaschen",
             "Physical-Digital Integration",
             "Luxus-Authentifizierung"
           ],
-          "url": "#",
-          "year": 2022,
           "client": "GHARAGE/Heinemann",
           "services": ["Web3-Entwicklung", "NFT-Implementierung", "Tokenisierung", "Authentifizierungssysteme"]
         },
@@ -913,30 +789,15 @@
           "slug": "poap-protocol",
           "category": "Supported at EthDenver 2019",
           "featured": true,
-          "status": "Previous Work",
-          "thumbnail": "img/works/8.jpg",
-          "images": [
-            "img/works/8/1.jpg",
-            "img/works/8/2.jpg",
-            "img/works/8/3.jpg",
-            "img/works/8/4.jpg",
-            "img/works/8/5.jpg",
-            "img/works/8/6.jpg",
-            "img/works/8/7.jpg"
-          ],
           "shortDescription": "Das grundlegende Protokoll für Teilnahmenachweise auf Ethereum.",
           "description": "Das grundlegende Protokoll für Teilnahmenachweise auf Ethereum. Sieben Jahre Aufbau der dezentralen Grundlage für digitale Kultur.",
           "longDescription": "POAP (Proof of Attendance Protocol) ist ein bahnbrechendes Ethereum-basiertes Protokoll, das Veranstaltungsteilnahmen in blockchain-verifizierte digitale Erinnerungen verwandelt. Über sieben Jahre hinweg haben wir eine robuste Infrastruktur aufgebaut, die Millionen von POAPs weltweit ausgegeben hat und eine dezentrale Aufzeichnung menschlicher Erfahrungen schafft.\n\nUnsere Arbeit umfasst Smart-Contract-Architektur, NFT-Infrastruktur und globale Skalierungslösungen, die massive gleichzeitige Lasten bei großen Veranstaltungen bewältigen. Das Protokoll dient als Fundament für digitale Kultur und ermöglicht Gemeinschaften, dauerhafte Verbindungen durch blockchain-verifizierte Teilnahme aufzubauen.",
-          "technologies": ["Ethereum", "Solidity", "Smart Contracts", "NFT", "IPFS", "Web3.js"],
           "highlights": [
             "Ethereum Smart Contracts",
             "NFT-Infrastruktur",
             "Globale Skalierung",
             "Millionen ausgegebene POAPs"
           ],
-          "url": "https://poap.xyz",
-          "github": "https://github.com/poap-xyz",
-          "year": 2018,
           "client": "POAP Foundation",
           "services": ["Smart Contract Entwicklung", "Protokoll-Design", "Infrastruktur"]
         },
@@ -946,27 +807,17 @@
           "slug": "ki-sprachmodelle",
           "category": "KI Forschung",
           "featured": true,
-          "thumbnail": "img/works/9.jpg",
-          "images": [
-            "img/works/9/1.jpg",
-            "img/works/9/2.jpg",
-            "img/works/9/3.jpg",
-            "img/works/9/4.jpg"
-          ],
           "shortDescription": "On-Premise KI-Assistenten und deutsche Sprachmodelle für Unternehmensanwendungen.",
           "description": "Forschung und Entwicklung von On-Premise KI-Assistenten, einschließlich deutschsprachiger Modelle und Dokumenten-Chatbots für sichere Unternehmensbereitstellung.",
           "longDescription": "Unsere KI-Forschung konzentriert sich auf die Entwicklung von On-Premise KI-Lösungen, die Organisationen vollständige Kontrolle über ihre Daten und KI-Fähigkeiten geben. Wir haben deutsche Sprachmodelle mit LeoLM 13B (basierend auf Llama-2-Architektur) entwickelt, die speziell für deutsches Sprachverständnis und -generation optimiert sind.\n\nZusätzlich haben wir deutsche Dokumenten-Chatbots mit h2ogpt-Technologie implementiert, die es Organisationen ermöglichen, ihre Dokumenten-Repositories mit natürlicher Sprache abzufragen. Diese On-Premise-Lösungen sind entscheidend für Unternehmen, die Datensouveränität benötigen, insbesondere in regulierten Branchen und staatlichen Anwendungen.\n\nUnsere Arbeit stellt sicher, dass leistungsstarke KI-Fähigkeiten bereitgestellt werden können, ohne sensible Daten an externe Cloud-Dienste zu senden, und vollständige Privatsphäre und Compliance mit europäischen Datenschutzbestimmungen gewährleistet.",
-          "technologies": ["KI", "Machine Learning", "LeoLM 13B", "Llama-2", "h2ogpt", "NLP", "Python"],
           "highlights": [
             "On-Premise KI",
             "Deutsche Sprachmodelle",
             "Dokumenten-Chatbots",
             "Datensouveränität"
           ],
-          "year": 2023,
           "client": "Qwellcode Labs",
-          "services": ["KI-Forschung", "Modell-Training", "NLP-Entwicklung", "Enterprise KI-Lösungen"],
-          "status": "Active"
+          "services": ["KI-Forschung", "Modell-Training", "NLP-Entwicklung", "Enterprise KI-Lösungen"]
         }
       ],
       "team": [

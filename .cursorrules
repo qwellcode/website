@@ -58,7 +58,7 @@ The site supports multiple languages through a structured translation system:
 - **Languages Configured**: English (en) and German (de)
 - **Structure**: `content.json` has a `translations` object with language codes as keys
 - **Default Language**: English (en)
-- **Language Switcher**: One-click toggle button in header (🇬🇧 EN → 🇩🇪)
+- **Language Switcher**: One-click toggle button in header (🇺🇸 EN → 🇩🇪)
   - Click to switch between languages instantly
   - Shows current language → next language
   - Persistent via localStorage and URL parameter
@@ -77,13 +77,16 @@ The site supports multiple languages through a structured translation system:
 
 ### Quick Edit Guide
 1. Open `content.json`
-2. Navigate to the appropriate language: `translations.en` or `translations.de`
-3. Find the section you want to edit (e.g., `"projects"`, `"team"`, `"blog"`)
-4. Edit the content (text, images, links, etc.)
-5. **Important**: Update both language versions to keep content in sync
-6. Save and refresh your browser - changes appear instantly!
+2. **For images/assets**: Edit `projectAssets` at root level (applies to all languages)
+3. **For text content**: Navigate to the appropriate language: `translations.en` or `translations.de`
+4. Find the section you want to edit (e.g., `"projects"`, `"team"`, `"blog"`)
+5. Edit the content (text only - images are in `projectAssets`)
+6. **Important**: Update both language versions to keep text content in sync
+7. Save and refresh your browser - changes appear instantly!
 
 ### Recent Content Updates
+- **Unified Project Assets** (December 2024): Restructured `content.json` with `projectAssets` section - images and technologies stored once, not duplicated per language
+- **Language Switcher**: Changed UK flag (🇬🇧) to US flag (🇺🇸)
 - **Team Section**: Updated from "Our Team" to "Our Teams Philosophy"
 - **Description**: Changed to emphasize "bleeding edge dev shop" with "Creators at Qwellcode Solutions" and "Researchers at Qwellcode Labs"
 - **Social Links**: Removed Xing, kept LinkedIn and Twitter
@@ -117,26 +120,44 @@ QCodeContent.updateAboutSection()                // Update about section
 ```
 
 ### Portfolio Content Structure
-Each project in `content.json` has the following structure:
+
+**NEW: Unified Assets System** - As of December 2024, project assets (images, technologies, year, status, URLs) are stored once in `projectAssets` at the root level of `content.json`, separate from language-specific translations.
+
+**Structure:**
 ```javascript
+// In content.json root:
+"projectAssets": {
+  "project-id": {
+    "images": ["img/works/1/1.jpg", "img/works/1/2.jpg"],
+    "thumbnail": "img/works/1.jpg",
+    "technologies": ["React", "Node.js"],
+    "year": 2024,
+    "status": "Active",
+    "url": "https://example.com"  // optional
+  }
+}
+
+// In translations.en.projects and translations.de.projects:
 {
-  "id": "project-slug",
-  "title": "Project Name",
+  "id": "project-id",           // Must match projectAssets key
+  "title": "Project Name",      // Language-specific
   "slug": "project-slug",
-  "category": "Category / Type",
-  "featured": true,              // true = shows on homepage grid
-  "thumbnail": "img/works/1.jpg", // Main thumbnail (718KB placeholder)
-  "images": [                     // Detail images for project pages
-    "img/works/1/1.jpg",
-    "img/works/1/2.jpg"
-  ],
-  "description": "Short description",
-  "highlights": [
-    "Feature 1",
-    "Feature 2"
-  ]
+  "category": "Category",
+  "featured": true,
+  "shortDescription": "...",    // Language-specific
+  "description": "...",         // Language-specific
+  "longDescription": "...",     // Language-specific
+  "highlights": ["..."],        // Language-specific
+  "client": "Client Name",
+  "services": ["..."]           // Language-specific
 }
 ```
+
+**How It Works:**
+- The content-manager.js automatically merges `projectAssets` with translation data
+- When you call `QCodeContent.getProjects()`, you get the full merged object
+- Images, technologies, and other assets are only maintained once
+- Translations only contain language-specific text content
 
 **Image Strategy**: Currently all portfolio images use a unified green digital/binary placeholder (718KB). Replace with actual project screenshots as they become available. See `PORTFOLIO-IMAGES-UPDATE.md` for details.
 
@@ -903,7 +924,7 @@ The homepage uses a custom grid implementation with special styling:
 // Open modal
 $('[data-modal-trigger]').click() → adds 'mil-active' class
 
-// Close modal  
+// Close modal
 $('.mil-modal-close').click() → removes 'mil-active' class
 $('.mil-modal').click(outside content) → closes modal
 $(document).keydown('Escape') → closes modal
@@ -1082,7 +1103,11 @@ $('[data-fancybox="gallery"]').fancybox({
 5. **Optimize images** before adding (< 500KB recommended)
 
 ### Adding New Content
-- **Projects**: Add to `"projects"` array with all required fields
+- **Projects**:
+  1. Add assets to `projectAssets` (images, thumbnail, technologies, year, status, url)
+  2. Add translation entry to both `translations.en.projects` and `translations.de.projects`
+  3. Use the same `id` in both places to link them
+  4. The content-manager.js automatically merges them when rendering
 - **Team Members**: Add to `"team"` array, set `featured: true` for homepage
 - **Blog Posts**: Add to `"blog"` array with date, thumbnail, excerpt
 - **Services**: Add to `"services"` array with highlights and CTA text
@@ -1136,8 +1161,15 @@ When content is dynamically loaded, ensure:
 **Trigger**: Click "Explore All Work" button
 
 ### Adding New Portfolio Projects
-1. Add project object to `content.json` → `translations.en.projects` (and `de`)
-2. Set `featured: true` to show on homepage (max 6 recommended)
+1. Add assets to `content.json` → `projectAssets.{project-id}`:
+   - `images`: array of detail images
+   - `thumbnail`: main thumbnail image path
+   - `technologies`: tech stack array
+   - `year`, `status`, `url` (optional)
+2. Add translation entries to both `translations.en.projects` and `translations.de.projects`:
+   - Use same `id` as projectAssets key
+   - Set `featured: true` to show on homepage (max 6 recommended)
+   - Add all language-specific text (title, descriptions, highlights, etc.)
 3. Add thumbnail image to `img/works/[n].jpg`
 4. Add detail images to `img/works/[n]/[1-n].jpg`
 5. Images currently use unified placeholder (718KB green digital theme)
@@ -1176,7 +1208,7 @@ Full internationalization support with language switcher:
 
 **Features:**
 - English and German translations
-- Flag emoji indicators (🇬🇧 🇩🇪)
+- Flag emoji indicators (🇺🇸 🇩🇪)
 - Structured JSON translation system
 - Easy to add new languages
 
@@ -1187,6 +1219,8 @@ Full internationalization support with language switcher:
 4. Update language switcher in header
 
 ### Content Updates
+- **Unified Project Assets** (December 2024): Restructured `content.json` to have a single `projectAssets` section for images, technologies, year, status, and URLs - no more duplication between languages
+- **Language Switcher**: Changed UK flag (🇬🇧) to US flag (🇺🇸)
 - Team philosophy section updated with new messaging
 - Social media links streamlined (removed Xing)
 - Emphasis on "bleeding edge" development approach

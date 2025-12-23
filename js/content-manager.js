@@ -92,12 +92,22 @@ Loads and manages content from content.json
         },
 
         /**
+         * Merge project translation with shared assets
+         */
+        mergeProjectAssets: function(project) {
+            if (!this.data || !this.data.projectAssets || !project.id) return project;
+            const assets = this.data.projectAssets[project.id];
+            if (!assets) return project;
+            return { ...project, ...assets };
+        },
+
+        /**
          * Get all projects
          */
         getProjects: function (featured = null) {
             const translation = this.getTranslation();
             if (!translation || !translation.projects) return [];
-            let projects = translation.projects;
+            let projects = translation.projects.map(p => this.mergeProjectAssets(p));
             if (featured !== null) {
                 projects = projects.filter(p => p.featured === featured);
             }
@@ -110,7 +120,8 @@ Loads and manages content from content.json
         getProject: function (identifier) {
             const translation = this.getTranslation();
             if (!translation || !translation.projects) return null;
-            return translation.projects.find(p => p.id === identifier || p.slug === identifier);
+            const project = translation.projects.find(p => p.id === identifier || p.slug === identifier);
+            return project ? this.mergeProjectAssets(project) : null;
         },
 
         /**
@@ -434,7 +445,7 @@ Loads and manages content from content.json
          */
         initReviewsSlider: function() {
             const testimonials = this.getTestimonials();
-            
+
             // Destroy existing slider if it exists
             if (window.reviewsSwiper) {
                 window.reviewsSwiper.destroy(true, true);

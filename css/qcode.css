@@ -334,7 +334,7 @@ h1, .mil-h1{
     }
 
     h1, .mil-h1{
-      font-size: 34px;
+      font-size: 24px;
     }
 
     #swupMain.mil-main-transition .mil-banner p{
@@ -344,7 +344,7 @@ h1, .mil-h1{
     }
 
     #swupMain.mil-main-transition .mil-banner div.mil-mb-60:first-of-type{
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 
     #swupMain.mil-main-transition .mil-banner h1{

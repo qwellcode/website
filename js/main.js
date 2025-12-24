@@ -406,6 +406,16 @@ $(function () {
     });
     /***************************
 
+    close menu on anchor link click
+
+    ***************************/
+    $('.mil-main-menu a[href^="#"]').on('click', function () {
+        $('.mil-menu-btn').removeClass('mil-active');
+        $('.mil-menu').removeClass('mil-active');
+        $('.mil-menu-frame').removeClass('mil-active');
+    });
+    /***************************
+
     progressbar
 
     ***************************/
@@ -837,6 +847,16 @@ $(function () {
             $('.mil-has-children a').removeClass('mil-active');
             $(this).toggleClass('mil-active');
             $(this).next().toggleClass('mil-active');
+        });
+        /***************************
+
+        close menu on anchor link click
+
+        ***************************/
+        $('.mil-main-menu a[href^="#"]').on('click', function () {
+            $('.mil-menu-btn').removeClass('mil-active');
+            $('.mil-menu').removeClass('mil-active');
+            $('.mil-menu-frame').removeClass('mil-active');
         });
         /***************************
 

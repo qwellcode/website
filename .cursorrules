@@ -50,6 +50,29 @@ This is a **static multi-page creative agency website template** (Ashley/QCode) 
 
 ## ⭐ Content Management System
 
+### ⚠️ CRITICAL RULE: Single Source of Truth
+
+**ALL text content lives in `content.json` - NEVER edit text in HTML files!**
+
+The HTML files contain only empty placeholders with comments. Any text changes made directly in HTML will be **completely overwritten** by content.json on page load.
+
+```html
+<!-- Example placeholder in index.html: -->
+<!-- Hero headline - dynamically loaded from content.json (site.hero.headline) -->
+<h1 class="mil-muted mil-mb-60"></h1>
+
+<!-- This is EMPTY on purpose! Text comes from content.json -->
+```
+
+**If you need to change text:**
+1. ✅ Edit `content.json`
+2. ❌ DON'T edit HTML files
+
+**If you see text in HTML:**
+- It's outdated and will be removed
+- The actual content comes from content.json
+- Changes to HTML text have NO EFFECT
+
 ### Overview
 All site content is managed through `content.json`. No HTML editing required for content updates!
 
@@ -64,6 +87,34 @@ The site supports multiple languages through a structured translation system:
   - Persistent via localStorage and URL parameter
   - Updates ALL content dynamically without page reload
 - All content (site info, projects, team, services, testimonials, blog) has translations
+
+### HTML Placeholder System
+
+All HTML files use a standardized commenting system to indicate dynamic content:
+
+```html
+<!-- [What it is] - dynamically loaded from content.json ([path.to.content]) -->
+<element></element>
+```
+
+**Examples from index.html:**
+```html
+<!-- Hero headline - dynamically loaded from content.json (site.hero.headline) -->
+<h1 class="mil-muted mil-mb-60"></h1>
+
+<!-- Services title - dynamically loaded from content.json (site.sections.services.title) -->
+<h2 class="mil-center mil-up mil-mb-60 mil-muted" id="services-title"></h2>
+
+<!-- Portfolio items - dynamically loaded from content.json (projects with featured: true) -->
+<div class="mil-portfolio-grid">
+    <!-- Dynamic content loaded here -->
+</div>
+```
+
+**These comments serve three purposes:**
+1. Document what content appears there
+2. Show the exact path in content.json
+3. Prevent developers from editing the HTML thinking it will work
 
 ### Content Types
 - **Projects** - Portfolio items with details, images, technologies
@@ -1095,12 +1146,52 @@ $('[data-fancybox="gallery"]').fancybox({
 
 ## Content Management Best Practices
 
-### Editing Content
-1. **Always edit `content.json`** for content updates (projects, team, blog, etc.)
-2. **Never hardcode content** in HTML files - use the content system
-3. **Validate JSON** before deploying (use jsonlint.com)
-4. **Backup `content.json`** before major changes
-5. **Optimize images** before adding (< 500KB recommended)
+### Editing Content - THE GOLDEN RULES
+
+1. **✅ DO: Always edit `content.json`** for ALL text content updates
+2. **❌ DON'T: NEVER edit text in HTML files** - it will be overwritten
+3. **✅ DO: Update both EN and DE translations** to keep languages in sync
+4. **✅ DO: Validate JSON** before saving (use jsonlint.com or `cat content.json | jq .`)
+5. **✅ DO: Hard refresh** (Ctrl+Shift+R) after content changes
+6. **✅ DO: Backup `content.json`** before major changes
+7. **✅ DO: Optimize images** before adding (< 500KB recommended)
+8. **❌ DON'T: Edit `css/style.css`** directly (it's compiled from SCSS)
+
+### What Happens When You Edit HTML Text
+
+```html
+<!-- WRONG APPROACH: -->
+<h1>I changed this text in HTML!</h1>
+
+<!-- What actually happens: -->
+1. Page loads
+2. js/content-manager.js runs
+3. Reads content.json
+4. OVERWRITES your HTML text with content from JSON
+5. Your change disappears ❌
+```
+
+**The correct flow:**
+```json
+// RIGHT APPROACH: Edit content.json
+{
+  "translations": {
+    "en": {
+      "site": {
+        "hero": {
+          "headline": "I changed this in content.json!"
+        }
+      }
+    }
+  }
+}
+```
+```javascript
+// System loads:
+QCodeContent.load() → reads content.json
+QCodeContent.updateHeroSection() → writes to HTML
+// Your change appears ✅
+```
 
 ### Adding New Content
 - **Projects**:
@@ -1127,20 +1218,55 @@ When content is dynamically loaded, ensure:
 
 ## File References
 
-- **Main styles**: `scss/style.scss` (imports others)
-- **Variables**: `scss/_variables.scss`
-- **Components**: `scss/_components.scss`
-- **Common styles**: `scss/_common.scss`
-- **Custom QCode CSS**: `css/qcode.css` (modals, portfolio, language switcher)
-- **Compiled CSS**: `css/style.css` (DO NOT EDIT - compiled from SCSS)
-- **JavaScript**: `js/main.js` (animations, interactions)
-- **Content Manager**: `js/content-manager.js` (content system)
-- **QCode Init**: `js/qcode.js` (initialization, modals)
-- **Content Database**: `content.json`
-- **Homepage**: `index.html`
-- **Admin Panel**: `admin.html`
-- **Documentation**: `README.md` (start here)
-- **Portfolio Images**: `img/works/` (thumbnails and detail images)
+### Content System Files (⚠️ CRITICAL)
+- **content.json** - ⭐ SINGLE SOURCE OF TRUTH for all text content (EDIT THIS!)
+- **js/content-manager.js** - Content loading and rendering system (reads content.json)
+- **js/qcode.js** - Initialization, modals, content loading orchestration
+- **index.html** - Structure only (empty placeholders with comments)
+
+### Style Files
+- **scss/style.scss** - Main SCSS entry (imports others)
+- **scss/_variables.scss** - Colors, fonts, sizes, transitions
+- **scss/_components.scss** - UI components, 3D shapes, core layout
+- **scss/_common.scss** - Base styles, typography, utilities
+- **css/style.css** - Compiled CSS (❌ DO NOT EDIT - compiled from SCSS)
+- **css/qcode.css** - ⭐ Custom QCode CSS (modals, portfolio, language switcher - OK to edit)
+
+### JavaScript Files
+- **js/main.js** - Animations, interactions, GSAP, Swup
+- **js/content-manager.js** - Content loading and rendering
+- **js/qcode.js** - Initialization and modal handling
+
+### Documentation
+- **README.md** - User guide (start here for content editing)
+- **.cursorrules** - Developer rules (THIS FILE - technical guidelines)
+- **admin.html** - Visual content editor panel
+- **content.json** - Content database (edit for all text changes)
+
+### Assets
+- **img/works/** - Portfolio images (thumbnails and detail images)
+- **img/faces/** - Team member photos
+- **img/blog/** - Blog post thumbnails
+
+### Quick Reference: What File to Edit When
+
+**Changing text content?**
+→ Edit `content.json` (NOT HTML!)
+
+**Changing colors/fonts/core styles?**
+→ Edit `scss/_variables.scss` → Run `npm run build:css`
+
+**Changing component styles?**
+→ Edit `scss/_components.scss` → Run `npm run build:css`
+
+**Changing modal/portfolio/language switcher styles?**
+→ Edit `css/qcode.css` (no compilation needed)
+
+**Adding animations/interactions?**
+→ Edit `js/main.js` (remember to reinit in swup:contentReplaced)
+
+**Fixing content bugs?**
+→ Check `js/content-manager.js` and `js/qcode.js`
 
 ## Quick Reference: Portfolio Implementation
 

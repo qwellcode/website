@@ -111,7 +111,7 @@
         },
         "hero": {
           "headline": "We build <span class=\"mil-thin\">the Future,</span><br> One System <span class=\"mil-thin\">at a Time</span>",
-          "description": "We're a boutique dev shop building permanent platforms for permanent success. From decentralized cultural systems to enterprise foundations, we transform bold ideas into technology used by millions of users around the world.",
+          "description": "We're a boutique dev shop building refreshing software solutions for permanent success. From decentralized cultural systems to enterprise foundations, we transform bold ideas into technology used by millions of users around the world.",
           "primaryCTA": {
             "text": "Our Services",
             "link": "#services"
@@ -536,7 +536,7 @@
       "site": {
         "name": "Qwellcode",
         "tagline": "Erfrischende Softwarelösungen",
-        "description": "Wir sind ein erstklassiger Entwicklungsshop, der permanente Plattformen für dauerhaften Erfolg baut.",
+        "description": "Wir sind ein erstklassiger Entwicklungsshop, der erfrischende Softwarelösungen für dauerhaften Erfolg baut.",
         "navigation": {
           "about": "Über uns",
           "services": "Was wir entwickeln",
@@ -555,7 +555,7 @@
         },
         "hero": {
           "headline": "Wir bauen <span class=\"mil-thin\">die Zukunft, </span><br>ein System<span class=\"mil-thin\"> nach dem anderen</span>",
-          "description": "Wir sind ein erstklassiger Entwicklungsshop, der permanente Plattformen für dauerhaften Erfolg baut. Von dezentralen Kultursystemen bis hin zu Enterprise Lösungen verwandeln wir Ideen in Technologie, die von Millionen genutzt wird.",
+          "description": "Wir sind ein erstklassiger Entwicklungsshop, der erfrischende Softwarelösungen für dauerhaften Erfolg baut. Von dezentralen Kultursystemen bis hin zu Enterprise Lösungen verwandeln wir Ideen in Technologie, die von Millionen genutzt wird.",
           "primaryCTA": {
             "text": "Unsere Services",
             "link": "#services"

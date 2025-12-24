@@ -80,31 +80,6 @@ h1, .mil-h1{
     }
 }
 
-@media screen and (max-width: 768px) {
-    .mil-language-switcher {
-        gap: 5px;
-        margin-right: 10px;
-    }
-
-    .mil-lang-btn {
-        padding: 5px 8px;
-        font-size: 12px;
-    }
-
-    .mil-flag {
-        font-size: 16px;
-    }
-
-    h1, .mil-h1{
-      font-size: 34px;
-    }
-
-    #swupMain.mil-main-transition .mil-banner p{
-        font-size: inherit;
-        line-height: inherit;
-    }
-}
-
 /* Modal Styles */
 .mil-modal {
     display: none;
@@ -338,5 +313,34 @@ h1, .mil-h1{
     .mil-animation-frame {
         display: none !important;
     }
-}
+    .mil-language-switcher {
+        gap: 5px;
+        margin-right: 10px;
+    }
 
+    .mil-lang-btn {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    .mil-flag {
+        font-size: 16px;
+    }
+
+    h1, .mil-h1{
+      font-size: 34px;
+    }
+
+    #swupMain.mil-main-transition .mil-banner p{
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    #swupMain.mil-main-transition .mil-banner div.mil-mb-60:first-of-type{
+        margin-bottom: 40px;
+    }
+
+    #swupMain.mil-main-transition .mil-banner h1{
+        margin-bottom: 20px;
+    }
+}

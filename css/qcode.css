@@ -94,6 +94,15 @@ h1, .mil-h1{
     .mil-flag {
         font-size: 16px;
     }
+
+    h1, .mil-h1{
+      font-size: 34px;
+    }
+
+    #swupMain.mil-main-transition .mil-banner p{
+        font-size: inherit;
+        line-height: inherit;
+    }
 }
 
 /* Modal Styles */

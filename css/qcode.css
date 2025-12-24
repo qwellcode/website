@@ -340,6 +340,7 @@ h1, .mil-h1{
     #swupMain.mil-main-transition .mil-banner p{
         font-size: inherit;
         line-height: inherit;
+        margin-bottom: 40px;
     }
 
     #swupMain.mil-main-transition .mil-banner div.mil-mb-60:first-of-type{

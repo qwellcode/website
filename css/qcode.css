@@ -333,5 +333,10 @@ h1, .mil-h1{
     .mil-portfolio-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Hide psychedelic geometric shape animations on mobile for performance */
+    .mil-animation-frame {
+        display: none !important;
+    }
 }
 

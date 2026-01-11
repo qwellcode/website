@@ -1,6 +1,6 @@
 # Qwellcode - Creative Agency Website
 
-![Version](https://img.shields.io/badge/version-3.3.0-blue.svg)
+![Version](https://img.shields.io/badge/version-3.4.0-blue.svg)
 ![Status](https://img.shields.io/badge/status-production_ready-success.svg)
 
 A modern creative agency website with JSON-based content management, multilingual support (EN/DE), and advanced 3D animations. Built for Qwellcode - enterprise systems and Web3 infrastructure.
@@ -175,6 +175,83 @@ localStorage.clear(); location.reload()
 - **GitHub Pages** - Enable in repo settings
 - **FTP** - Upload all files
 - **S3/CloudFront** - `aws s3 sync`
+- **IPFS** - Use static build (see below)
+
+---
+
+## 🌐 Static IPFS Export
+
+Build a self-contained static version for IPFS, FTP, or any static file host. No server required—just copy the files and it works.
+
+### Build Static Distribution
+
+```bash
+# Generate static build
+npm run build:static
+
+# Test locally before deploying
+npm run serve:static
+```
+
+This creates a `dist/` folder (~65 MB) with everything needed:
+
+```
+dist/
+├── index.html      # HTML with inline content (no AJAX)
+├── 404.html
+├── favicon.ico
+├── logo.png
+├── README.md       # Deployment instructions
+├── css/            # All stylesheets
+├── js/             # Modified JS with inline content support
+├── img/            # All images
+└── data/           # Additional assets
+```
+
+### Key Features
+
+- ✅ **No AJAX Required** - `content.json` is inlined directly into HTML
+- ✅ **All Relative Paths** - Works from any subdirectory or IPFS gateway
+- ✅ **Language Switching** - Still works via localStorage
+- ✅ **Offline Capable** - Fully self-contained
+- ✅ **Zero Config** - Just copy files and serve
+
+### Deploy to IPFS
+
+**Option 1: Pinata / Fleek / web3.storage**
+1. Upload the entire `dist/` folder
+2. Get your CID
+3. Access via `https://gateway.pinata.cloud/ipfs/<CID>/`
+
+**Option 2: IPFS Desktop**
+1. Import the `dist/` folder
+2. Pin it for persistence
+3. Access via `https://ipfs.io/ipfs/<CID>/`
+
+**Option 3: ipfs-deploy CLI**
+```bash
+cd dist
+npx ipfs-deploy .
+```
+
+### Deploy to FTP / Static Host
+
+Just upload the `dist/` folder contents to your server. Works with:
+- Any FTP server
+- GitHub Pages
+- Netlify / Vercel
+- Amazon S3
+- Any web server (Apache, Nginx, etc.)
+
+### How It Works
+
+The build script (`scripts/build-static.js`):
+1. Copies all assets to `dist/`
+2. Inlines `content.json` data into `index.html` as `window.QCODE_INLINE_CONTENT`
+3. Modifies `content-manager.js` to use inline data (with AJAX fallback)
+4. Generates deployment documentation
+
+This means the page loads instantly without any fetch/AJAX calls—perfect for decentralized hosting where CORS might be an issue.
 
 ---
 
@@ -192,4 +269,4 @@ localStorage.clear(); location.reload()
 
 ---
 
-**© 2013-2025 Qwellcode Solutions GmbH & Co. KG** | v3.3.0 Production Ready
+**© 2013-2026 Qwellcode Solutions GmbH & Co. KG** | v3.4.0 Production Ready

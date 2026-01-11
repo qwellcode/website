@@ -10,7 +10,7 @@
 
 .mil-language-switcher {
     display: flex;
-    gap: 10px;
+    gap: 4px;
     align-items: center;
     margin-left: auto;
     margin-right: 20px;
@@ -20,41 +20,42 @@
 .mil-lang-btn {
     display: flex;
     align-items: center;
-    gap: 5px;
-    padding: 8px 12px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
+    padding: 6px 10px;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 14px;
-    border-radius: 4px;
-}
-
-.mil-lang-btn:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.4);
-    color: rgba(255, 255, 255, 1);
-    transform: translateY(-1px);
-}
-
-.mil-lang-btn:active {
-    transform: translateY(0);
-}
-
-.mil-lang-btn.active {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-.mil-flag {
-    font-size: 18px;
-}
-
-.mil-lang-name {
+    font-size: 13px;
     font-weight: 500;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+}
+
+.mil-lang-btn:disabled {
+    cursor: default;
+    color: #fff;
+}
+
+.mil-lang-btn.mil-lang-inactive {
+    opacity: 0.5;
+}
+
+.mil-lang-btn.mil-lang-inactive:hover {
+    opacity: 1;
+    color: rgba(135, 216, 50, 1);
+}
+
+.mil-lang-divider {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 2px;
+}
+
+.mil-lang-label {
+    font-weight: 500;
+    letter-spacing: 1.5px;
 }
 
 h1, .mil-h1{
@@ -290,12 +291,9 @@ h1, .mil-h1{
         margin-right: 15px;
     }
 
-    .mil-lang-name {
-        display: none;
-    }
-
     .mil-lang-btn {
-        padding: 6px 10px;
+        padding: 5px 8px;
+        font-size: 12px;
     }
 }
 
@@ -324,17 +322,19 @@ h1, .mil-h1{
         display: none !important;
     }
     .mil-language-switcher {
-        gap: 5px;
+        gap: 2px;
         margin-right: 10px;
     }
 
     .mil-lang-btn {
-        padding: 5px 8px;
-        font-size: 12px;
+        padding: 4px 6px;
+        font-size: 11px;
+        letter-spacing: 1px;
     }
 
-    .mil-flag {
-        font-size: 16px;
+    .mil-lang-divider {
+        font-size: 12px;
+        margin: 0;
     }
 
     h1, .mil-h1{

@@ -440,6 +440,7 @@ $(function () {
             y: 40,
             scale: .98,
             ease: 'sine',
+            immediateRender: true,  // Prevents FOUC by immediately applying initial state
 
         }, {
             y: 0,
@@ -872,6 +873,7 @@ $(function () {
                 y: 40,
                 scale: .98,
                 ease: 'sine',
+                immediateRender: true,  // Prevents FOUC by immediately applying initial state
 
             }, {
                 y: 0,

@@ -833,22 +833,20 @@ Loads and manages content from content.json
             const currentLabel = currentLang.label || currentLang.code.toUpperCase();
             const otherLabel = otherLang.label || otherLang.code.toUpperCase();
 
-            // Create toggle button showing "Current | Other" with simple text labels
+            // Create single toggle button with entire "Current | Other" clickable
             const html = `
-                <button class="mil-lang-btn" data-lang="${currentLang.code}" disabled>
-                    <span class="mil-lang-label">${currentLabel}</span>
-                </button>
-                <span class="mil-lang-divider">|</span>
-                <button class="mil-lang-btn mil-lang-inactive" data-lang="${otherLang.code}"
+                <button class="mil-lang-toggle" data-lang="${otherLang.code}"
                         title="Switch to ${otherLang.name}">
-                    <span class="mil-lang-label">${otherLabel}</span>
+                    <span class="mil-lang-label mil-lang-active">${currentLabel}</span>
+                    <span class="mil-lang-divider">|</span>
+                    <span class="mil-lang-label mil-lang-inactive">${otherLabel}</span>
                 </button>
             `;
             container.append(html);
 
-            // Add click handler with proper context binding
+            // Add click handler - entire button is clickable
             const self = this;
-            container.find('.mil-lang-btn:not([disabled])').off('click').on('click', function(e) {
+            container.find('.mil-lang-toggle').off('click').on('click', function(e) {
                 e.preventDefault();
                 const langCode = $(this).data('lang');
                 console.log('Language toggle clicked, switching from', self.currentLanguage, 'to', langCode);

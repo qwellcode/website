@@ -12,7 +12,7 @@
         "label": "DEU"
       }
     ],
-    "defaultLanguage": "en"
+    "defaultLanguage": "de"
   },
   "projectAssets": {
     "bega": {
@@ -231,60 +231,6 @@
       ],
       "projects": [
         {
-          "id": "moca",
-          "title": "Museum of Crypto Art",
-          "slug": "museum-of-crypto-art",
-          "category": "Web3 Culture & Digital Arts",
-          "featured": true,
-          "shortDescription": "The world's first decentralized museum for crypto art and Web3 culture.",
-          "description": "A platform for Web3 art and culture, building the cultural archive of the decentralized internet with mocaOS, Codex, and Vibe Studio.",
-          "longDescription": "The Museum of Crypto Art (M○C▲) is our flagship Web3 cultural initiative—a decentralized museum preserving and showcasing the evolution of crypto art since 2021.\n\nRecent integrations include @comput3ai for AI inference, @elizaOS for OS-level enhancements, and @hyperfy_io for immersive 3D experiences. The platform includes ArtDeCC0s agents (AI-driven interactive elements for digital collectibles).\n\nThrough mocaOS, Codex, and Vibe Studio, we've created an open-source ecosystem for decentralized cultural memetics—the infrastructure layer for Web3 art and culture.",
-          "highlights": [
-            "AI Integration with Comput3",
-            "ElizaOS Enhancements",
-            "Hyperfy Immersive Spaces",
-            "ArtDeCC0s Agents"
-          ],
-          "client": "Museum of Crypto Art",
-          "services": ["Web3 Development", "AI Integration", "3D Experiences", "Cultural Infrastructure"]
-        },
-        {
-          "id": "zeroone",
-          "title": "ZeroOne",
-          "slug": "zeroone",
-          "category": "Web3 Social & Creator Tools",
-          "featured": true,
-          "shortDescription": "Transforming social content into unique digital assets for 180K+ creators.",
-          "description": "A Web3-focused initiative built in tandem with Museum of Crypto Art, leveraging experimental blockchain applications to turn digital footprints into fortunes.",
-          "longDescription": "ZeroOne is another major Web3 initiative tied to cultural and decentralized projects, built alongside the Museum of Crypto Art. It uses similar tech stacks for experimental blockchain applications.\n\nWith 180K+ creators and 4.5M+ digital assets, ZeroOne transforms every social media post into a unique, ownable digital asset. We've built the social layer for the ownership economy—making blockchain invisible to end users while enabling creators to monetize their influence directly.\n\nAdvanced algorithms handle asset generation, rarity determination, and marketplace dynamics seamlessly.",
-          "highlights": [
-            "180K+ Active Creators",
-            "4.5M+ Digital Assets",
-            "Seamless Web3 UX",
-            "Creator Monetization"
-          ],
-          "client": "ZeroOne",
-          "services": ["Platform Development", "Blockchain Integration", "Creator Tools", "Social Features"]
-        },
-        {
-          "id": "poap",
-          "title": "POAP",
-          "slug": "poap-protocol",
-          "category": "ETHDenver 2019 • Founding Team",
-          "featured": true,
-          "shortDescription": "The foundational protocol for proof of attendance on Ethereum. CEO Reneil was on the founding team.",
-          "description": "Proof of Attendance Protocol—transforming event participation into blockchain-verified digital memories. Born at ETHDenver hackathons, now issuing millions of POAPs worldwide.",
-          "longDescription": "POAP (Proof of Attendance Protocol) originated from early experiments at ETHDenver hackathons. Qwellcode's CEO, Reneil (@reneil1337), was part of the founding team for @poapxyz—a key player in creating digital badges for events and communities.\n\nOver seven years, we've built robust infrastructure that has issued millions of POAPs worldwide, creating a decentralized record of human experiences. The protocol serves as the foundation for digital culture, enabling communities to build lasting connections through blockchain-verified participation.\n\nOur work includes smart contract architecture, NFT infrastructure, and global scaling solutions that handle massive concurrent loads during major events like ETHDenver, Devcon, and countless community gatherings.",
-          "highlights": [
-            "Founding Team Member",
-            "Millions of POAPs Issued",
-            "Global Event Infrastructure",
-            "Community Building Protocol"
-          ],
-          "client": "POAP Foundation",
-          "services": ["Smart Contract Development", "Protocol Design", "Infrastructure", "Scaling Solutions"]
-        },
-        {
           "id": "bega",
           "title": "BEGA Group",
           "slug": "bega-digital",
@@ -339,6 +285,60 @@
           "services": ["Platform Development", "Ticketing Systems", "Venue Management", "VR Experiences"]
         },
         {
+          "id": "moca",
+          "title": "Museum of Crypto Art",
+          "slug": "museum-of-crypto-art",
+          "category": "Web3 Culture & Digital Arts",
+          "featured": true,
+          "shortDescription": "The world's first decentralized museum for crypto art and Web3 culture.",
+          "description": "A platform for Web3 art and culture, building the cultural archive of the decentralized internet with mocaOS, Codex, and Vibe Studio.",
+          "longDescription": "The Museum of Crypto Art (M○C▲) is our flagship Web3 cultural initiative—a decentralized museum preserving and showcasing the evolution of crypto art since 2021.\n\nRecent integrations include @comput3ai for AI inference, @elizaOS for OS-level enhancements, and @hyperfy_io for immersive 3D experiences. The platform includes ArtDeCC0s agents (AI-driven interactive elements for digital collectibles).\n\nThrough mocaOS, Codex, and Vibe Studio, we've created an open-source ecosystem for decentralized cultural memetics—the infrastructure layer for Web3 art and culture.",
+          "highlights": [
+            "AI Integration with Comput3",
+            "ElizaOS Enhancements",
+            "Hyperfy Immersive Spaces",
+            "ArtDeCC0s Agents"
+          ],
+          "client": "Museum of Crypto Art",
+          "services": ["Web3 Development", "AI Integration", "3D Experiences", "Cultural Infrastructure"]
+        },
+        {
+          "id": "zeroone",
+          "title": "ZeroOne",
+          "slug": "zeroone",
+          "category": "Web3 Social & Creator Tools",
+          "featured": true,
+          "shortDescription": "Transforming social content into unique digital assets for 180K+ creators.",
+          "description": "A Web3-focused initiative built in tandem with Museum of Crypto Art, leveraging experimental blockchain applications to turn digital footprints into fortunes.",
+          "longDescription": "ZeroOne is another major Web3 initiative tied to cultural and decentralized projects, built alongside the Museum of Crypto Art. It uses similar tech stacks for experimental blockchain applications.\n\nWith 180K+ creators and 4.5M+ digital assets, ZeroOne transforms every social media post into a unique, ownable digital asset. We've built the social layer for the ownership economy—making blockchain invisible to end users while enabling creators to monetize their influence directly.\n\nAdvanced algorithms handle asset generation, rarity determination, and marketplace dynamics seamlessly.",
+          "highlights": [
+            "180K+ Active Creators",
+            "4.5M+ Digital Assets",
+            "Seamless Web3 UX",
+            "Creator Monetization"
+          ],
+          "client": "ZeroOne",
+          "services": ["Platform Development", "Blockchain Integration", "Creator Tools", "Social Features"]
+        },
+        {
+          "id": "poap",
+          "title": "POAP",
+          "slug": "poap-protocol",
+          "category": "ETHDenver 2019 • Founding Team",
+          "featured": true,
+          "shortDescription": "The foundational protocol for proof of attendance on Ethereum. CEO Reneil was on the founding team.",
+          "description": "Proof of Attendance Protocol—transforming event participation into blockchain-verified digital memories. Born at ETHDenver hackathons, now issuing millions of POAPs worldwide.",
+          "longDescription": "POAP (Proof of Attendance Protocol) originated from early experiments at ETHDenver hackathons. Qwellcode's CEO, Reneil (@reneil1337), was part of the founding team for @poapxyz—a key player in creating digital badges for events and communities.\n\nOver seven years, we've built robust infrastructure that has issued millions of POAPs worldwide, creating a decentralized record of human experiences. The protocol serves as the foundation for digital culture, enabling communities to build lasting connections through blockchain-verified participation.\n\nOur work includes smart contract architecture, NFT infrastructure, and global scaling solutions that handle massive concurrent loads during major events like ETHDenver, Devcon, and countless community gatherings.",
+          "highlights": [
+            "Founding Team Member",
+            "Millions of POAPs Issued",
+            "Global Event Infrastructure",
+            "Community Building Protocol"
+          ],
+          "client": "POAP Foundation",
+          "services": ["Smart Contract Development", "Protocol Design", "Infrastructure", "Scaling Solutions"]
+        },
+        {
           "id": "codex",
           "title": "Codex",
           "slug": "codex",
@@ -355,42 +355,6 @@
           ],
           "client": "Museum of Crypto Art",
           "services": ["Archive Development", "AI Integration", "Data Architecture", "Search Implementation"]
-        },
-        {
-          "id": "collectorshub",
-          "title": "CollectorsHub",
-          "slug": "collectorshub",
-          "category": "NFT Curation Tools",
-          "featured": false,
-          "shortDescription": "Tools for digital collectors to curate and share their NFT and crypto art collections.",
-          "description": "A platform helping collectors organize, display, and share their digital art collections across the Web3 ecosystem.",
-          "longDescription": "CollectorsHub.art is our tool for digital collectors—helping them curate and share their NFT and crypto art collections in meaningful ways.\n\nThe platform connects to multiple blockchains, aggregates collection data, and provides beautiful display options for showcasing digital ownership. It's designed for serious collectors who want to manage and present their digital art portfolios professionally.\n\nThis represents our commitment to building the tooling layer that makes Web3 accessible and useful for everyday collectors.",
-          "highlights": [
-            "Multi-chain Support",
-            "Collection Curation",
-            "Portfolio Display",
-            "Community Sharing"
-          ],
-          "client": "Qwellcode",
-          "services": ["Platform Development", "Web3 Integration", "UI/UX Design", "Community Features"]
-        },
-        {
-          "id": "amber-island",
-          "title": "Amber Island",
-          "slug": "amber-island",
-          "category": "RWAs • Gebr. Heinemann",
-          "featured": false,
-          "shortDescription": "Web3-based whisky membership bridging physical luxury goods with digital ownership.",
-          "description": "Innovative NFT membership platform for tokenized premium whisky bottles and exclusive community experiences.",
-          "longDescription": "Amber Island represents a pioneering experiment in merging physical luxury goods with Web3 technology. Developed for GHARAGE/Heinemann in 2022, the platform allows members to mint 'Amber Island Key' NFTs to join an exclusive whisky community.\n\nMembers gain access to tokenized premium whisky bottles (including Glenturret 30YO and limited CryptoPunk Whisky), exclusive events, and unique community experiences. The technology integrates Meta Anchor™ for authenticity verification.\n\nCurrently on strategic pause due to market conditions, but the project demonstrates the potential for blockchain technology in luxury goods authentication and community building.",
-          "highlights": [
-            "NFT Membership Keys",
-            "Tokenized Whisky",
-            "Authenticity Verification",
-            "Luxury RWA Pioneer"
-          ],
-          "client": "GHARAGE/Heinemann",
-          "services": ["Web3 Development", "NFT Implementation", "Tokenization", "Authentication Systems"]
         },
         {
           "id": "ai-language-models",
@@ -723,60 +687,6 @@
       ],
       "projects": [
         {
-          "id": "moca",
-          "title": "Museum of Crypto Art",
-          "slug": "museum-of-crypto-art",
-          "category": "Web3 Kultur & Digitale Kunst",
-          "featured": true,
-          "shortDescription": "Das weltweit erste dezentrale Museum für Kryptokunst und Web3-Kultur.",
-          "description": "Eine Plattform für Web3-Kunst und -Kultur, die das kulturelle Archiv des dezentralen Internets mit mocaOS, Codex und Vibe Studio aufbaut.",
-          "longDescription": "Das Museum of Crypto Art (M○C▲) ist unsere Flaggschiff-Initiative für Web3-Kultur—ein dezentrales Museum, das die Entwicklung der Kryptokunst seit 2021 bewahrt und präsentiert.\n\nAktuelle Integrationen umfassen @comput3ai für KI-Inferenz, @elizaOS für OS-Level-Erweiterungen und @hyperfy_io für immersive 3D-Erlebnisse. Die Plattform beinhaltet ArtDeCC0s-Agenten (KI-gesteuerte interaktive Elemente für digitale Sammlerstücke).\n\nDurch mocaOS, Codex und Vibe Studio haben wir ein Open-Source-Ökosystem für dezentrale kulturelle Memetik geschaffen—die Infrastrukturschicht für Web3-Kunst und -Kultur.",
-          "highlights": [
-            "KI-Integration mit Comput3",
-            "ElizaOS-Erweiterungen",
-            "Hyperfy Immersive Räume",
-            "ArtDeCC0s-Agenten"
-          ],
-          "client": "Museum of Crypto Art",
-          "services": ["Web3-Entwicklung", "KI-Integration", "3D-Erlebnisse", "Kulturelle Infrastruktur"]
-        },
-        {
-          "id": "zeroone",
-          "title": "ZeroOne",
-          "slug": "zeroone",
-          "category": "Web3 Social & Creator Tools",
-          "featured": true,
-          "shortDescription": "Verwandlung von Social-Content in einzigartige digitale Assets für 180.000+ Kreative.",
-          "description": "Eine Web3-Initiative zusammen mit dem Museum of Crypto Art, die experimentelle Blockchain-Anwendungen nutzt, um digitale Fußabdrücke in Vermögen zu verwandeln.",
-          "longDescription": "ZeroOne ist eine weitere große Web3-Initiative, die mit kulturellen und dezentralen Projekten verbunden ist und parallel zum Museum of Crypto Art entwickelt wurde. Sie nutzt ähnliche Tech-Stacks für experimentelle Blockchain-Anwendungen.\n\nMit 180.000+ Kreativen und 4,5M+ digitalen Assets verwandelt ZeroOne jeden Social-Media-Post in ein einzigartiges, besitzbares digitales Asset. Wir haben die soziale Schicht für die Ownership Economy gebaut—Blockchain wird für Endnutzer unsichtbar, während Kreative ihren Einfluss direkt monetarisieren können.\n\nFortgeschrittene Algorithmen übernehmen nahtlos die Asset-Generierung, Seltenheitsbestimmung und Marktplatz-Dynamiken.",
-          "highlights": [
-            "180.000+ aktive Kreative",
-            "4,5M+ digitale Assets",
-            "Nahtlose Web3 UX",
-            "Creator-Monetarisierung"
-          ],
-          "client": "ZeroOne",
-          "services": ["Plattform-Entwicklung", "Blockchain-Integration", "Creator-Tools", "Social Features"]
-        },
-        {
-          "id": "poap",
-          "title": "POAP",
-          "slug": "poap-protocol",
-          "category": "ETHDenver 2019 • Gründungsteam",
-          "featured": true,
-          "shortDescription": "Das grundlegende Protokoll für Teilnahmenachweise auf Ethereum. CEO Reneil war im Gründungsteam.",
-          "description": "Proof of Attendance Protocol—verwandelt Veranstaltungsteilnahmen in blockchain-verifizierte digitale Erinnerungen. Geboren bei ETHDenver-Hackathons, heute weltweit Millionen POAPs.",
-          "longDescription": "POAP (Proof of Attendance Protocol) entstand aus frühen Experimenten bei ETHDenver-Hackathons. Qwellcodes CEO, Reneil (@reneil1337), war Teil des Gründungsteams von @poapxyz—einem wichtigen Akteur bei der Erstellung digitaler Badges für Events und Communities.\n\nÜber sieben Jahre haben wir eine robuste Infrastruktur aufgebaut, die weltweit Millionen von POAPs ausgegeben hat und eine dezentrale Aufzeichnung menschlicher Erfahrungen schafft. Das Protokoll dient als Grundlage für digitale Kultur und ermöglicht Communities, dauerhafte Verbindungen durch blockchain-verifizierte Teilnahme aufzubauen.\n\nUnsere Arbeit umfasst Smart-Contract-Architektur, NFT-Infrastruktur und globale Skalierungslösungen, die massive gleichzeitige Lasten bei großen Events wie ETHDenver, Devcon und unzähligen Community-Treffen bewältigen.",
-          "highlights": [
-            "Gründungsteam-Mitglied",
-            "Millionen POAPs ausgestellt",
-            "Globale Event-Infrastruktur",
-            "Community-Building-Protokoll"
-          ],
-          "client": "POAP Foundation",
-          "services": ["Smart Contract Entwicklung", "Protokoll-Design", "Infrastruktur", "Skalierungslösungen"]
-        },
-        {
           "id": "bega",
           "title": "BEGA Group",
           "slug": "bega-digital",
@@ -829,6 +739,60 @@
           ],
           "client": "GOP Varieté",
           "services": ["Plattform-Entwicklung", "Ticketing-Systeme", "Venue-Management", "VR-Erlebnisse"]
+        },
+        {
+          "id": "moca",
+          "title": "Museum of Crypto Art",
+          "slug": "museum-of-crypto-art",
+          "category": "Web3 Kultur & Digitale Kunst",
+          "featured": true,
+          "shortDescription": "Das weltweit erste dezentrale Museum für Kryptokunst und Web3-Kultur.",
+          "description": "Eine Plattform für Web3-Kunst und -Kultur, die das kulturelle Archiv des dezentralen Internets mit mocaOS, Codex und Vibe Studio aufbaut.",
+          "longDescription": "Das Museum of Crypto Art (M○C▲) ist unsere Flaggschiff-Initiative für Web3-Kultur—ein dezentrales Museum, das die Entwicklung der Kryptokunst seit 2021 bewahrt und präsentiert.\n\nAktuelle Integrationen umfassen @comput3ai für KI-Inferenz, @elizaOS für OS-Level-Erweiterungen und @hyperfy_io für immersive 3D-Erlebnisse. Die Plattform beinhaltet ArtDeCC0s-Agenten (KI-gesteuerte interaktive Elemente für digitale Sammlerstücke).\n\nDurch mocaOS, Codex und Vibe Studio haben wir ein Open-Source-Ökosystem für dezentrale kulturelle Memetik geschaffen—die Infrastrukturschicht für Web3-Kunst und -Kultur.",
+          "highlights": [
+            "KI-Integration mit Comput3",
+            "ElizaOS-Erweiterungen",
+            "Hyperfy Immersive Räume",
+            "ArtDeCC0s-Agenten"
+          ],
+          "client": "Museum of Crypto Art",
+          "services": ["Web3-Entwicklung", "KI-Integration", "3D-Erlebnisse", "Kulturelle Infrastruktur"]
+        },
+        {
+          "id": "zeroone",
+          "title": "ZeroOne",
+          "slug": "zeroone",
+          "category": "Web3 Social & Creator Tools",
+          "featured": true,
+          "shortDescription": "Verwandlung von Social-Content in einzigartige digitale Assets für 180.000+ Kreative.",
+          "description": "Eine Web3-Initiative zusammen mit dem Museum of Crypto Art, die experimentelle Blockchain-Anwendungen nutzt, um digitale Fußabdrücke in Vermögen zu verwandeln.",
+          "longDescription": "ZeroOne ist eine weitere große Web3-Initiative, die mit kulturellen und dezentralen Projekten verbunden ist und parallel zum Museum of Crypto Art entwickelt wurde. Sie nutzt ähnliche Tech-Stacks für experimentelle Blockchain-Anwendungen.\n\nMit 180.000+ Kreativen und 4,5M+ digitalen Assets verwandelt ZeroOne jeden Social-Media-Post in ein einzigartiges, besitzbares digitales Asset. Wir haben die soziale Schicht für die Ownership Economy gebaut—Blockchain wird für Endnutzer unsichtbar, während Kreative ihren Einfluss direkt monetarisieren können.\n\nFortgeschrittene Algorithmen übernehmen nahtlos die Asset-Generierung, Seltenheitsbestimmung und Marktplatz-Dynamiken.",
+          "highlights": [
+            "180.000+ aktive Kreative",
+            "4,5M+ digitale Assets",
+            "Nahtlose Web3 UX",
+            "Creator-Monetarisierung"
+          ],
+          "client": "ZeroOne",
+          "services": ["Plattform-Entwicklung", "Blockchain-Integration", "Creator-Tools", "Social Features"]
+        },
+        {
+          "id": "poap",
+          "title": "POAP",
+          "slug": "poap-protocol",
+          "category": "ETHDenver 2019 • Gründungsteam",
+          "featured": true,
+          "shortDescription": "Das grundlegende Protokoll für Teilnahmenachweise auf Ethereum. CEO Reneil war im Gründungsteam.",
+          "description": "Proof of Attendance Protocol—verwandelt Veranstaltungsteilnahmen in blockchain-verifizierte digitale Erinnerungen. Geboren bei ETHDenver-Hackathons, heute weltweit Millionen POAPs.",
+          "longDescription": "POAP (Proof of Attendance Protocol) entstand aus frühen Experimenten bei ETHDenver-Hackathons. Qwellcodes CEO, Reneil (@reneil1337), war Teil des Gründungsteams von @poapxyz—einem wichtigen Akteur bei der Erstellung digitaler Badges für Events und Communities.\n\nÜber sieben Jahre haben wir eine robuste Infrastruktur aufgebaut, die weltweit Millionen von POAPs ausgegeben hat und eine dezentrale Aufzeichnung menschlicher Erfahrungen schafft. Das Protokoll dient als Grundlage für digitale Kultur und ermöglicht Communities, dauerhafte Verbindungen durch blockchain-verifizierte Teilnahme aufzubauen.\n\nUnsere Arbeit umfasst Smart-Contract-Architektur, NFT-Infrastruktur und globale Skalierungslösungen, die massive gleichzeitige Lasten bei großen Events wie ETHDenver, Devcon und unzähligen Community-Treffen bewältigen.",
+          "highlights": [
+            "Gründungsteam-Mitglied",
+            "Millionen POAPs ausgestellt",
+            "Globale Event-Infrastruktur",
+            "Community-Building-Protokoll"
+          ],
+          "client": "POAP Foundation",
+          "services": ["Smart Contract Entwicklung", "Protokoll-Design", "Infrastruktur", "Skalierungslösungen"]
         },
         {
           "id": "codex",

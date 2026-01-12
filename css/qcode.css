@@ -3,6 +3,11 @@
    Custom CSS for Qwellcode Website
    ======================================== */
 
+/* Fancybox Loader Color Override */
+.fancybox-progress {
+    background: rgba(135, 216, 50, 1) !important;
+}
+
 /* Language Switcher Styles */
 .mil-frame-top {
     position: relative;
@@ -17,13 +22,15 @@
     pointer-events: all;
 }
 
-.mil-lang-btn {
+/* Single toggle button - entire element is clickable */
+.mil-lang-toggle {
     display: flex;
     align-items: center;
-    padding: 6px 10px;
+    gap: 8px;
+    padding: 8px 16px;
     background: transparent;
-    border: none;
-    color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 13px;
@@ -32,30 +39,39 @@
     text-transform: uppercase;
 }
 
-.mil-lang-btn:disabled {
-    cursor: default;
-    color: #fff;
+.mil-lang-toggle:hover {
+    border-color: rgba(135, 216, 50, 0.5);
+    background: rgba(135, 216, 50, 0.05);
+    transform: translateY(-1px);
 }
 
-.mil-lang-btn.mil-lang-inactive {
-    opacity: 0.5;
-}
-
-.mil-lang-btn.mil-lang-inactive:hover {
-    opacity: 1;
-    color: rgba(135, 216, 50, 1);
+.mil-lang-toggle:active {
+    transform: translateY(0);
 }
 
 .mil-lang-divider {
     color: rgba(255, 255, 255, 0.3);
     font-size: 14px;
     font-weight: 300;
-    margin: 0 2px;
+    margin: 0 4px;
 }
 
 .mil-lang-label {
     font-weight: 500;
     letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+
+.mil-lang-label.mil-lang-active {
+    color: #fff;
+}
+
+.mil-lang-label.mil-lang-inactive {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.mil-lang-toggle:hover .mil-lang-label.mil-lang-inactive {
+    color: rgba(135, 216, 50, 1);
 }
 
 h1, .mil-h1{
@@ -291,9 +307,10 @@ h1, .mil-h1{
         margin-right: 15px;
     }
 
-    .mil-lang-btn {
-        padding: 5px 8px;
+    .mil-lang-toggle {
+        padding: 6px 12px;
         font-size: 12px;
+        gap: 6px;
     }
 }
 
@@ -322,19 +339,19 @@ h1, .mil-h1{
         display: none !important;
     }
     .mil-language-switcher {
-        gap: 2px;
         margin-right: 10px;
     }
 
-    .mil-lang-btn {
-        padding: 4px 6px;
+    .mil-lang-toggle {
+        padding: 6px 10px;
         font-size: 11px;
         letter-spacing: 1px;
+        gap: 4px;
     }
 
     .mil-lang-divider {
         font-size: 12px;
-        margin: 0;
+        margin: 0 2px;
     }
 
     h1, .mil-h1{
